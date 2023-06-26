@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Module Test</title>
+</head>
+<body>
+    <input type="button" value="click me" onclick="hello"/>
+    <script type="module">
+        import {hello} from './test.js'
+      
+        window.hello = hello;
+    </script>
+</body>
+</html>
