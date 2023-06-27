@@ -62,6 +62,19 @@ function next_generation() {
     }
 }
 
+document.onkeydown = function(e) {
+    switch (e.key) {
+        case "ArrowLeft":
+            prev_generation();
+            break;
+        case "ArrowRight":
+            next_generation();
+            break
+        default:
+            return;
+    }
+}
+
 fetch("http://localhost:8080/Questions.json")
     .then(response => response.json())
     .then(json => {
