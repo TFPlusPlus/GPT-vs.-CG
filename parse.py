@@ -29,7 +29,7 @@ def parse(path, num_of_generations = 5):
                     if line == "\n" or line == "":
                         break
                     generation += line
-                generated.append(generation)
+                generated.append(generation.strip())
             question_dict = {
                 "id": int(id),
                 "question": question.strip(),
