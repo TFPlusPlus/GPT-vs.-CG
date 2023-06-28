@@ -8,36 +8,52 @@
     <script defer type="text/javascript" src="Categorizer.js"></script>
 </head>
 <body>
-    <div style="text-align: center; width: 100%;">
-        <button>All Questions</button>
-    </div>
-    <div style="float: left; width: 20%; text-align: right;">
-        <button onclick="prev_question()">&lt;&lt;</button>
-    </div>
-    <div style="float: left; width: 60%;">
-        <div class="box" style="background-color: beige; width: 90%;">
-            <h3 id="id">Question ID</h3>
-            <div id="question" class="box">
-                <h3>Question Text</h3>
-            </div>
-            <div id="answer" class="box">
-                <h3>Answer Text</h3>
-            </div>
-            <div style="display: flex; padding-top: 10px;">
-                <div style="flex: 1; width: 10%; text-align: right;">
-                    <button onclick="prev_generation()">&lt;</button>
+    <div id="main" style="display: none;">
+        <div style="text-align: center; width: 100%;">
+            <button style="width: 15ch;" onclick="show_list()">All Questions</button>
+        </div>
+        <div style="float: left; width: 20%; text-align: right;">
+            <button onclick="prev_question()">&lt;&lt;</button>
+        </div>
+        <div style="float: left; width: 60%;">
+            <div class="box" style="background-color: beige; width: 90%;">
+                <h3 id="id">Question ID</h3>
+                <div id="question" class="box">
+                    <h3>Question Text</h3>
                 </div>
-                <div id="generated" class="box" style="flex: 8; width: 80%;">
+                <div id="answer" class="box">
+                    <h3>Answer Text</h3>
                 </div>
-                <div style="flex: 1; width: 10%;">
-                    <button onclick="next_generation()">&gt;</button>
+                <div style="display: flex; padding-top: 10px;">
+                    <div style="flex: 1; width: 10%; text-align: right;">
+                        <button onclick="prev_generation()">&lt;</button>
+                    </div>
+                    <div style="flex: 8; width: 80%;">
+                        <div id="generated" class="box"></div>
+                        <h3 id="generated-index" style="text-align: center;">Generation 0/5</h3>
+                    </div>
+                    <div style="flex: 1; width: 10%;">
+                        <button onclick="next_generation()">&gt;</button>
+                    </div>
                 </div>
             </div>
         </div>
+        <div style="float: left; width: 20%;">
+            <button onclick="next_question()">&gt;&gt;</button>
+        </div>
     </div>
-    <div style="float: left; width: 20%;">
-        <button onclick="next_question()">&gt;&gt;</button>
+    <div id="cover" style="background-color: white; position: absolute; left: 0; top: 0; width: 100%; margin-top: 10px;">
+        <div style="text-align: center; width: 100%;">
+            <button style="width: 15ch;" onclick="hide_list()">Back</button>
+        </div>
+        <div style="display: flex;">
+            <div style="flex: 1"></div>
+            <div style="flex: 3;">
+                <div id="list" class="box" style="background-color: beige; padding-top: 10px; width: 90%;"></div>
+            </div>
+            <div style="flex: 1;"></div>
+        </div>
     </div>
-    <div id="cover" style="background-color: white; position: absolute; left: 0; top: 0; height: 100%; width: 100%;"></div>
+    <div id="loading" style="background-color: white; position: absolute; left: 0; top: 0; height: 100%; width: 100%;"></div>
 </body>
 </html>
