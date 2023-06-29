@@ -1,0 +1,123 @@
+[
+    {
+        "category": "Topic",
+        "options": [
+            "Geometry",
+            "Graphics Introduction",
+            "Color",
+            "Illumination and Shading",
+            "3D Modelling",
+            "Texture Mapping",
+            "Ray Tracing"
+        ]
+    },
+    {
+        "category": "Bloom's Taxonomy",
+        "options": [
+            "Remember",
+            "Understand",
+            "Apply",
+            "Analyze",
+            "Evaluate",
+            "Create"
+        ]
+    },
+    {
+        "category": "Question Type",
+        "options": [
+            "Multiple-Choice Question",
+            "Written response",
+            "Programming"
+        ]
+    },
+    {
+        "category": "Difficulty Level",
+        "options": [
+            "Easy",
+            "Easy - Medium",
+            "Medium",
+            "Medium - Hard",
+            "Hard"
+        ]
+    },
+    {
+        "category": "Input Type",
+        "options": [
+            "Text",
+            "Mathematical formula",
+            "Image",
+            "Code (OpenGL)"
+        ]
+    },
+    {
+        "category": "Output Type",
+        "options": [
+            "Text",
+            "Mathematical formula",
+            "Image",
+            "Code (OpenGL)"
+        ]
+    },
+    {
+        "category": "Reasoning",
+        "options": [
+            "Inductive",
+            "Deductive",
+            "Abductive"
+        ]
+    },
+    {
+        "category": "Solution Process",
+        "options": [
+            "Concept recall",
+            "Calculation",
+            "Geometry/Transformation",
+            "Programming"
+        ]
+    },
+    {
+        "category": "Generation 1",
+        "options": [
+            "Correct explanation",
+            "Conceptual error",
+            "Calculation error",
+            "Logic error"
+        ]
+    },
+    {
+        "category": "Generation 2",
+        "options": [
+            "Correct explanation",
+            "Conceptual error",
+            "Calculation error",
+            "Logic error"
+        ]
+    },
+    {
+        "category": "Generation 3",
+        "options": [
+            "Correct explanation",
+            "Conceptual error",
+            "Calculation error",
+            "Logic error"
+        ]
+    },
+    {
+        "category": "Generation 4",
+        "options": [
+            "Correct explanation",
+            "Conceptual error",
+            "Calculation error",
+            "Logic error"
+        ]
+    },
+    {
+        "category": "Generation 5",
+        "options": [
+            "Correct explanation",
+            "Conceptual error",
+            "Calculation error",
+            "Logic error"
+        ]
+    }
+]
