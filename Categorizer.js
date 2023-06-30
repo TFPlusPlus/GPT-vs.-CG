@@ -1,5 +1,28 @@
-let QUESTIONS = [], CATEGORIES = [], CATEGORIES_INDICES = [], data = [], checked = [];
+let QUESTIONS = [], CATEGORIES = [], CATEGORIES_OPTIONS = [], CATEGORIES_INDICES = [], data = [], checked = [];
 let num_of_questions, num_of_generations, num_of_categories, current_question = 0, current_generation = 0, current_category = 0;
+
+function setup() {
+    CATEGORIES_OPTIONS = CATEGORIES.map(category => category.options);
+    CATEGORIES_OPTIONS = [].concat.apply(["Question ID"], CATEGORIES_OPTIONS);
+    let current_index = 0, i = 0;
+    for (i = 0; i < CATEGORIES.length; i++) {
+        CATEGORIES_INDICES[i] = current_index;
+        current_index += CATEGORIES[i].options.length;
+    }
+    CATEGORIES_INDICES[i] = current_index;
+    if (data.length == 0) {
+        for (let i = 0; i < QUESTIONS.length; i++) {
+            data.push(Array(current_index).fill(0));
+        }
+    }
+    num_of_questions = QUESTIONS.length;
+    num_of_generations = QUESTIONS[0].generated.length;
+    num_of_categories = CATEGORIES.length;
+    prepare_list();
+    refresh(0, 0);
+    hide_list();
+    document.getElementById("loading").remove();
+}
 
 function refresh() {
     let item = QUESTIONS[current_question];
@@ -79,6 +102,7 @@ function prev_category() {
         current_category = num_of_categories - 1;
         current_question--;
         current_generation = num_of_generations - 1;
+        save();
     }
     if (num_of_categories - num_of_generations <= current_category) {
         current_generation = current_category + num_of_generations - num_of_categories;
@@ -95,6 +119,7 @@ function next_category() {
         current_category = 0;
         current_question++;
         current_generation = 0;
+        save();
     }
     if (num_of_categories - num_of_generations <= current_category) {
         current_generation = current_category + num_of_generations - num_of_categories;
@@ -149,11 +174,30 @@ function update_data() {
 }
 
 function save() {
-
+    const csvData = `${CATEGORIES_OPTIONS.join(',')}\n` + data.map((row, i) => `${QUESTIONS[i].id},` + row.join(',')).join('\n');
+    const blob = new Blob([csvData], { type: 'text/csv' });
+    const csvURL = URL.createObjectURL(blob);
+    const link = document.createElement('a');
+    link.href = csvURL;
+    link.download = 'data.csv';
+    link.dispatchEvent(new MouseEvent(`click`, {bubbles: true, cancelable: true, view: window}));
 }
 
 function load() {
-    
+    const file = fileInput.files[0];
+    const reader = new FileReader();
+  
+    reader.onload = function (e) {
+      const csvData = e.target.result;
+      const rows = csvData.split('\n');
+      const array = rows.map(row => row.split(','));
+  
+      // If needed, perform conversions on array elements here
+  
+      callback(array);
+    };
+  
+    reader.readAsText(file);
 }
 
 document.onkeydown = function(e) {
@@ -163,7 +207,10 @@ document.onkeydown = function(e) {
             break;
         case "ArrowRight":
             next_category();
-            break
+            break;
+        case "Space":
+            save();
+            break;
         default:
             break;
     }
@@ -185,22 +232,20 @@ fetch("Questions.json")
             .then(categories_json => {
                 QUESTIONS = questions_json;
                 CATEGORIES = categories_json;
-                let current_index = 0, i = 0;
-                for (i = 0; i < CATEGORIES.length; i++) {
-                    CATEGORIES_INDICES[i] = current_index;
-                    current_index += CATEGORIES[i].options.length;
-                }
-                CATEGORIES_INDICES[i] = current_index;
-                for (let i = 0; i < QUESTIONS.length; i++) {
-                    data.push(Array(current_index).fill(0));
-                }
-                num_of_questions = QUESTIONS.length;
-                num_of_generations = QUESTIONS[0].generated.length;
-                num_of_categories = CATEGORIES.length;
-                prepare_list();
-                refresh(0, 0);
-                hide_list();
-                document.getElementById("loading").remove();
+                fetch("data.csv")
+                    .then(response => response.text())
+                    .then(csv => {
+                        let rows = csv.split("\n");
+                        let array = rows.map(row => row.split(","));
+                        for (let i = 1; i < array.length; i++) {
+                            data.push(Array(array[i].length - 1).fill(0));
+                            for (let j = 1; j < array[i].length; j++) {
+                                data[i - 1][j - 1] = parseInt(array[i][j]);
+                            }
+                        }
+                        setup();
+                    })
+                    .catch(error => {setup(); console.error(error);});
             })
             .catch(error => console.error(error));
     })
