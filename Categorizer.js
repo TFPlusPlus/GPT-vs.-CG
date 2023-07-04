@@ -186,17 +186,12 @@ function save() {
 function load() {
     const file = fileInput.files[0];
     const reader = new FileReader();
-  
     reader.onload = function (e) {
-      const csvData = e.target.result;
-      const rows = csvData.split('\n');
-      const array = rows.map(row => row.split(','));
-  
-      // If needed, perform conversions on array elements here
-  
-      callback(array);
+        const csvData = e.target.result;
+        const rows = csvData.split('\n');
+        const array = rows.map(row => row.split(','));  
+        callback(array);
     };
-  
     reader.readAsText(file);
 }
 

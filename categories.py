@@ -1,6 +1,6 @@
 import json
 
-num_of_generations = 5
+num_of_generations = 10
 
 category = ["Topic", "Bloom's Taxonomy", "Question Type", "Difficulty Level", "Input Type", "Output Type", "Reasoning", "Solution Process"]
 options = [

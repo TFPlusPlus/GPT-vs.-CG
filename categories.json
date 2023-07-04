@@ -120,5 +120,50 @@
             "Calculation error",
             "Logic error"
         ]
+    },
+    {
+        "category": "Generation 6",
+        "options": [
+            "Correct explanation",
+            "Conceptual error",
+            "Calculation error",
+            "Logic error"
+        ]
+    },
+    {
+        "category": "Generation 7",
+        "options": [
+            "Correct explanation",
+            "Conceptual error",
+            "Calculation error",
+            "Logic error"
+        ]
+    },
+    {
+        "category": "Generation 8",
+        "options": [
+            "Correct explanation",
+            "Conceptual error",
+            "Calculation error",
+            "Logic error"
+        ]
+    },
+    {
+        "category": "Generation 9",
+        "options": [
+            "Correct explanation",
+            "Conceptual error",
+            "Calculation error",
+            "Logic error"
+        ]
+    },
+    {
+        "category": "Generation 10",
+        "options": [
+            "Correct explanation",
+            "Conceptual error",
+            "Calculation error",
+            "Logic error"
+        ]
     }
 ]

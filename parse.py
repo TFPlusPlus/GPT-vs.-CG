@@ -1,7 +1,7 @@
 import json
 import math
 
-def parse(path, num_of_generations = 5):
+def parse(path, num_of_generations = 10):
     with open(path, 'r') as file:
         questions = []
         while True:
