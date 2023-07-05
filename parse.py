@@ -1,7 +1,7 @@
 import json
 import math
 
-def parse(path, num_of_generations = 10):
+def parse(path, filename_output, num_of_generations = 10):
     with open(path, 'r') as file:
         questions = []
         while True:
@@ -31,13 +31,13 @@ def parse(path, num_of_generations = 10):
                     generation += line
                 generated.append(generation.strip())
             question_dict = {
-                "id": int(id),
+                "id": id.strip(),
                 "question": question.strip(),
                 "answer": answer.strip(),
                 "generated": generated
             }
             questions.append(question_dict)
-    with open(path[:-4] + ".json", 'w') as file:
+    with open(filename_output, 'w') as file:
         json.dump(questions, file, indent=4)
 
-parse("Questions.txt")
+# parse("Questions.txt")

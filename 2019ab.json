@@ -1,0 +1,53 @@
+[
+    {
+        "id": "2019a00",
+        "question": "Write a function projectionLength(), that takes as parameters two Vec3d structs a & b, and returns the length of the projection of a on to b.\nYour function should have the following signature:\ndouble projectionLength(Vec3d a, Vec3d b)\nYou can assume that you have access to a struct Vec3d that represents a 3D vector and exposes fields named x, y, and z, and that the following functions are available to you:\ndouble magnitude(Vec3d v)\ndouble dot(Vec3d u, Vec3d v)\nVec3d cross(Vec3d u, Vec3d v)\nVec3d normalized(Vec3d v)\nPlease note that you may not need to use all of the available functions.\nFor example:\nTest\nVec3d a = {1.0, 2.0, 0.0};\nVec3d b = {1.0, 5.0, 3.0};\ndouble d = projectionLength(a, b);\nprintf(\"magnitude = %.2lf\", d);\nResult\nmagnitude = 1.86",
+        "answer": "null",
+        "generated": [
+            "Answer Text 0",
+            "Answer Text 1",
+            "Answer Text 2",
+            "Answer Text 3",
+            "Answer Text 4",
+            "Answer Text 5",
+            "Answer Text 6",
+            "Answer Text 7",
+            "Answer Text 8",
+            "Answer Text 9"
+        ]
+    },
+    {
+        "id": "2019a01",
+        "question": "Task: Write the imagej macro code to find the cumulative histogram of the image\nBe aware that there is a run time limit, so make sure that you write your code relatively efficiently!\nFor marking purposes of this question in Coderunner, overwrite only the FIRST row of pixels of the input image with your histogram count.\nImage Input: Assume that the input image is an 8-bit gray scale image. You should assume that this image only contains pixels values between 0 and value 255. The width of the input image that is used for testing in this question is 256 pixels.\nNote:\nDo NOT explicitly load any images in your code. Assume that a valid image has already been loaded.\nAssume that the image size needs to be determined by your code.\nYou are required to achieve the task by looping through image pixels, and NOT by calling a built in function.\nThe complete script needs to be pasted (or typed) in the solution area.\nYour script should NOT contain any output commands such as print, Plot or Dialog.\nDo NOT call close or save and the use of the newImage function is forbidden.",
+        "answer": "null",
+        "generated": [
+            "Answer Text 0",
+            "Answer Text 1",
+            "Answer Text 2",
+            "Answer Text 3",
+            "Answer Text 4",
+            "Answer Text 5",
+            "Answer Text 6",
+            "Answer Text 7",
+            "Answer Text 8",
+            "Answer Text 9"
+        ]
+    },
+    {
+        "id": "2019a02",
+        "question": "Task: Given an input gray-scale image, perform linear stretching with a gain of -1 and a bias of 150.\nNote:\nDo NOT explicitly load any images in your code. Assume that a valid image has already been loaded.\nAssume that the image size needs to be determined by your code.\nYou are required to achieve the task by looping through image pixels, and NOT by calling a built in function.\nThe complete script needs to be pasted (or typed) in the solution area.\nYour script should NOT contain any output commands such as print, Plot or Dialog.\nDo NOT call close or save and the use of the newImage function is forbidden.",
+        "answer": "null",
+        "generated": [
+            "Answer Text 0",
+            "Answer Text 1",
+            "Answer Text 2",
+            "Answer Text 3",
+            "Answer Text 4",
+            "Answer Text 5",
+            "Answer Text 6",
+            "Answer Text 7",
+            "Answer Text 8",
+            "Answer Text 9"
+        ]
+    }
+]
