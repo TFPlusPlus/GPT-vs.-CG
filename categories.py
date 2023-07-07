@@ -8,8 +8,8 @@ options = [
     ["Remember", "Understand", "Apply", "Analyze", "Evaluate", "Create"],
     ["Multiple-Choice Question", "Written response", "Programming"],
     ["Easy", "Easy - Medium", "Medium", "Medium - Hard", "Hard"],
-    ["Text", "Mathematical formula", "Image", "Code (OpenGL)"],
-    ["Text", "Mathematical formula", "Image", "Code (OpenGL)"],
+    ["Text", "Mathematical formula", "Image description (novice)", "Image description (informed)", "Code (OpenGL)"],
+    ["Text", "Mathematical formula", "Image description (novice)", "Image description (informed)", "Code (OpenGL)"],
     ["Inductive", "Deductive", "Abductive"],
     ["Concept recall", "Calculation", "Geometry/Transformation", "Programming"]
 ]

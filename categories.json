@@ -46,7 +46,8 @@
         "options": [
             "Text",
             "Mathematical formula",
-            "Image",
+            "Image description (novice)",
+            "Image description (informed)",
             "Code (OpenGL)"
         ]
     },
@@ -55,7 +56,8 @@
         "options": [
             "Text",
             "Mathematical formula",
-            "Image",
+            "Image description (novice)",
+            "Image description (informed)",
             "Code (OpenGL)"
         ]
     },

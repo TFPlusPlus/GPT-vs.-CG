@@ -1,4 +1,5 @@
 import openai
+import json
 
 def ask(question, temperature = 1.0, num_of_generations = 10):
     responses = []
@@ -10,13 +11,13 @@ def ask(question, temperature = 1.0, num_of_generations = 10):
             ],
             temperature = temperature
         )
-        responses.append(response.choices[0].message.content.strip())
+        responses.append(response.choices[0].message.content.strip().replace("\n\n", "\n"))
     return responses
 
 def ask2(question, num_of_generations = 10):
-    return ["Answer Text {}".format(i) for i in range(num_of_generations)]
+    return ["Answer Text {}".format(i ** 2) for i in range(num_of_generations)]
 
-def ask_file(filename_input, filename_output, num_of_generations = 10, test = True):
+def ask_txt(filename_input, filename_output, num_of_generations = 10, test = True):
     with open(filename_input, 'r') as file1, open(filename_output, 'w') as file2:
         while True:
             id = file1.readline()
@@ -49,5 +50,15 @@ def ask_file(filename_input, filename_output, num_of_generations = 10, test = Tr
                 file2.write(generation)
                 file2.write("\n\n")
 
-# ans = ask("How will the weather be tomorrow in Auckland?", num_of_generations = 2)
-# print(ans)
+
+def ask_json(filename_input, filename_output, num_of_generations = 10, test = True):
+    with open(filename_input, "r") as file:
+        data = json.load(file)
+        for i in range(len(data)):
+            if test:
+                generated = ask2(data[i]["question"], num_of_generations = num_of_generations)
+            else:
+                generated = ask(data[i]["question"], num_of_generations = num_of_generations)
+            data[i]["generated"] = generated
+    with open(filename_output, "w") as file:
+        json.dump(data, file, indent = 4)

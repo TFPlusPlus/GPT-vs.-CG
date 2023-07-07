@@ -1,8 +1,8 @@
 import json
 import math
 
-def parse(path, filename_output, num_of_generations = 10):
-    with open(path, 'r') as file:
+def parse(filename_input, filename_output, num_of_generations = 10):
+    with open(filename_input, 'r') as file:
         questions = []
         while True:
             id = file.readline()
@@ -18,7 +18,7 @@ def parse(path, filename_output, num_of_generations = 10):
             answer = ""
             while True:
                 line = file.readline()
-                if line == "\n":
+                if line == "\n" or line == "":
                     break
                 answer += line
             generated = []

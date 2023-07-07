@@ -1,11 +1,8 @@
-from preprocess import preprocess
-from ask import ask_file
-from parse import parse
+from prepare import prepare
+from ask import ask_json
 
-filename = "2022aa"
+filename = "2019ab"
 
-# preprocess(filename, filename + "-1")
+prepare(filename, filename + ".json")
 
-# ask_file(filename + "-1", filename + "-2", num_of_generations = 10, test = True)
-
-# parse(filename + "-2", filename + ".json", num_of_generations = 10)
+# ask_json(filename + ".json", filename + "-a.json", num_of_generations = 10, test = True)
