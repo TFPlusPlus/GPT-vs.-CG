@@ -21,7 +21,10 @@ def parse(filename_input, filename_output, num_of_generations = 10):
                 if line == "\n" or line == "":
                     break
                 answer += line
-            generated = []
+            if num_of_generations == 0:
+                generated = ["EMPTY"]
+            else:
+                generated = []
             for i in range(num_of_generations):
                 generation = ""
                 while True:

@@ -1,7 +1,7 @@
 import openai
 import json
 
-def ask(question, temperature = 1.0, num_of_generations = 10):
+def ask(question, temperature = 0.75, num_of_generations = 10):
     responses = []
     for i in range(num_of_generations):
         response = openai.ChatCompletion.create(

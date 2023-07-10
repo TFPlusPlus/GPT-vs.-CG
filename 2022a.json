@@ -1,0 +1,178 @@
+[
+    {
+        "id": "2022a01",
+        "question": "Given a triangle comprised of the following vertex array:\nvertices = {(0.0, 0.0, 0.0), (2.0, 3.0, 0.0), (-3.0, 3.0, -1.0)}\nIf the triangle is drawn using the indices {0, 1, 2}, and anticlockwise winding order represents front faces, which of the following represents the surface normal of the front face of the triangle?\na. \\frac{1}{\\sqrt{238}}\\begin{pmatrix} 3 \\\\ -2 \\\\-15 \\end{pmatrix}\nb. \\frac{1}{\\sqrt{238}}\\begin{pmatrix} 3 \\\\ -15 \\\\-2 \\end{pmatrix}\nc. \\frac{1}{\\sqrt{238}}\\begin{pmatrix} -3 \\\\ 2 \\\\15 \\end{pmatrix}\nd. None of the others.\ne. \\frac{1}{\\sqrt{238}}\\begin{pmatrix} -3 \\\\ 15 \\\\2 \\end{pmatrix}",
+        "answer": "The correct answer is:\n\\frac{1}{\\sqrt{238}}\\begin{pmatrix} -3 \\\\ 2 \\\\15 \\end{pmatrix}",
+        "generated": [
+            "EMPTY"
+        ]
+    },
+    {
+        "id": "2022a02",
+        "question": "The orthogonal projection of vector\n\\textbf{u} = \\begin{pmatrix}0\\\\2\\\\3 \\end{pmatrix}\nonto vector\n\\textbf{v} = \\begin{pmatrix} 1 \\\\3\\\\0 \\end{pmatrix}\nis equal to:\nSelect one:\na. \\frac{6}{10}\\begin{pmatrix}0 \\\\2 \\\\3 \\end{pmatrix}\nb. \\frac{6}{10}\\begin{pmatrix}1 \\\\3 \\\\0 \\end{pmatrix}\nc. None of the others\nd. \\frac{6}{\\sqrt{10}} \\begin{pmatrix}0\\\\2 \\\\3 \\end{pmatrix}\ne. \\frac{6}{\\sqrt{10}}",
+        "answer": "The correct answer is:\n\\frac{6}{10}\\begin{pmatrix}1 \\\\3 \\\\0 \\end{pmatrix}",
+        "generated": [
+            "EMPTY"
+        ]
+    },
+    {
+        "id": "2022a03",
+        "question": "Given a plane\nP\ndefined by the equation:\n2x+2y+z=2\n, and a point\nQ = \\begin{pmatrix} 1 \\\\1 \\\\-2 \\end{pmatrix}\n,\nWhat is the smallest absolute distance between\nP\nand\nQ\n?\nSelect one:\na. None of the others\nb. 1\nc. 13\nd. 2\ne. 0\n, Q is on the plane, P.",
+        "answer": "The correct answer is:\n0\n, Q is on the plane, P.",
+        "generated": [
+            "EMPTY"
+        ]
+    },
+    {
+        "id": "2022a04",
+        "question": "Consider a matrix of 3D geometric transformations in homogeneous coordinates. Which of the following statements about the matrix\nM = \\begin{bmatrix}-1 & 0 & 0 & -4 \\\\ 0 & -1 & 0 & -1 \\\\ 0 & 0 & 1 & -4 \\\\ 0 & 0 & 0 & 1\\end{bmatrix}\nis true?\nSelect one:\na. M represents a shear parallel to the z axis with magnitude 4 followed by a scaling along the x axis and y axis by -1.\nb. M represents a rotation about the z axis by -180 degrees followed by a translation by\nM = \\begin{bmatrix}-1 & 0 & 0 & -4 \\\\ 0 & -1 & 0 & -1 \\\\ 0 & 0 & 1 & -4 \\\\ 0 & 0 & 0 & 1\\end{bmatrix}\n.\nc. M represents a scaling along the x axis and y axis by -1 followed by a shear parallel to the z axis with magnitude 4.\nd. None of the others\ne. M represents a translation by\n\\begin{pmatrix}4 \\\\ 1 \\\\ -4\\end{pmatrix}\nfollowed by a rotation about the z axis by -180 degrees.",
+        "answer": "The correct answer is: M represents a translation by\n\\begin{pmatrix}4 \\\\ 1 \\\\ -4\\end{pmatrix}\nfollowed by a rotation about the z axis by -180 degrees.",
+        "generated": [
+            "EMPTY"
+        ]
+    },
+    {
+        "id": "2022a05a",
+        "question": "Given are the vertices (labelled in the image)\nconst int numVertices=8;\nconst float vertices[numVertices][2] = {{100,100},{400,100},{100,200},{400,200},{100,300},{400,300},{100,400},{400,400}};\nWhich of the following represents a possible indices array that will generate the image shown below if we use the OpenGL commands glBegin(GL_TRIANGLES) and glEnd()?\nImage description: An hourglass shape is shown with the vertices labelled with its index in the array.\na. None of the others.\nb. {0, 1, 2, 0, 3, 2, 0, 5, 2, 0, 7, 2, 1, 4, 3, 1, 6, 3, 4, 5, 7, 4, 7, 6}\nc. {0, 1, 2, 3, 4, 5, 6, 7}\nd. {4, 5, 7, 4, 7, 6, 0, 1, 3, 0, 3, 2, 0, 5, 7, 0, 7, 2, 4, 1, 3, 4, 3, 6}\ne. {0, 1, 3, 0, 3, 2, 1, 3, 4, 4, 3, 6, 4, 6, 7, 4, 7, 5, 7, 2, 5, 7, 0, 5}",
+        "answer": "The correct answer is:\n{4, 5, 7, 4, 7, 6, 0, 1, 3, 0, 3, 2, 0, 5, 7, 0, 7, 2, 4, 1, 3, 4, 3, 6}",
+        "generated": [
+            "EMPTY"
+        ]
+    },
+    {
+        "id": "2022a05b",
+        "question": "Given are the vertices (labelled in the image)\nconst int numVertices=8;\nconst float vertices[numVertices][2] = {{100,100},{400,100},{100,200},{400,200},{100,300},{400,300},{100,400},{400,400}};\nWhich of the following represents a possible indices array that will generate the image shown below if we use the OpenGL commands glBegin(GL_TRIANGLES) and glEnd()?\nImage description: The shape is formed with multiple shapes listed here. The first shape is a rectangle with the vertices 4, 5, 6, 7; the second shape is a rectangle with the vertices 0, 1, 2, 3; the third shape is a parallelogram with the vertices 0, 2, 5, 7; the fourth shape is a parallelogram with the vertices 1, 3, 4, 6.\na. None of the others.\nb. {0, 1, 2, 0, 3, 2, 0, 5, 2, 0, 7, 2, 1, 4, 3, 1, 6, 3, 4, 5, 7, 4, 7, 6}\nc. {0, 1, 2, 3, 4, 5, 6, 7}\nd. {4, 5, 7, 4, 7, 6, 0, 1, 3, 0, 3, 2, 0, 5, 7, 0, 7, 2, 4, 1, 3, 4, 3, 6}\ne. {0, 1, 3, 0, 3, 2, 1, 3, 4, 4, 3, 6, 4, 6, 7, 4, 7, 5, 7, 2, 5, 7, 0, 5}",
+        "answer": "The correct answer is:\n{4, 5, 7, 4, 7, 6, 0, 1, 3, 0, 3, 2, 0, 5, 7, 0, 7, 2, 4, 1, 3, 4, 3, 6}",
+        "generated": [
+            "EMPTY"
+        ]
+    },
+    {
+        "id": "2022a06",
+        "question": "Which of the following statements about drawing meshes is true?\na. By using a mesh data structure, multiple instances of a mesh may be drawn using the same mesh data and different transformations.\nb. Meshes can only be used when drawing with triangle primitives.\nc. By using a mesh data structure, multiple instances of a mesh may be drawn without increasing rendering time.\nd. None of the others.\ne. Using an indices array to represent vertex usage will always result in less memory being required to represent a mesh.",
+        "answer": "The correct answer is:\nBy using a mesh data structure, multiple instances of a mesh may be drawn using the same mesh data and different transformations.",
+        "generated": [
+            "EMPTY"
+        ]
+    },
+    {
+        "id": "2022a07",
+        "question": "Consider a surface that reflects the colour magenta when three lights are shining on it: one red, one green, one blue.\nWhat will be the reflected colour if the blue light is removed?\na. Green\nb. Yellow\nc. Black\nd. Magenta\ne. Red",
+        "answer": "The correct answer is:\nRed",
+        "generated": [
+            "EMPTY"
+        ]
+    },
+    {
+        "id": "2022a08",
+        "question": "The CIE XYZ colour space may be represented as a projection on the 2D plane: x + y + Z = 1.\nGiven the color (3, 9, 3), what is the corresponding 2D colour?\nSelect one:\na. None of the others\nb. (3, 9)\nc. (0.2, 0.6)\nd. (3, 15)\ne. (0.3, 0.9)",
+        "answer": "The correct answer is: (0.2, 0.6)",
+        "generated": [
+            "EMPTY"
+        ]
+    },
+    {
+        "id": "2022a09",
+        "question": "Which of the following statements is true for a spectral density function (SDF)?\nSelect one:\na. None of the others\nb. All light sources can be defined by their SDF.\nc. The SDF describes the light absorption of a surface.\nd. Only natural light can be defined by the SDF.\ne. Only artificial light sources can be defined by their SDF.",
+        "answer": "The correct answer is: All light sources can be defined by their SDF.",
+        "generated": [
+            "EMPTY"
+        ]
+    },
+    {
+        "id": "2022a10a",
+        "question": "Consider the following image of a sphere:\nImage description: A sphere is shown surrounded by darkness.\nAssuming a scene where the light intensities and reflection coefficients for ambient, diffuse, and specular are non-zero, which types of reflection are enabled for this scene?\na. Ambient, Diffuse, and Specular\nb. Diffuse only\nc. Ambient and Diffuse\nd. Diffuse and Specular\ne. Ambient Only",
+        "answer": "The correct answer is:\nDiffuse only",
+        "generated": [
+            "EMPTY"
+        ]
+    },
+    {
+        "id": "2022a10b",
+        "question": "Consider the following image of a sphere:\nImage description: A sphere is shown in space. The space surrounding it is black, the sphere itself is shown with a medium level of brightness, and there are no highlights shown on the sphere.\nAssuming a scene where the light intensities and reflection coefficients for ambient, diffuse, and specular are non-zero, which types of reflection are enabled for this scene?\na. Ambient, Diffuse, and Specular\nb. Diffuse only\nc. Ambient and Diffuse\nd. Diffuse and Specular\ne. Ambient Only",
+        "answer": "The correct answer is:\nDiffuse only",
+        "generated": [
+            "EMPTY"
+        ]
+    },
+    {
+        "id": "2022a11",
+        "question": "Consider a viewport of 800x800 pixels, with a coordinate system that ranges from 0-800 in the x and y axes, where (0, 0) is the bottom left corner of the viewport, and (800, 800) is the top right corner of the viewport.\nIn this viewport are drawn three triangles, where triangle T1 is drawn in red, triangle T2 is drawn in green, and triangle T3 is drawn in blue. The triangles are also being redrawn in wireframe, such that border pixels are drawn in black. The clear-colour for the viewport is white.\nThe triangles are being drawn in the order T1, T2, T3, with projection and depth testing set up such that if two triangles occupy the same pixel, the pixel will always be the colour of the more recently drawn triangle.\nIf the projected vertex locations of the triangles in the viewport are as follows:\nT1: {(0, 0, 0), (0, 800, 0), (800, 800, 0)}\nT2: {(260, 800, 0), (540, 800, 0), (380, 390, 0)}\nT3 {(120, 440, 0), (420, 440, 0), (410, 380, 0)}\nWhat colour will the pixel located at the viewport coordinates (410, 410) be?\na. Blue\nb. White\nc. Black\nd. Red\ne. Green",
+        "answer": "The correct answer is:\nBlue",
+        "generated": [
+            "EMPTY"
+        ]
+    },
+    {
+        "id": "2022a12",
+        "question": "Which of the following statements about the Phong illumination model is false?\nSelect one:\na. Ambient reflection is constant over the entire surface.\nb. Diffuse reflection does not vary with the angle between surface normal and view vector.\nc. Diffuse reflection models rough surfaces such as clay and cardboard.\nd. Diffuse reflection does not vary with the angle between surface normal and light direction.\ne. Ambient reflection does NOT depend on the surface normal.",
+        "answer": "The correct answer is: Diffuse reflection does not vary with the angle between surface normal and light direction.",
+        "generated": [
+            "EMPTY"
+        ]
+    },
+    {
+        "id": "2022a13",
+        "question": "Write a function colinear(), that takes as parameters three 3D vectors representing points, and returns a boolean: true if all three points lie on the same line, false otherwise. Your function should have the following signature:\nbool colinear(Vector3 p, Vector3 q, Vector3 r)\nYou can assume that Vector3 is a class that represents a 3D vector, and exposes fields named x, y, and z, and that the following functions are available to you:\ndouble dot(Vector3 u, Vector3 v) //dot product\nVector3 cross(Vector3 u, Vector3 v) //cross product\nYou can assume that the Vector3 class has the following member functions available to you:\nVector3 Vector3.normalized() //returns a vector pointing in the same direction with length 1\ndouble Vector3.magnitude() //returns the length of the vector\nYou can assume that the Vector3 class supports the following operators:\nVector3 + Vector3\nVector3 - Vector3",
+        "answer": "NULL",
+        "generated": [
+            "EMPTY"
+        ]
+    },
+    {
+        "id": "2022a14",
+        "question": "Write a function surfaceNormal(), which takes as parameters an array of 3D vectors representing the vertices of an arbitrarily shaped polygon, and an integer representing the number of vertices that make up the polygon. Your function should compute and return a unit vector that best represents the surface normal of the polygon.\nYou should assume that vertices are given in anticlockwise order, and that front faces are determined using anticlockwise winding order.\nYou should not assume that the polygon is well formed. Vertices may be co-linear, and they are not necessarily co-planar.\nYour function should have the following signature:\nVector3 surfaceNormal(Vector3 vertices[], int numVertices)\nYou can assume that Vector3 is a class that represents a 3D vector, and exposes fields named x, y, and z, and that the following functions are available to you:\ndouble dot(Vector3 u, Vector3 v) //dot product\nVector3 cross(Vector3 u, Vector3 v) //cross product\nYou can assume that the Vector3 class has the following member functions available to you:\nVector3 Vector3::normalized() //returns a vector pointing in the same direction with length 1\ndouble Vector3::magnitude() //returns the length of the vector\nYou can assume that the Vector3 class supports the following operators:\nVector3 + Vector3\nVector3 - Vector3\nVector3 * double",
+        "answer": "NULL",
+        "generated": [
+            "EMPTY"
+        ]
+    },
+    {
+        "id": "2022a15a",
+        "question": "Write a function drawGrid(), that generates the image below:\nImage description: An arbitrary sheet floating in space.\nYour function should have the following signature:\nvoid drawGrid(double width, double height)\nThe grid consists of rows/columns of squares that span the x-z plane, with each square being made up of two triangles. The width parameter gives the number of of squares the grid contains on the x-axis, and the height parameter gives the number of squares the grid contains on the z-axis.\nEach square is exactly one unit wide on both the x and z axes.\nThe y axis value of each vertex is derived from its location on the x and z axes. The y-axis value is equal to the cosine (in radians) of the x-axis value + the cosine (in radians) of the z-axis value.\nYou must use GL_TRIANGLES to draw the mesh. You do not need to specify vertex colours.\nThe vertices must be given in anticlockwise order for the triangles as seen from above. In each pair of triangles, the triangle closer to the origin must be drawn starting from the closest vertex to the origin (minimum x and z), and the triangle farther away from the origin must be drawn starting from the farthest vertex from the origin (maximum x and z).\nThe grid should fill in each column (each group of height tiles that share x-axis values) before proceeding to the next column.\nThe image above shows the grid drawn in wireframe. You do not need to specify that drawing will be done in wireframe.\nYou can assume that if required, you have access to a Vector3 class that represents a 3D vector, and exposes fields named x, y, and z.\nYou can assume that you have access to standard trigonometric functions such as cos(), and that they assume input parameters are in radians by default.\nImportant note:\nCoderunner requires certain OpenGL functions to use special versions:\nInstead of glVertex3d(), use CRVertex3d()",
+        "answer": "NULL",
+        "generated": [
+            "EMPTY"
+        ]
+    },
+    {
+        "id": "2022a15b",
+        "question": "Write a function drawGrid(), that generates the image below:\nImage description: An arbitrary sheet floating in space. The sheet is made up of a grid of squares, with each square being made up of two triangles. The sheet is shown in wireframe.\nYour function should have the following signature:\nvoid drawGrid(double width, double height)\nThe grid consists of rows/columns of squares that span the x-z plane, with each square being made up of two triangles. The width parameter gives the number of of squares the grid contains on the x-axis, and the height parameter gives the number of squares the grid contains on the z-axis.\nEach square is exactly one unit wide on both the x and z axes.\nThe y axis value of each vertex is derived from its location on the x and z axes. The y-axis value is equal to the cosine (in radians) of the x-axis value + the cosine (in radians) of the z-axis value.\nYou must use GL_TRIANGLES to draw the mesh. You do not need to specify vertex colours.\nThe vertices must be given in anticlockwise order for the triangles as seen from above. In each pair of triangles, the triangle closer to the origin must be drawn starting from the closest vertex to the origin (minimum x and z), and the triangle farther away from the origin must be drawn starting from the farthest vertex from the origin (maximum x and z).\nThe grid should fill in each column (each group of height tiles that share x-axis values) before proceeding to the next column.\nThe image above shows the grid drawn in wireframe. You do not need to specify that drawing will be done in wireframe.\nYou can assume that if required, you have access to a Vector3 class that represents a 3D vector, and exposes fields named x, y, and z.\nYou can assume that you have access to standard trigonometric functions such as cos(), and that they assume input parameters are in radians by default.\nImportant note:\nCoderunner requires certain OpenGL functions to use special versions:\nInstead of glVertex3d(), use CRVertex3d()",
+        "answer": "NULL",
+        "generated": [
+            "EMPTY"
+        ]
+    },
+    {
+        "id": "2022a16a",
+        "question": "Write a function projectVertex(), that computes the projection of a vertex on to a plane for the purpose of creating a shadow.\nThe plane is given in the form ax + by + cz + d = 0\nYour function should have the following signature:\nVector3 projectVertex(Vector3 vertex, double a, double b, double c, double d)\nThe function should return the location of a vertex given by the vertex parameter when projected from the origin on to a plane given by the a, b, c,  & d parameters.\nIf working correctly, the program will produce the following output:\nImage description: A ruby shape on top of a dark triangle on top of a grey square.\nYou can assume that Vector3 is a class that represents a 3D vector, and exposes fields named x, y, and z.\nYour code can assume that this is a straightforward case for generating shadows: the light source (the origin of the projection) is located at (0, 0, 0), and you do not need to account for any transformations on the object.\nYou do not need to handle the actual display of the object or the shadow, only the calculation of the shadow vertex location.",
+        "answer": "NULL",
+        "generated": [
+            "EMPTY"
+        ]
+    },
+    {
+        "id": "2022a16b",
+        "question": "Write a function projectVertex(), that computes the projection of a vertex on to a plane for the purpose of creating a shadow.\nThe plane is given in the form ax + by + cz + d = 0\nYour function should have the following signature:\nVector3 projectVertex(Vector3 vertex, double a, double b, double c, double d)\nThe function should return the location of a vertex given by the vertex parameter when projected from the origin on to a plane given by the a, b, c,  & d parameters.\nIf working correctly, the program will produce the following output:\nImage description: A red object resembling the shape of a ruby is shown floating in space, with a grey square representing the plane, a triangular shadow of the object is shown on the plane as black.\nYou can assume that Vector3 is a class that represents a 3D vector, and exposes fields named x, y, and z.\nYour code can assume that this is a straightforward case for generating shadows: the light source (the origin of the projection) is located at (0, 0, 0), and you do not need to account for any transformations on the object.\nYou do not need to handle the actual display of the object or the shadow, only the calculation of the shadow vertex location.",
+        "answer": "NULL",
+        "generated": [
+            "EMPTY"
+        ]
+    },
+    {
+        "id": "2022a17a",
+        "question": "Write a function phongDirectionalSource() which implements the achromatic version of the Phong Illumination equation for a directional light source.\nIf the function is implemented correctly you should get the following result (Note: this image is rendered using only your implementation and does not use OpenGL lights or materials)\nImage description: A white circle on top of a grey circle on top of a yellow background.\nYour function should have the following signature:\ndouble phongDirectionalSource(double ambientIntensity, double diffuseIntensity, double specularIntensity, double ambientReflecCoef, double diffuseReflecCoef, double specularReflecCoef, double shininess, Vector3 pointOnSurface, Vector3 surfaceNormal, Vector3 incomingLightDirection, Vector3 viewPoint)\nA Vector3 class representing a 3D vector is available to you, with the following member functions:\nVector3 Vector3::normalized() //returns a vector pointing in the same direction with length 1\ndouble Vector3::magnitude() //returns the length of the vector\nvoid Vector3::normalize() //normalises the vector (destructive)\nIn addition, you can assume the + and - operators are available for the Vector3 class.\nYou can assume that the following functions are also defined:\ndouble dot(Vector3 a, Vector3 b) //returns the dot product of a and b\nVector3 cross (Vector3 a, Vector3 b) //returns the cross product of a and b\ndouble pow(double a, double b) //returns a to the power of b\nHint: The parameter incomingLightDirection refers to the direction of travel of light rays emitted from the light source.",
+        "answer": "NULL",
+        "generated": [
+            "EMPTY"
+        ]
+    },
+    {
+        "id": "2022a17b",
+        "question": "Write a function phongDirectionalSource() which implements the achromatic version of the Phong Illumination equation for a directional light source.\nIf the function is implemented correctly you should get the following result (Note: this image is rendered using only your implementation and does not use OpenGL lights or materials)\nImage description: The background is bright yellow, and a grey sphere is shown with a medium level of lighting, with a bright white highlight covering a small portion of the surface of the sphere.\nYour function should have the following signature:\ndouble phongDirectionalSource(double ambientIntensity, double diffuseIntensity, double specularIntensity, double ambientReflecCoef, double diffuseReflecCoef, double specularReflecCoef, double shininess, Vector3 pointOnSurface, Vector3 surfaceNormal, Vector3 incomingLightDirection, Vector3 viewPoint)\nA Vector3 class representing a 3D vector is available to you, with the following member functions:\nVector3 Vector3::normalized() //returns a vector pointing in the same direction with length 1\ndouble Vector3::magnitude() //returns the length of the vector\nvoid Vector3::normalize() //normalises the vector (destructive)\nIn addition, you can assume the + and - operators are available for the Vector3 class.\nYou can assume that the following functions are also defined:\ndouble dot(Vector3 a, Vector3 b) //returns the dot product of a and b\nVector3 cross (Vector3 a, Vector3 b) //returns the cross product of a and b\ndouble pow(double a, double b) //returns a to the power of b\nHint: The parameter incomingLightDirection refers to the direction of travel of light rays emitted from the light source.",
+        "answer": "NULL",
+        "generated": [
+            "EMPTY"
+        ]
+    }
+]
