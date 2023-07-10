@@ -52,7 +52,6 @@ P' = \begin{pmatrix} 2 \\ -8 \\ 2 \\ 1 \end{pmatrix}
 Consider a scene with a single light source, that emits white light. This light passes through one translucent object such that red light is reflected while other light is transmitted. After passing through this object, the light then hits a second, opaque object that appears yellow.
 You can assume that no objects in the scene other than the light source emit light, and that the only light interactions that may occur are transmission, reflection, and absorption.
 Which of the following statements about the second object is true?
-
 a. The object's surface must reflect red light, and absorb blue and green light.
 b. The object's surface must absorb blue light, reflect green light, and may either absorb or reflect red light.
 c. The object's surface must reflect red and green light, and absorb blue light.
@@ -98,12 +97,12 @@ e. glRotatef(150, 0, 0, 1);
 
 The correct answer is: glRotatef(-120, 0, 0, 1);
 
-2022b07
+2022b07a
 
 The image below on the left is used to texture map a rectangle as illustrated in the image below on the right. Assume the bottom-left vertex of the rectangle has the texture coordinates (2, 1) and that the texture parameter GL_REPEAT is set for both texture coordinate directions.
 What are the texture coordinates of the other three vertices?
 NOTE: the texture coordinate of the bottom-left vertex is (2,1) and not (0,0)!
-texture mapped polygon
+Image description: The picture of a sheep facing to the right is used as the base image. The image is repeated 4 times in the horizontal direction and 2 times in the vertical direction, where the top half of the second image in the vertical direction is cropped. In the filled texture map, the sheep is facing left.
 Select one:
 a. Bottom-right vertex: (-2, 1); Top-left vertex: (2, 2.5); Top-right vertex: (-2, 2.5)
 b. Bottom-right vertex: (4, 0); Top-left vertex: (0, 1.5); Top-right vertex: (4, 1.5)
@@ -113,10 +112,40 @@ e. Bottom-right vertex: (6, 1.5); Top-left vertex: (2, 2.5); Top-right vertex: (
 
 The correct answer is: Bottom-right vertex: (-2, 1); Top-left vertex: (2, 2.5); Top-right vertex: (-2, 2.5)
 
-2022b08
+2022b07b
+
+The image below on the left is used to texture map a rectangle as illustrated in the image below on the right. Assume the bottom-left vertex of the rectangle has the texture coordinates (2, 1) and that the texture parameter GL_REPEAT is set for both texture coordinate directions.
+What are the texture coordinates of the other three vertices?
+NOTE: the texture coordinate of the bottom-left vertex is (2,1) and not (0,0)!
+Image description: In the filled texture map, the base image is flipped and repeated 4 times in the horizontal direction and 1.5 times in the vertical direction. The texture coordinate of the bottom-left vertex is (2,1).
+Select one:
+a. Bottom-right vertex: (-2, 1); Top-left vertex: (2, 2.5); Top-right vertex: (-2, 2.5)
+b. Bottom-right vertex: (4, 0); Top-left vertex: (0, 1.5); Top-right vertex: (4, 1.5)
+c. Bottom-right vertex: (-4, 0); Top-left vertex: (0, 1.5); Top-right vertex: (-4, 1.5)
+d. Bottom-right vertex: (-4, 1); Top-left vertex: (0, 2.5); Top-right vertex: (-4, 2.5)
+e. Bottom-right vertex: (6, 1.5); Top-left vertex: (2, 2.5); Top-right vertex: (6, 2.5)
+
+The correct answer is: Bottom-right vertex: (-2, 1); Top-left vertex: (2, 2.5); Top-right vertex: (-2, 2.5)
+
+2022b08a
 
 The texture image below on the left is mapped onto a triangle producing  the picture below on the right.
-TextureMapping_M001_Final2022
+Image description: The picture of a arrow facing to the right is used as the base image. The image is repeated 3 times in the horizontal direction and shifted up diagonally to the right. The resultant texture map is a triangle. In the filled texture map, the arrow is facing right.
+Assumed the texture is repeated in both coordinate directions and the texture coordinate of the bottom left vertex is (0, 0).
+What are the texture coordinates at the top-left and top-right vertex of the triangle?
+Select one:
+a. The texture coordinate of the top-left vertex is (0, 1) and of the top-right vertex (3, 0).
+b. The texture coordinate of the top-left vertex is (1, 0) and of the top-right vertex (3, 0).
+c. The texture coordinate of the top-left vertex is (1, 0) and of the top-right vertex (0, 3).
+d. The texture coordinate of the top-left vertex is (0, 1) and of the top-right vertex (0, 3).
+e. The texture coordinate of the top-left vertex is (0, 1) and of the top-right vertex (3, 1).
+
+The correct answer is: The texture coordinate of the top-left vertex is (0, 1) and of the top-right vertex (3, 0).
+
+2022b08b
+
+The texture image below on the left is mapped onto a triangle producing  the picture below on the right.
+Image description: In the filled texture map, the base image is repeated 3 times in the horizontal direction and shifted up diagonally. The bottom-right corner of the third base image is mapped to the top-right corner of the filled texture map.
 Assumed the texture is repeated in both coordinate directions and the texture coordinate of the bottom left vertex is (0, 0).
 What are the texture coordinates at the top-left and top-right vertex of the triangle?
 Select one:
@@ -225,7 +254,19 @@ Value of median filtered image at x=3, y=1?
 
 NULL
 
-2022b15
+2022b15a
+
+Given is a function drawShape() which draws a wireframe representation of the letter "L" in the xy-plane as shown in the image below.
+Image description: A letter L is placed on the x-y plane.
+Please write OpenGL code to transform this shape such that you obtain the scene displayed in the image below:
+Image description: A letter L with twice the size is placed on the x-z plane.
+IMPORTANT:
+Please only use OpenGL transformations, e.g. glScalef, glTranslatef, glRotatef
+Please do NOT draw the shape itself - this is done automatically by the uploaded code
+
+NULL
+
+2022b15b
 
 Given is a function drawShape() which draws a wireframe representation of the letter "L" in the xy-plane as shown in the image below.
 Image description: A letter L is placed on the x-y plane. The vertices on the shape are p1 = (0, 0, 0), p2 = (0, 2, 0), p3 = (1.5, 0, 0).
@@ -237,36 +278,60 @@ Please do NOT draw the shape itself - this is done automatically by the uploaded
 
 NULL
 
-2022b16
+2022b16a
 
 Given is a function drawShape() which draws a wireframe representation of the letter "F" in the xy-plane as shown in the image below.
-Wireframe representation of the letter "F" in the xy-plane
+Image description: A letter F is placed on the x-y plane.
 Please write OpenGL code to transform this shape such that you obtain the scene displayed in the image below:
-Transformed shape
+Image description: A letter F with twice the size is placed on the x-z plane and moved one unit to the right.
 IMPORTANT:
 Please only use OpenGL transformations, e.g. glScalef, glTranslatef, glRotatef
 Please do NOT draw the shape itself - this is done automatically by the uploaded code
 
 NULL
 
-2022b17
+2022b16b
+
+Given is a function drawShape() which draws a wireframe representation of the letter "F" in the xy-plane as shown in the image below.
+Image description: A letter F is placed on the x-y plane. The vertices on the shape are p1 = (0, 0, 0), p2 = (0, 2, 0), p3 = (1, 2, 0).
+Please write OpenGL code to transform this shape such that you obtain the scene displayed in the image below:
+Image description: A letter F with twice the size is placed on the x-z plane and moved one unit to the the positive direction of the x-axis. The vertices on the shape are p1 = (1, 0, 0), p2 = (1, 0, 4), p3 = (3, 0, 4).
+IMPORTANT:
+Please only use OpenGL transformations, e.g. glScalef, glTranslatef, glRotatef
+Please do NOT draw the shape itself - this is done automatically by the uploaded code
+
+NULL
+
+2022b17a
 
 Given is an RGB colour cube with side length 2 as illustrated in the image below"
-RGB colour cube with side length 2
+Image description: The image shows a RGB colour cube with side length 2. The colours shown are green, cyan, blue, pink, red, and yellow in counterclockwise order, where red is on the x-axis.
 Please write OpenGL code to rotate this cube as illustrated in the image below.
-Transformed RGB colour cube
+Image description: The image shows a RGB colour cube with side length 2 shifted one unit to the right. The colours shown are red, pink, white, cyan, green, and black in counterclockwise order, where green is on the x-axis.
 IMPORTANT:
 Please only use OpenGL transformations, e.g. glTranslatef, glRotatef
 Please do NOT draw the shape itself - this is done automatically by the uploaded code
 
 NULL
 
-2022b18
+2022b17b
 
-Given is a function drawTorus() which draws a torus with colored "blobs" centred at the origin and aligned with the z-axis as shown in the image below.
-Torus centered at origin and aligned with z-axis
+Given is an RGB colour cube with side length 2 as illustrated in the image below"
+Image description: The image shows a RGB colour cube with side length 2. The point representing white is on (2, 2, 2), the point representing blue is on (0, 0, 2), and the point representing red is on (2, 0, 0).
+Please write OpenGL code to rotate this cube as illustrated in the image below.
+Image description: The image shows a RGB colour cube with side length 2 shifted one unit to the positive direction of the x-axis. The point representing white is on (1, 0, 2), the point representing blue is on (3, 2, 2), and the point representing red is on (1, 2, 0).
+IMPORTANT:
+Please only use OpenGL transformations, e.g. glTranslatef, glRotatef
+Please do NOT draw the shape itself - this is done automatically by the uploaded code
+
+NULL
+
+2022b18a
+
+Given is a function drawTorus() which draws a torus with coloured "blobs" centered at the origin and aligned with the z-axis as shown in the image below.
+Image description: The image shows a torus centered at the origin and aligned with z-axis. The torus is coloured with green, blue, yellow, and pink in counterclockwise order, where green is on the x-axis.
 Please write OpenGL code to render the the chain of tori displayed in the image below:
-Chain of tori
+Image description: The image shows a chain of tori. The first torus is centered at the origin, with yellow, pink, green, and blue in counterclockwise order, where yellow is on the x-axis. The second torus is centered at (1.5, 0, 0), with green, blue, yellow, and pink in counterclockwise order, where green is to the right of yellow on the x-axis. The third torus is centered at (0, 1.5, 0), with green, blue, yellow, and pink in counterclockwise order, where blue is above pink on the y-axis.
 Note that the second torus is rotated such that it lies in the xz-plane and has a centre of (1.5, 0, 0), and the third torus lies again in the zy-plane and has a centre of (0, 1.5, 0).
 IMPORTANT:
 Your code must first draw the torus centered at the origin, then the torus centered at (1.5, 0, 0), and then the torus centered at (0, 1.5, 0). Your code should have the format:
@@ -280,10 +345,29 @@ You can use any OpenGL transformations, e.g. glRotatef, glTranslatef, glScalef, 
 
 NULL
 
-2022b19
+2022b18b
+
+Given is a function drawTorus() which draws a torus with coloured "blobs" centered at the origin and aligned with the z-axis as shown in the image below.
+Image description: The image shows a torus centered at the origin and on the x-y plane. The torus is coloured with green, blue, yellow, and pink in counterclockwise order, where green is on the x-axis.
+Please write OpenGL code to render the the chain of tori displayed in the image below:
+Image description: The image shows a chain of tori. The first torus is centered at the origin and on the x-y plane, with yellow, pink, green, and blue in counterclockwise order, where yellow is on the x-axis. The second torus is centered at (1.5, 0, 0) and on the x-z plane, with green, blue, yellow, and pink in counterclockwise order, where green is to the right of yellow on the x-axis. The third torus is centered at (0, 1.5, 0) and on the y-z plane, with green, blue, yellow, and pink in counterclockwise order, where blue is above pink on the y-axis.
+Note that the second torus is rotated such that it lies in the xz-plane and has a centre of (1.5, 0, 0), and the third torus lies again in the zy-plane and has a centre of (0, 1.5, 0).
+IMPORTANT:
+Your code must first draw the torus centered at the origin, then the torus centered at (1.5, 0, 0), and then the torus centered at (0, 1.5, 0). Your code should have the format:
+<insert your transformations>
+drawTorus();
+<insert your transformations>
+drawTorus();
+<insert your transformations>
+drawTorus();
+You can use any OpenGL transformations, e.g. glRotatef, glTranslatef, glScalef, glPushMatrix and glPopMatrix;
+
+NULL
+
+2022b19a
 
 The image below is used to texture map a rectangle:
-Mitre Peak
+Image description: A mountain.
 The texture mapping code to be used is:
 glBegin(GL_QUADS);
 glTexCoord2f(0,2);
@@ -296,7 +380,7 @@ glTexCoord2f(0,B);
 glVertex3f(0,4,0);
 glEnd();
 and produces the image shown below:
-Texture mapped rectangle
+Image description: A mountain facing downwards, repeated 2 times horizontally and 2 times vertically.
 Please copy and paste the following code to define the correct values for the variables A, B and C, i.e.
 A=<Your Answer>;
 B=<Your Answer>;
@@ -304,10 +388,34 @@ C=<Your Answer>;
 
 NULL
 
-2022b20
+2022b19b
+
+The image below is used to texture map a rectangle:
+Image description: A mountain facing upright.
+The texture mapping code to be used is:
+glBegin(GL_QUADS);
+glTexCoord2f(0,2);
+glVertex3f(0,0,0);
+glTexCoord2f(A,C);
+glVertex3f(6,0,0);
+glTexCoord2f(A,B);
+glVertex3f(6,4,0);
+glTexCoord2f(0,B);
+glVertex3f(0,4,0);
+glEnd();
+and produces the image shown below:
+Image description: The base image is rotated 180 degrees, and repeated 2 times horizontally and 2 times vertically.
+Please copy and paste the following code to define the correct values for the variables A, B and C, i.e.
+A=<Your Answer>;
+B=<Your Answer>;
+C=<Your Answer>;
+
+NULL
+
+2022b20a
 
 The image below is used to texture map a square:
-Colour square
+Image description: The image shows a 4x4 grid of colours. From left to right, then top to bottom, the colours are red, light green, dark blue, brown, yellow, purple, cyan, dark orange, pink, white, lime, grey, black, light blue, light orange, dark green.
 The texture mapping code to be used is:
 glBegin(GL_QUADS);
 glTexCoord2f(0.0,0.5);
@@ -320,7 +428,7 @@ glTexCoord2f(E,F);
 glVertex3f(0,4,0);
 glEnd();
 and produces the image shown below:
-Textured square
+Image description: The image shows a shifted version of the base image, with the top left corner of the texture map being the the top right corner of the red tile, the bottom left corner being the top left corner of the pink tile, the bottom right corner being the bottom left corner of the dark green tile, and the top right corner being the bottom right corner of the dark orange tile.
 Please use the following code to define the correct values for the variables A, B, C, D, E, F. NOTE: The texture coordinates must be between 0 and 1. Write the correct values into the answer space using C/C++ notation.
 A=?;
 B=?;
@@ -328,7 +436,31 @@ etc.
 
 NULL
 
-2022b21
+2022b20b
+
+The image below is used to texture map a square:
+Image description: The image shows a 4x4 grid of colours.
+The texture mapping code to be used is:
+glBegin(GL_QUADS);
+glTexCoord2f(0.0,0.5);
+glVertex3f(0,0,0);
+glTexCoord2f(A,B);
+glVertex3f(4,0,0);
+glTexCoord2f(C,D);
+glVertex3f(4,4,0);
+glTexCoord2f(E,F);
+glVertex3f(0,4,0);
+glEnd();
+and produces the image shown below:
+Image description: The image shows a shifted version of the base image. Using grid coordinates from the base image, where the bottom left corner of the base image is (0, 0) and the top right corner of the base image is (4, 4), then the top left corner of the texture map is (1, 4), the bottom left corner is (0, 2), the bottom right corner is (3, 0), and the top right corner is (4, 2).
+Please use the following code to define the correct values for the variables A, B, C, D, E, F. NOTE: The texture coordinates must be between 0 and 1. Write the correct values into the answer space using C/C++ notation.
+A=?;
+B=?;
+etc.
+
+NULL
+
+2022b21a
 
 In this exercise you need to complete the function below defining an intersection between a Ray and a convex quadrilateral with circular hole. The convex quadrilateral (and its circular hole) lie on a plane with the normal n. The quadrilateral is defined by four vertices A, B, C and D, and the circular hole by its centre and radius.
 Complete the template in the answer space for the function for computing the intersection between a ray and a quadrilateral with a circular hole. You can use the algorithms explained in the lecture slide and/or use any of your solutions of the graded and ungraded CodeRunner quizzes.
@@ -351,11 +483,38 @@ float v1.Dot(Vector v2) - returns the dot product of vector v1 and v2
 Vector v1.Cross(Vector v2) - returns the cross product of vector v1 and v2
 You can compute the length of a vector v as "sqrt(v.Dot(v))"
 Please paste the completed code fragment into the answer space. If your solution is correct you should get the following image (note: the quadrilateral is the green surface at the bottom and the circular hole appears blue (since we can see the background colour through it):
-OpenGL_RayTracing_RayQuadCircleHoleIntersection_M008
+Image description: A red sphere is placed above a green quadrilateral with a circular hole in it.
 
 NULL
 
-2022b22
+2022b21b
+
+In this exercise you need to complete the function below defining an intersection between a Ray and a convex quadrilateral with circular hole. The convex quadrilateral (and its circular hole) lie on a plane with the normal n. The quadrilateral is defined by four vertices A, B, C and D, and the circular hole by its centre and radius.
+Complete the template in the answer space for the function for computing the intersection between a ray and a quadrilateral with a circular hole. You can use the algorithms explained in the lecture slide and/or use any of your solutions of the graded and ungraded CodeRunner quizzes.
+NOTE: A point is inside a convex quadrilateral, if it lies on the same side of all edges when traversing the edges in clockwise or anti-clockwise order. We can hence use the same inside-outside test as for the triangle, except that we have four instead of three edges.
+double QuadWithCircleHole::Intersect(Vector source, Vector d)
+{
+	// complete calculation of ray-quadrilateral-with-circular-hole intersection in the answer box below
+	// and return correct value for t. If there is no intersection t should be -1.0
+}
+Note: The following variables and functions are already defined for you to use:
+Vector A, B, C, D - coordinates of the 4 vertices of the convex quadrilateral in winding order (either clockwise or anti-clockwise)
+Vector n - normal of the plane of the quadrilateral
+Vector Centre - centre of the circular hole
+double radius - radius of the circular hole
+Vector: v1+v2 - adds the vectors v1 and v2 and returns resulting vector
+Vector: v1-v2 - subtracts v2 from v1 and returns resulting vector
+Vector: v1 * t - scales the vector v1 by t and returns resulting vector
+Vector v.Scale(float a, float b, float c) - scales each component of the vector v
+float v1.Dot(Vector v2) - returns the dot product of vector v1 and v2
+Vector v1.Cross(Vector v2) - returns the cross product of vector v1 and v2
+You can compute the length of a vector v as "sqrt(v.Dot(v))"
+Please paste the completed code fragment into the answer space. If your solution is correct you should get the following image (note: the quadrilateral is the green surface at the bottom and the circular hole appears blue (since we can see the background colour through it):
+Image description: A red sphere is placed above a green quadrilateral with a circular hole in it. There exists a gap between the red sphere and the green quadrilateral, and the background colour is visible through the gap.
+
+NULL
+
+2022b22a
 
 Given is a cubic spline curve c(t)=T M G with the geometric constraint vector
 G=(p0, p1, r0, r0.5)^T
@@ -380,7 +539,36 @@ p1.setVector(0, 0, 3);      // This is p1
 r0.setVector(-10, 10, 0);   // This is r0
 r05.setVector(0, 0, 10);    // This is r05
 and should result in the image below:
-OpenGL_ParametricCurvesSurfs_ConstructSplineCurve_H008
+Image description: A red curve in space.
+
+NULL
+
+2022b22b
+
+Given is a cubic spline curve c(t)=T M G with the geometric constraint vector
+G=(p0, p1, r0, r0.5)^T
+The curve c(t) is defined by the four conditions c(0)=p0 (start point), c(1)=p1 (end point), c'(0)=r0 (start tangent), and c'(0.5)=r0.5 (mid-point tangent).
+Implement this curve by computing its basis functions and completing the code fragment below.
+TIP: You can use the same idea we used in the lecture to derive the basis functions of the Hermite curve.
+Note that in order to get the basis functions you need to invert a 4x4 matrix.
+This is easiest done by using an online tool such as:
+https://www.wolframalpha.com/calculators/matrix-inverse-calculator
+Please write your answer into the answer space using the following format:
+double Basis1(double t){ return <Insert code>;} // B1(t) 
+double Basis2(double t){ return <Insert code>;} // B2(t) 
+double Basis3(double t){ return <Insert code>;} // B3(t)
+double Basis4(double t){ return <Insert code>;} // B4(t)
+CVec3df c(float t, CVec3df p0, CVec3df p1, CVec3df r0, CVec3df r05) { 
+   CVec3df p=<Insert code>; 
+   return p; 
+}
+The first test case uses the geometric constraints
+p0.setVector(4, 0, 0);      // This is p0
+p1.setVector(0, 0, 3);      // This is p1
+r0.setVector(-10, 10, 0);   // This is r0
+r05.setVector(0, 0, 10);    // This is r05
+and should result in the image below:
+Image desciption: A cubic spline curve in space, starting from p0 = (4, 0, 0), ending at p1 = (0, 0, 3), with start tangent r0 = (-10, 10, 0) and mid-point tangent r05 = (0, 0, 10).
 
 NULL
 
@@ -393,7 +581,7 @@ Border handling: Border pixels should be handled with the BorderIgnore strategy,
 Return the result image in our list of lists representation. Resulting pixels are floating point values, without any rounding!
 Note: You may assume that the Python3 function 'createInitializedGreyscalePixelArray(image_width, image_height, initValue)' is available, which creates an empty greyscale array (values 0) as a list of lists of integers or a greyscale array with values 0.0 as a list of lists of floats (if initValue is 0.0).
 For example:
-Test	Result
+Test1
 image_width = 6
 image_height = 5
 pixel_array = [ [6, 3, 2, 6, 4, 7], 
@@ -402,11 +590,13 @@ pixel_array = [ [6, 3, 2, 6, 4, 7],
                 [7, 6, 6, 2, 7, 3], 
                 [2, 2, 2, 5, 1, 2] ]
 printPixelArray(computeInterquartileRange3x3(pixel_array, image_width, image_height))
+Result1
 0.0 0.0 0.0 0.0 0.0 0.0
 0.0 4.0 5.0 5.5 4.5 0.0
 0.0 4.0 5.0 5.5 5.5 0.0
 0.0 4.5 4.5 5.5 5.5 0.0
 0.0 0.0 0.0 0.0 0.0 0.0
+Test2
 image_width = 7
 image_height = 6
 pixel_array = [ [244, 126, 101, 174, 168, 75, 62], 
@@ -416,6 +606,7 @@ pixel_array = [ [244, 126, 101, 174, 168, 75, 62],
                 [85, 123, 49, 53, 106, 60, 197], 
                 [113, 196, 35, 19, 126, 130, 48] ] 
 printPixelArray(computeInterquartileRange3x3(pixel_array, image_width, image_height))
+Result2
 0.0 0.0 0.0 0.0 0.0 0.0 0.0
 0.0 68.0 48.0 83.5 95.0 123.0 0.0
 0.0 121.5 110.5 107.5 92.5 102.5 0.0
@@ -445,7 +636,7 @@ def computeCumulativeHistogram(pixel_array, image_width, image_height, nr_bins =
         cumulative_histogram[q] = running_sum
     return cumulative_histogram
 For example:
-Test	Result
+Test1
 image_width = 6
 image_height = 5
 pixel_array = [ [6, 3, 2, 6, 4, 7], 
@@ -457,6 +648,7 @@ nr_bins = 8
 lookup_table= computeLookupTableHistEq(pixel_array, image_width, image_height, nr_bins)
 for q in range(len(lookup_table)):
    print("{}: {}".format(q, round(lookup_table[q], 2)))
+Result1
 0: 0.0
 1: 0.48
 2: 2.41
@@ -465,6 +657,7 @@ for q in range(len(lookup_table)):
 5: 3.86
 6: 5.31
 7: 7.0
+Test2
 image_width = 6
 image_height = 5
 pixel_array = [ [3, 7, 2, 3, 2, 3], 
@@ -476,6 +669,7 @@ nr_bins = 8
 lookup_table= computeLookupTableHistEq(pixel_array, image_width, image_height, nr_bins)
 for q in range(len(lookup_table)):
    print("{}: {}".format(q, round(lookup_table[q], 2)))
+Result2
 0: 0.0
 1: 1.04
 2: 3.37
