@@ -1,5 +1,7 @@
+import codecs
+
 def preprocess(filename_input, filename_output):
-    file = open(filename_input, "r")
+    file = codecs.open(filename_input, "r", "utf-8")
     text = file.read()
     file.close()
     l = text.split("\n")
@@ -12,13 +14,13 @@ def preprocess(filename_input, filename_output):
     k = 1
     l = ["{}{:02d}\n".format(filename_input, k)] + l
     for i in range(1, len(l)):
-        if l[i] == "~~~":
+        if l[i].strip() == "~~~":
             k += 1
             l[i] = "\nNULL\n\n{}{:02d}\n".format(filename_input, k)
-        if l[i] == "~~":
+        if l[i].strip() == "~~":
             k += 1
             l[i] = "\n{}{:02d}\n".format(filename_input, k)
-    file = open(filename_output, "w")
+    file = codecs.open(filename_output, "w", "utf-8")
     file.write("\n".join(l))
     file.write("\n")
     file.close()
