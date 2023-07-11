@@ -59,6 +59,7 @@ function refresh() {
             checked.push(i);
         }
     }
+    MathJax.typeset();
 }
 
 function prev_question() {
@@ -181,18 +182,6 @@ function save() {
     link.href = csvURL;
     link.download = 'data.csv';
     link.dispatchEvent(new MouseEvent(`click`, {bubbles: true, cancelable: true, view: window}));
-}
-
-function load() {
-    const file = fileInput.files[0];
-    const reader = new FileReader();
-    reader.onload = function (e) {
-        const csvData = e.target.result;
-        const rows = csvData.split('\n');
-        const array = rows.map(row => row.split(','));  
-        callback(array);
-    };
-    reader.readAsText(file);
 }
 
 document.onkeydown = function(e) {
