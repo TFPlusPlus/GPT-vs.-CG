@@ -1,8 +1,9 @@
 import json
 import math
+import codecs
 
 def parse(filename_input, filename_output, num_of_generations = 10):
-    with open(filename_input, 'r') as file:
+    with codecs.open(filename_input, 'r', "utf-8") as file:
         questions = []
         while True:
             id = file.readline()
