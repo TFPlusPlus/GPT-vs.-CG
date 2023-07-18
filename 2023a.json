@@ -1,7 +1,449 @@
 [
     {
         "id": "2023a01",
-        "question": "Given are two vectors\r\n$${\\bf u} = \\begin{pmatrix} 3 \\\\ 1  \\\\ c \\end{pmatrix}$$\nand\r\n$${\\bf v} = \\begin{pmatrix} 2 \\\\ 4  \\\\ -2 \\end{pmatrix}$$\n.\r\nFor what value of c are u and v orthogonal?\r\nSelect one:\r\na.\r\n-4\r\nb.\r\n-2\r\nc.\r\n0\r\nd.\r\n3\r\ne.\r\n5\r\n\r\nThe correct answer is: 5\r\n\r\n2023a02\r\n\r\nGiven is a plane P with a normal n and an unknown vector v.\r\nThe projection of v onto the plane is vP and the projection of the vector v onto the normal n has a length of k.\r\nWhat is the vector v?\r\nSelect one:\r\na.\r\n$${\\bf v}=\\frac{{\\bf v_{plane}}}{|{\\bf v_{plane}}|}-k\\frac{{\\bf n}}{|{\\bf n}|}$$\nb.\r\n$${\\bf v}=\\frac{{\\bf v_{plane}}}{|{\\bf v_{plane}}|}+k\\frac{{\\bf n}}{|{\\bf n}|}$$\nc.\r\nNone of the others\r\nd.\r\n$${\\bf v}={\\bf v_{plane}}-k\\frac{{\\bf n}}{|{\\bf n}|}$$\ne.\r\n$${\\bf v}={\\bf v_{plane}}+k\\frac{{\\bf n}}{|{\\bf n}|}$$\n\r\nThe correct answer is:\r\n$${\\bf v}={\\bf v_{plane}}+k\\frac{{\\bf n}}{|{\\bf n}|}$$\n\r\n2023a03\r\n\r\nGiven are two vectors\r\n$${\\bf u} = \\begin{pmatrix} 0 \\\\ 1  \\\\ 3 \\end{pmatrix}$$\nand\r\n$${\\bf v} = \\begin{pmatrix} c \\\\ 0  \\\\ 0 \\end{pmatrix}$$\n.\r\nAssuming c>0, which of the statements below about the cross product of u and v is true?\r\nSelect one:\r\na.\r\nThe resulting vector is zero, i.e., it is the origin.\r\nb.\r\nNone of the others\r\nc.\r\nThe resulting vector lies in the xy-plane, i.e., its z-coordinate is zero\r\nd.\r\nThe resulting vector lies in the yz-plane, i.e., its x-coordinate is zero\r\ne.\r\nThe resulting vector lies in the xz-plane, i.e., its y-coordinate is zero\r\n\r\nThe correct answer is: The resulting vector lies in the yz-plane, i.e., its x-coordinate is zero\r\n\r\n2023a04\r\n\r\n$$\\small\\text{Consider a plane $P$ defined by the equation $2x - 2y - z = 3$ and a point $Q = \\begin{pmatrix} 3 \\\\ -2  \\\\ 1 \\end{pmatrix}$.}$$\n$$\\small\\text{What is the absolute distance of the point $Q$ to the plane $P$?}$$\nSelect one:\r\na.\r\n3\r\nb.\r\n2\r\nc.\r\n0 (the point is on the plane)\r\nd.\r\n1\r\ne.\r\n4\r\n\r\nThe correct answer is: 2\r\n\r\n2023a05\r\n\r\nWhich of the 3D homogeneous matrices below first translates a point by the vector\r\n$$P = \\begin{pmatrix} 1 \\\\ 2 \\\\ 3  \\end{pmatrix}$$\nand then rotates it by 90 degree around the x-axis?\r\nAnswer\r\na.\r\n$$\\begin{pmatrix} 1 & 0 & 0 & 1 \\\\ 0 & 0 & 1 & 3 \\\\ 0 & -1 & 0 & -2 \\\\ 0 & 0 & 0 & 1$$\n$$\\end{pmatrix}$$\nb.\r\n$$\\begin{pmatrix} 1 & 0 & 0 & 1 \\\\ 0 & 0 & -1 & 2 \\\\ 0 & 1 & 0 & 3 \\\\ 0 & 0 & 0 & 1$$\n$$\\end{pmatrix}$$\nc.\r\n$$\\begin{pmatrix} 1 & 0 & 0 & 1 \\\\ 0 & 0 & -1 & -3 \\\\ 0 & 1 & 0 & 2 \\\\ 0 & 0 & 0 & 1 \\end{pmatrix}$$\nd.\r\nNone of the others.\r\ne.\r\n$$\\begin{pmatrix} 1 & 0 & 0 & 1 \\\\ 0 & 0 & 1 & 2$$\n$$\\\\ 0 & -1 & 0 & 3 \\\\ 0 & 0 & 0 & 1$$\n$$\\end{pmatrix}$$\n\r\nThe correct answer is:\r\n$$\\begin{pmatrix} 1 & 0 & 0 & 1 \\\\ 0 & 0 & -1 & -3 \\\\ 0 & 1 & 0 & 2 \\\\ 0 & 0 & 0 & 1 \\end{pmatrix}$$\n\r\n2023a06\r\n\r\nWhat is the minimum number of vertices required to draw 20 connected quadrilaterals (like a row of a chessboard) using GL_QUAD_STRIP?\r\nSelect one:\r\na.\r\n80\r\nb.\r\n60\r\nc.\r\n22\r\nd.\r\n42\r\ne.\r\n40\r\n\r\nThe correct answer is: 42\r\n\r\n2023a07\r\n\r\nA light source with magenta light illuminates a cyan coloured object. What is the perceived colour of the object?\r\nSelect one:\r\na.\r\nGreen\r\nb.\r\nBlue\r\nc.\r\nWhite\r\nd.\r\nRed\r\ne.\r\nBlack\r\n\r\nThe correct answer is: Blue\r\n\r\n2023a08\r\n\r\nWhich of the following statements is false?\r\nSelect one:\r\na.\r\nThe interaction of light with a material can be described using a spectral response function.\r\nb.\r\nMaterials can absorb, reflect, and/or transmit light.\r\nc.\r\nThe saturation (or purity) of a colour describes the percentage of luminance residing in the dominant component of the spectrum.\r\nd.\r\nDifferent spectral density functions are perceived as different colours.\r\ne.\r\nThe spectral density function shows the strength of the variations(energy) as a function of frequency.\r\n\r\nThe correct answer is: Different spectral density functions are perceived as different colours.\r\n\r\n2023a09\r\n\r\nGiven is a triangle with the RGB vertex colours (0.8, 0.6, 0.2) at vertex A, (0.1, 0.1, 0.1) at vertex B, and (0.2, 0.0, 0.6) at vertex C. What us the RGB colour of the point half-way between vertex A and B?\r\nSelect one:\r\na.\r\n(0.7, 0.5, 0.1)\r\nb.\r\nIt depends on the orientation of the triangle.\r\nc.\r\n(0.45, 0.35, 0.15)\r\nd.\r\n(0.5, 0.3, 0.4)\r\ne.\r\n(0.9, 0.7, 0.3)\r\n\r\nThe correct answer is: (0.45, 0.35, 0.15)\r\n\r\n2023a10\r\n\r\nWhich of the following statements about colour spaces is false?\r\nSelect one:\r\na.\r\nThe colour gamut describes the range of colours that can be reproduced on an output device.\r\nb.\r\nIf we represent two pure spectral colours (i.e., rainbow colours) in HSV coordinates, then linearly interpolating these colours gives also a pure spectral colour (rainbow colour).\r\nc.\r\nIf we represent two pure spectral colours (i.e., rainbow colours) in RGB coordinates, then linearly interpolating these colours gives also a pure spectral colour (rainbow colour).\r\nd.\r\nThe HSV colour space is more convenient and intuitive than the RGB colour space for colour design.\r\ne.\r\nThe RGB colour space mirrors the way colours are represented in display devices, i.e., as combination of red, green and blue light.\r\n\r\nThe correct answer is: If we represent two pure spectral colours (i.e., rainbow colours) in RGB coordinates, then linearly interpolating these colours gives also a pure spectral colour (rainbow colour).\r\n\r\n2023a11\r\n\r\nThe CIE XYZ colour space may be represented as a projection on the 2D plane: x + y + Z = 1.\r\nGiven the color (2, 4, 2), what is the corresponding 2D colour in the CIE chromaticity diagram?\r\nSelect one:\r\na.\r\n(0.25, 0.5)\r\nb.\r\n(0.5, 1.0)\r\nc.\r\n(2, 4)\r\nd.\r\n(1, 2)\r\ne.\r\n(0.2, 0.4)\r\n\r\nThe correct answer is: (0.25, 0.5)\r\n\r\n2023a12\r\n\r\nWhich of the following statements about shadows is false?\r\nSelect one:\r\na.\r\nShadow maps are calculated by rendering a scene from the light's perspective.\r\nb.\r\nThe shadow of a cube is always a square or rectangle regardless of the orientation of the cube and position of the light source.\r\nc.\r\nWithout shadows it is difficult to perceive the position of an object with respect to a ground plane.\r\nd.\r\nThe projected shadow of a 3D object cast on a ground plane can be computed by multiplying all vertices of the object with a matrix.\r\ne.\r\nShadow maps can be used to compute shadows for any surface.\r\n\r\nThe correct answer is: The shadow of a cube is always a square or rectangle regardless of the orientation of the cube and position of the light source.\r\n\r\n2023a13\r\n\r\nGiven is a uvn-coordinate system with the origin \r\n$$O_{uvn} = \\begin{pmatrix} 1 \\\\ 2  \\\\ -1 \\end{pmatrix}$$\nand the coordinate axis \r\n$${\\bf u} = \\begin{pmatrix} 0 \\\\ -1  \\\\ 0 \\end{pmatrix}\\text{ ,  } {\\bf v} = \\begin{pmatrix} 1 \\\\ 0  \\\\ 0 \\end{pmatrix}\\text{  and } {\\bf n} = \\begin{pmatrix} 0 \\\\ 0  \\\\ 1 \\end{pmatrix}$$\nGiven is a point P with the uvn-coordinates \r\n$${\\bf p}_{uvn} = \\begin{pmatrix} 2 \\\\ 1  \\\\ 3 \\end{pmatrix}$$\n.\r\nWhat are the xyz-coordinates (world coordinates) of this point?\r\nSelect one:\r\na.\r\n$$\\begin{pmatrix} 1 \\\\ 1  \\\\ 4 \\end{pmatrix}$$\nb.\r\n$$\\begin{pmatrix} 1 \\\\ -1  \\\\ 4 \\end{pmatrix}$$\nc.\r\n$$\\begin{pmatrix} 3 \\\\ 3  \\\\ 2 \\end{pmatrix}$$\nd.\r\n$$\\begin{pmatrix} 2 \\\\ 0  \\\\ 2 \\end{pmatrix}$$\ne.\r\n$$\\begin{pmatrix} 3 \\\\ -3  \\\\ 2 \\end{pmatrix}$$\n\r\nThe correct answer is:\r\n$$\\begin{pmatrix} 2 \\\\ 0  \\\\ 2 \\end{pmatrix}$$\n\r\n2023a14\r\n\r\nGiven is a scene containing an illuminated object. The scene contains a single light source with ambient intensity Ia=0.2 and diffuse intensity Id=0.5. The illuminated object has the ambient reflection coefficient \u03c1a=0.5 and \u03c1d=0.9. Given is a point p=(0,0,0)T on the surface of the object. The surface normal at p is (0,0,1)T, the light position is (2,1,2)T, and the viewpoint is  (3,0,0)T.\r\nUsing the (achromatic) Phong Illumination equation discussed in the lecture and assignment, what is the diffuse component of the reflected light at p?\r\nNOTE 1: Please assume that there is no distance dependency, i.e. kc=1.0 and kl=kq=0.0.\r\nNOTE 2: In order to work out your answer you may not need all of the parameters specified above.\r\nSelect one:\r\na.\r\n0.4\r\nb.\r\n0.35\r\nc.\r\n1/3\r\nd.\r\n0.45\r\ne.\r\n0.3\r\n\r\nThe correct answer is: 0.3\r\n\r\n2023a15\r\n\r\nWrite a function areaTriangle(), that takes as parameters three 3D vectors representing points, and returns a floating point value representing the area of the triangle. Your function should have the following signature:\r\ndouble areaTriangle(Vector3 p0, Vector3 p1, Vector3 p2)\r\nYou can assume that Vector3 is a class that represents a 3D vector, and exposes fields named x, y, and z, and that the following functions are available to you:\r\ndouble dot(Vector3 u, Vector3 v) //dot product\r\nVector3 cross(Vector3 u, Vector3 v) //cross product\r\nYou can assume that the Vector3 class has the following member functions available to you:\r\nVector3 Vector3.normalized() //returns a vector pointing in the same direction with length 1\r\ndouble Vector3.magnitude() //returns the length of the vector\r\nYou can assume that the Vector3 class supports the following operators returning objects of type Vector3:\r\nVector3 + Vector3\r\nVector3 - Vector3\r\nFor example:\r\nTest1\r\nVector3 p0 = Vector3(0.0, 0.0, 0.0);\r\nVector3 p1 = Vector3(3.0, 0.0, 0.0);\r\nVector3 p2 = Vector3(0.0, 2.0, 0.0);\r\nprintf(\"area = %.2lf\", areaTriangle(p0,p1,p2));\r\nResult1\r\narea = 3.00\r\nTest2\r\nVector3 p0 = Vector3(0.0, 0.0, 0.0);\r\nVector3 p1 = Vector3(3.0, 0.0, 0.0);\r\nVector3 p2 = Vector3(1.5, 5.0, 0.0);\r\nprintf(\"area = %.2lf\", areaTriangle(p0,p1,p2));\r\nResult2\r\narea = 7.50\r\nTest3\r\nVector3 p0 = Vector3(1.0, 0.0, 2.0);\r\nVector3 p1 = Vector3(2.0, 1.0, 3.5);\r\nVector3 p2 = Vector3(3.0, 2.0, 5.0);\r\nprintf(\"area = %.2lf\", areaTriangle(p0,p1,p2));\r\nResult3\r\narea = 0.00\r\n\r\nNULL\r\n\r\n2023a16\r\n\r\nWrite a function MixHSV(), that takes as a parameter two HSV colours with each component in the range [0...1], and returns the HSV colour which is the average of the two input colours. Your function should have the following signature:\r\nHSVColour MixHSV(HSVColour c1, HSVColour c2)\r\nYou can assume that HSVColour is a class that represents a colour in the 3D HSV space and exposes fields named H, S, and V.\r\nFor example:\r\nTest1\r\nHSVColour mixedColour = MixHSV(HSVColour(0.6, 1.0, 1.0), HSVColour(0.8, 1.0, 1.0));\r\nprintf(\"Mixed HSV colour = (%.2lf, %.2lf, %.2lf)\", mixedColour.H, mixedColour.S, mixedColour.V); \r\nResult1\r\nMixed HSV colour = (0.70, 1.00, 1.00)\r\nTest2\r\nHSVColour mixedColour = MixHSV(HSVColour(0.0, 0.0, 0.0), HSVColour(1.0, 1.0, 1.0));\r\nprintf(\"Mixed HSV colour = (%.2lf, %.2lf, %.2lf)\", mixedColour.H, mixedColour.S, mixedColour.V); \r\nResult2\r\nMixed HSV colour = (0.50, 0.50, 0.50)\r\n\r\nNULL\r\n\r\n2023a17a\r\n\r\nGiven are the vertices\r\nconst int numVertices=9;\r\nconst float vertices[numVertices][2] = { {100,50},{300,50},{150,150},{250,150},{50,200},{150,200},{250,200},{350,200},{200,300} };\r\nWhich calling sequence of these vertices results in the shape below if we use the OpenGL commands glBegin(GL_TRIANGLE_FAN) and glEnd()?\r\nImage description: The image shows a star shape with the bottom two vertices connected by a line. The vertices are labelled according to the vertices array above.\r\nWrite OpenGL code for drawing the shape. You can assume that the following function is defined:\r\nvoid v(int i) {glVertex2fv(vertices[i]);}\r\nYour code should have the following form:\r\nglBegin(GL_TRIANGLE_FAN);\r\nv(<start_index>); // draw first vertex\r\n// draw as many additional vertices as necessary using the above format\r\nglEnd();\r\nIMPORTANT:\r\n1) Use as first vertex the vertex with the smallest possible index resulting in the correct shape. The vertices must be defined in clockwise order.\r\nIf you get the correct image but an error in the test case then this might indicate that you used anticlockwise order, or that your first vertex index is not correct, or that you have drawn more vertices than necessary.\r\n\r\nNULL\r\n\r\n2023a17b\r\n\r\nGiven are the vertices\r\nconst int numVertices=9;\r\nconst float vertices[numVertices][2] = { {100,50},{300,50},{150,150},{250,150},{50,200},{150,200},{250,200},{350,200},{200,300} };\r\nWhich calling sequence of these vertices results in the shape below if we use the OpenGL commands glBegin(GL_TRIANGLE_FAN) and glEnd()?\r\nImage description: The image shows a star shape with the bottom two vertices connected by a line. The vertices are labelled according to the vertices array above. Lines connecting the 2nd vertex to every other vertex are all inside the shape.\r\nWrite OpenGL code for drawing the shape. You can assume that the following function is defined:\r\nvoid v(int i) {glVertex2fv(vertices[i]);}\r\nYour code should have the following form:\r\nglBegin(GL_TRIANGLE_FAN);\r\nv(<start_index>); // draw first vertex\r\n// draw as many additional vertices as necessary using the above format\r\nglEnd();\r\nIMPORTANT:\r\n1) Use as first vertex the vertex with the smallest possible index resulting in the correct shape. The vertices must be defined in clockwise order.\r\nIf you get the correct image but an error in the test case then this might indicate that you used anticlockwise order, or that your first vertex index is not correct, or that you have drawn more vertices than necessary.\r\n\r\nNULL\r\n\r\n2023a18a\r\n\r\nGiven are the vertices\r\nconst int numVertices=8;\r\nconst float vertices[numVertices][2] = {{50,50},{100,50},{200,50},{250,50},{50,300},{100,300},{200,300},{250,300} };\r\nWhich calling sequence of these vertices results in the shape below if we use the OpenGL commands glBegin(GL_TRIANGLE_STRIP) and glEnd()?\r\nImage description: The image shows an N-shaped triangle strip. The vertices are labelled according to the vertices array above.\r\nWrite OpenGL code for drawing the shape. You can assume that the following function is defined:\r\nvoid v(int i) {glVertex2fv(vertices[i]);}\r\nYour code should have the following form:\r\nglBegin(GL_TRIANGLE_STRIP);\r\nv(<start_index>); // draw first vertex\r\n// draw as many additional vertices as necessary using the above format\r\nglEnd();\r\nIMPORTANT:\r\n1) Use as first vertex the vertex with the smallest possible index resulting in the correct shape.  Do not repeat any vertices. Note that some triangles are allowed to slightly overlap.\r\nIf you get the correct image but an error in the test case then this might indicate that your first vertex index is not correct, or that you have drawn more vertices than necessary.\r\n\r\nNULL\r\n\r\n2023a18b\r\n\r\nGiven are the vertices\r\nconst int numVertices=8;\r\nconst float vertices[numVertices][2] = {{50,50},{100,50},{200,50},{250,50},{50,300},{100,300},{200,300},{250,300} };\r\nWhich calling sequence of these vertices results in the shape below if we use the OpenGL commands glBegin(GL_TRIANGLE_STRIP) and glEnd()?\r\nImage description: The image shows an N-shaped triangle strip. The vertices are labelled according to the vertices array above. The vertices 0, 1, 4, 5 form a rectangle, the vertices 4, 5, 2, 3 form a parallelogram, and the vertices 2, 3, 6, 7 form a rectangle.\r\nWrite OpenGL code for drawing the shape. You can assume that the following function is defined:\r\nvoid v(int i) {glVertex2fv(vertices[i]);}\r\nYour code should have the following form:\r\nglBegin(GL_TRIANGLE_STRIP);\r\nv(<start_index>); // draw first vertex\r\n// draw as many additional vertices as necessary using the above format\r\nglEnd();\r\nIMPORTANT:\r\n1) Use as first vertex the vertex with the smallest possible index resulting in the correct shape.  Do not repeat any vertices. Note that some triangles are allowed to slightly overlap.\r\nIf you get the correct image but an error in the test case then this might indicate that your first vertex index is not correct, or that you have drawn more vertices than necessary.\r\n\r\nNULL\r\n\r\n2023a19\r\n\r\nWrite a function RGB2SV(), that takes as a parameter an RGB colour with each component in the range [0...1], and returns a vector where the x-coordinate is the saturation of the RGB colour and the y-coordinate is the value (intensity) of the RGB colour.\r\nThe function should have the following format:\r\nVector2 RGB2SV(RGBColour c)\r\nYou can assume that RGBColour is a class that represents a colour in the 3D RGB space and exposes fields named R, G, and B.\r\nYou can assume that Vector2 is a class that represents a 2D vector, and exposes fields named x and y.\r\nHINT:\r\nGiven an RGB colour (R, G, B) the saturation S and value V are computed as follows:\r\nV=max(R, G, B)\r\ndelta=max(R, G, B) - min(R, G, B)\r\nS=delta/V if V>0 and otherwise S=0\r\nNOTE: You can compute the maximum and minimum of two floating point values using the functions max(x,y) and min(x,y)\r\nFor example:\r\nTest1\r\nRGBColour c = RGBColour(0.0, 0.0, 0.0);\r\nVector2 saturationAndValue = RGB2SV(c);\r\nprintf(\"Saturation = %.2lf, Value = %.2lf\", saturationAndValue.x, saturationAndValue.y);\r\nResult1\r\nSaturation = 0.00, Value = 0.00\r\nTest2\r\nRGBColour c = RGBColour(1.0, 1.0, 1.0);\r\nVector2 saturationAndValue = RGB2SV(c);\r\nprintf(\"Saturation = %.2lf, Value = %.2lf\", saturationAndValue.x, saturationAndValue.y);\r\nResult2\r\nSaturation = 0.00, Value = 1.00\r\nTest3\r\nRGBColour c = RGBColour(1.0, 0.3, 0.3);\r\nVector2 saturationAndValue = RGB2SV(c);\r\nprintf(\"Saturation = %.2lf, Value = %.2lf\", saturationAndValue.x, saturationAndValue.y);\r\nResult3\r\nSaturation = 0.70, Value = 1.00\r\nTest4\r\nRGBColour c = RGBColour(0.5, 0.3, 0.3);\r\nVector2 saturationAndValue = RGB2SV(c);\r\nprintf(\"Saturation = %.2lf, Value = %.2lf\", saturationAndValue.x, saturationAndValue.y);\r\nResult4\r\nSaturation = 0.40, Value = 0.50\r\n\r\nNULL\r\n\r\n2023a20\r\n\r\nWrite a function areaTriangleFan(), that takes as parameters the number of points of the triangle fan, an array with the points defining the triangle fan, and returns a floating point value representing the area of the triangle fan. Your function should have the following signature:\r\ndouble areaTriangleFan(int numVertices, Vector3 *vertices)\r\nYou can assume that the triangle fan is defined the same as the corresponding OpenGL primitive, i.e., the first vertex forms triangles with each pair of consecutive vertices. You can also assume that the input is a valid triangle fan and that it has at least 3 vertices.\r\nHINT:\r\nThink about how OpenGL divides a triangle fan into triangles.\r\nYou can assume that Vector3 is a class that represents a 3D vector, and exposes fields named x, y, and z, and that the following functions are available to you:\r\ndouble dot(Vector3 u, Vector3 v) //dot product\r\nVector3 cross(Vector3 u, Vector3 v) //cross product\r\nYou can assume that the Vector3 class has the following member functions available to you:\r\nVector3 Vector3.normalized() //returns a vector pointing in the same direction with length 1\r\ndouble Vector3.magnitude() //returns the length of the vector\r\nYou can assume that the Vector3 class supports the following operators returning an object of type Vector3:\r\nVector3 + Vector3\r\nVector3 - Vector3\r\nFor example:\r\nTest1\r\nint numVertices = 3;\r\nVector3 vertices[numVertices]={Vector3(0.0, 0.0, 0.0),Vector3(3.0, 0.0, 0.0),Vector3(0.0, 2.0, 0.0)};\r\nprintf(\"area = %.2lf\", areaTriangleFan(numVertices, vertices));\r\nResult1\r\narea = 3.00\r\nTest2\r\nint numVertices = 4;\r\nVector3 vertices[numVertices]={Vector3(2.0, 2.0, 0.0),Vector3(0.0, 0.0, 0.0),Vector3(4.0, 2.0, 0.0),Vector3(0.0, 5.0, 0.0)};\r\nprintf(\"area = %.2lf\", areaTriangleFan(numVertices, vertices));\r\nResult2\r\narea = 5.00\r\n\r\nNULL\r\n\r\n2023a21a\r\n\r\nPhong Shading interpolates the surface normal of a polygon and computes the perceived colour of each pixel using the Phong Illumination model. In OpenGL this is usually implemented using so-called fragment shaders.\r\nIn order to apply Phong shading to a triangle we need to interpolate the normals at the vertices of the triangle. In this exercise you will implement a function barycentricInterpolation, which interpolates the normals of a triangle for a given point p on the triangle. The signature of the function is:\r\nCVec3df barycentricInterpolation(CVec3df p, CVec3df p0, CVec3df p1, CVec3df p2, CVec3df n0, CVec3df n1, CVec3df n2)\r\nThe point p is a point on the triangle. The vertices of the triangle are p0, p1, and p2, and the corresponding normals are n0, n1, and n2. The function returns the interpolated normal at the point p. The interpolation must be performed using barycentric interpolation as discussed in the lecture.\r\nAfter completing this function you should get the following output:\r\nImage description: The image shows a grey triangle with some white spots on a yellow background.\r\nNOTE 1:\r\nYou can use the function\r\ndouble areaTriangle(CVec3df p0, CVec3df p1, CVec3df p2)\r\nwhich returns the area of the triangle defined by three points p0, p1 and p2.\r\nNOTE 2:\r\nThe class CVec3df implements a 3D vector as a 3D array. The class defines operations for adding two vectors and scaling vectors, e.g.:\r\nCVec3df a,b,c;\r\nc=a+b;\r\nc=5.0*a;\r\ndouble xCoor=a[0];    // x-coordinate\r\ndouble yCoor=a[1];    // y-coordinate\r\ndouble zCoor=a[2];    // z-coordinate\r\n\r\nNULL\r\n\r\n2023a21b\r\n\r\nPhong Shading interpolates the surface normal of a polygon and computes the perceived colour of each pixel using the Phong Illumination model. In OpenGL this is usually implemented using so-called fragment shaders.\r\nIn order to apply Phong shading to a triangle we need to interpolate the normals at the vertices of the triangle. In this exercise you will implement a function barycentricInterpolation, which interpolates the normals of a triangle for a given point p on the triangle. The signature of the function is:\r\nCVec3df barycentricInterpolation(CVec3df p, CVec3df p0, CVec3df p1, CVec3df p2, CVec3df n0, CVec3df n1, CVec3df n2)\r\nThe point p is a point on the triangle. The vertices of the triangle are p0, p1, and p2, and the corresponding normals are n0, n1, and n2. The function returns the interpolated normal at the point p. The interpolation must be performed using barycentric interpolation as discussed in the lecture.\r\nAfter completing this function you should get the following output:\r\nImage description: The image shows a moderately bright triangle with some brighter spots on a plain, yellow background.\r\nNOTE 1:\r\nYou can use the function\r\ndouble areaTriangle(CVec3df p0, CVec3df p1, CVec3df p2)\r\nwhich returns the area of the triangle defined by three points p0, p1 and p2.\r\nNOTE 2:\r\nThe class CVec3df implements a 3D vector as a 3D array. The class defines operations for adding two vectors and scaling vectors, e.g.:\r\nCVec3df a,b,c;\r\nc=a+b;\r\nc=5.0*a;\r\ndouble xCoor=a[0];    // x-coordinate\r\ndouble yCoor=a[1];    // y-coordinate\r\ndouble zCoor=a[2];    // z-coordinate\r\n\r\nNULL\r\n\r\n2023a22a\r\n\r\nGiven is a triangle with the vertices:\r\nconst int numVertices=3;\r\nconst float vertices[numVertices][2] = {{-50,0},{50,0},{0,120}};\r\nThe triangles has a width of 100 and a height of 120 and is oriented along the y-axis.\r\nUse this triangle to draw a sun / flower shape as shown in the images below. The given program draws a red circle with centre (250, 250) and radius 100. Please draw n triangles around this red circle in anti-clockwise direction starting with the triangle at the top. To place the triangles around the red circle they are transformed as follows:\r\n1) The triangle given above is translated by 100 in y-direction\r\n2) The i-th triangle is rotated by i/n*360 degree around the origin. For example, if n=4 then the first triangle is rotated by 0 degree, the second by 90 degree, the third by 180 degree, and the fourth by 270 degree.\r\n3) Translate the rotated triangle by 250 in x- and y-direction\r\nIMPORTANT:\r\n1) The number n of triangles is  given by the variable numTriangles. Please do not change it.\r\n2) Please draw the n triangles in anti-clockwise order starting with the triangle at the top (0 degree rotation). Each triangle is drawn using GL_TRIANGLES and the vertex order 0, 1, 2\r\n3) You are not allowed to use OpenGL transformations, i.e., you need to compute the transformed vertices before you draw them. You can use the functions cos(x) and sin(x).  Note that these functions use an argument in radian. In order to use an angle in degree you can write: cos(2*PI*angleInDegree/360.0f)\r\nNote that the constant PI is already predefined.\r\n4) Note that if two arguments are integers C/C++ uses integer division, e.g. 7/3=2. In order to get floating point division one of the arguments must be a floating point number, e.g., 7.0f/3 or ((float) 7)/3\r\n5) Please draw the transformed vertices using the function\r\nmyVertex2D(float x, float y)\r\nwhich calls the corresponding glVertex command and outputs information for the automarker.\r\nThe image below shows the expected output for n=4, n=8, and n=20.\r\nImage description: The image shows three red circles, each with four, eight, and twenty yellow triangles around it. The triangles are oriented in a flower pattern.\r\n\r\nNULL\r\n\r\n2023a22b\r\n\r\nGiven is a triangle with the vertices:\r\nconst int numVertices=3;\r\nconst float vertices[numVertices][2] = {{-50,0},{50,0},{0,120}};\r\nThe triangles has a width of 100 and a height of 120 and is oriented along the y-axis.\r\nUse this triangle to draw a sun / flower shape as shown in the images below. The given program draws a red circle with centre (250, 250) and radius 100. Please draw n triangles around this red circle in anti-clockwise direction starting with the triangle at the top. To place the triangles around the red circle they are transformed as follows:\r\n1) The triangle given above is translated by 100 in y-direction\r\n2) The i-th triangle is rotated by i/n*360 degree around the origin. For example, if n=4 then the first triangle is rotated by 0 degree, the second by 90 degree, the third by 180 degree, and the fourth by 270 degree.\r\n3) Translate the rotated triangle by 250 in x- and y-direction\r\nIMPORTANT:\r\n1) The number n of triangles is  given by the variable numTriangles. Please do not change it.\r\n2) Please draw the n triangles in anti-clockwise order starting with the triangle at the top (0 degree rotation). Each triangle is drawn using GL_TRIANGLES and the vertex order 0, 1, 2\r\n3) You are not allowed to use OpenGL transformations, i.e., you need to compute the transformed vertices before you draw them. You can use the functions cos(x) and sin(x).  Note that these functions use an argument in radian. In order to use an angle in degree you can write: cos(2*PI*angleInDegree/360.0f)\r\nNote that the constant PI is already predefined.\r\n4) Note that if two arguments are integers C/C++ uses integer division, e.g. 7/3=2. In order to get floating point division one of the arguments must be a floating point number, e.g., 7.0f/3 or ((float) 7)/3\r\n5) Please draw the transformed vertices using the function\r\nmyVertex2D(float x, float y)\r\nwhich calls the corresponding glVertex command and outputs information for the automarker.\r\nThe image below shows the expected output for n=4, n=8, and n=20.\r\nImage description: The left part of the image shows a red circle, around this circle there are 4 triangles. The first triangle is at the top and is rotated by 0 degrees. The second triangle is rotated by 90 degrees, the third by 180 degrees, and the fourth by 270 degrees. The triangles are oriented such that they form a flower shape. The center part of the image shows a red circle, around this circle there are 8 triangles. The first triangle is at the top and is rotated by 0 degrees. The second triangle is rotated by 45 degrees, the third by 90 degrees, the fourth by 135 degreess, the fifth by 180 degrees, the sixth by 225 degrees, the seventh by 270 degrees, and the eighth by 315 degrees. The triangles are oriented such that they form a flower shape. The right part shows the same as the center part but with 20 triangles.\r\n\r\nNULL",
+        "question": "Given are two vectors\n$${\\bf u} = \\begin{pmatrix} 3 \\\\ 1  \\\\ c \\end{pmatrix}$$\nand\n$${\\bf v} = \\begin{pmatrix} 2 \\\\ 4  \\\\ -2 \\end{pmatrix}$$\n.\nFor what value of c are u and v orthogonal?\nSelect one:\na. -4\nb. -2\nc. 0\nd. 3\ne. 5",
+        "answer": "The correct answer is: 5",
+        "generated": [
+            "EMPTY 1",
+            "EMPTY 2",
+            "EMPTY 3",
+            "EMPTY 4",
+            "EMPTY 5",
+            "EMPTY 6",
+            "EMPTY 7",
+            "EMPTY 8",
+            "EMPTY 9",
+            "EMPTY 10"
+        ]
+    },
+    {
+        "id": "2023a02",
+        "question": "Given is a plane P with a normal n and an unknown vector v.\nThe projection of v onto the plane is vP and the projection of the vector v onto the normal n has a length of k.\nWhat is the vector v?\nSelect one:\n$$a. {\\bf v}=\\frac{{\\bf v_{plane}}}{|{\\bf v_{plane}}|}-k\\frac{{\\bf n}}{|{\\bf n}|}$$\n$$b. {\\bf v}=\\frac{{\\bf v_{plane}}}{|{\\bf v_{plane}}|}+k\\frac{{\\bf n}}{|{\\bf n}|}$$\nc. None of the others\n$$d. {\\bf v}={\\bf v_{plane}}-k\\frac{{\\bf n}}{|{\\bf n}|}$$\n$$e. {\\bf v}={\\bf v_{plane}}+k\\frac{{\\bf n}}{|{\\bf n}|}$$",
+        "answer": "The correct answer is:\n$${\\bf v}={\\bf v_{plane}}+k\\frac{{\\bf n}}{|{\\bf n}|}$$",
+        "generated": [
+            "EMPTY 1",
+            "EMPTY 2",
+            "EMPTY 3",
+            "EMPTY 4",
+            "EMPTY 5",
+            "EMPTY 6",
+            "EMPTY 7",
+            "EMPTY 8",
+            "EMPTY 9",
+            "EMPTY 10"
+        ]
+    },
+    {
+        "id": "2023a03",
+        "question": "Given are two vectors\n$${\\bf u} = \\begin{pmatrix} 0 \\\\ 1  \\\\ 3 \\end{pmatrix}$$\nand\n$${\\bf v} = \\begin{pmatrix} c \\\\ 0  \\\\ 0 \\end{pmatrix}$$\n.\nAssuming c>0, which of the statements below about the cross product of u and v is true?\nSelect one:\na. The resulting vector is zero, i.e., it is the origin.\nb. None of the others\nc. The resulting vector lies in the xy-plane, i.e., its z-coordinate is zero\nd. The resulting vector lies in the yz-plane, i.e., its x-coordinate is zero\ne. The resulting vector lies in the xz-plane, i.e., its y-coordinate is zero",
+        "answer": "The correct answer is: The resulting vector lies in the yz-plane, i.e., its x-coordinate is zero",
+        "generated": [
+            "EMPTY 1",
+            "EMPTY 2",
+            "EMPTY 3",
+            "EMPTY 4",
+            "EMPTY 5",
+            "EMPTY 6",
+            "EMPTY 7",
+            "EMPTY 8",
+            "EMPTY 9",
+            "EMPTY 10"
+        ]
+    },
+    {
+        "id": "2023a04",
+        "question": "$$\\small\\text{Consider a plane $P$ defined by the equation $2x - 2y - z = 3$ and a point $Q = \\begin{pmatrix} 3 \\\\ -2  \\\\ 1 \\end{pmatrix}$.}$$\n$$\\small\\text{What is the absolute distance of the point $Q$ to the plane $P$?}$$\nSelect one:\na. 3\nb. 2\nc. 0 (the point is on the plane)\nd. 1\ne. 4",
+        "answer": "The correct answer is: 2",
+        "generated": [
+            "EMPTY 1",
+            "EMPTY 2",
+            "EMPTY 3",
+            "EMPTY 4",
+            "EMPTY 5",
+            "EMPTY 6",
+            "EMPTY 7",
+            "EMPTY 8",
+            "EMPTY 9",
+            "EMPTY 10"
+        ]
+    },
+    {
+        "id": "2023a05",
+        "question": "Which of the 3D homogeneous matrices below first translates a point by the vector\n$$P = \\begin{pmatrix} 1 \\\\ 2 \\\\ 3  \\end{pmatrix}$$\nand then rotates it by 90 degree around the x-axis?\nAnswer\na. $$\\begin{pmatrix} 1 & 0 & 0 & 1 \\\\ 0 & 0 & 1 & 3 \\\\ 0 & -1 & 0 & -2 \\\\ 0 & 0 & 0 & 1$$\n$$\\end{pmatrix}$$\nb. $$\\begin{pmatrix} 1 & 0 & 0 & 1 \\\\ 0 & 0 & -1 & 2 \\\\ 0 & 1 & 0 & 3 \\\\ 0 & 0 & 0 & 1$$\n$$\\end{pmatrix}$$\nc. $$\\begin{pmatrix} 1 & 0 & 0 & 1 \\\\ 0 & 0 & -1 & -3 \\\\ 0 & 1 & 0 & 2 \\\\ 0 & 0 & 0 & 1 \\end{pmatrix}$$\nd. None of the others.\ne. $$\\begin{pmatrix} 1 & 0 & 0 & 1 \\\\ 0 & 0 & 1 & 2$$\n$$\\\\ 0 & -1 & 0 & 3 \\\\ 0 & 0 & 0 & 1$$\n$$\\end{pmatrix}$$",
+        "answer": "The correct answer is:\n$$\\begin{pmatrix} 1 & 0 & 0 & 1 \\\\ 0 & 0 & -1 & -3 \\\\ 0 & 1 & 0 & 2 \\\\ 0 & 0 & 0 & 1 \\end{pmatrix}$$",
+        "generated": [
+            "EMPTY 1",
+            "EMPTY 2",
+            "EMPTY 3",
+            "EMPTY 4",
+            "EMPTY 5",
+            "EMPTY 6",
+            "EMPTY 7",
+            "EMPTY 8",
+            "EMPTY 9",
+            "EMPTY 10"
+        ]
+    },
+    {
+        "id": "2023a06",
+        "question": "What is the minimum number of vertices required to draw 20 connected quadrilaterals (like a row of a chessboard) using GL_QUAD_STRIP?\nSelect one:\na. 80\nb. 60\nc. 22\nd. 42\ne. 40",
+        "answer": "The correct answer is: 42",
+        "generated": [
+            "EMPTY 1",
+            "EMPTY 2",
+            "EMPTY 3",
+            "EMPTY 4",
+            "EMPTY 5",
+            "EMPTY 6",
+            "EMPTY 7",
+            "EMPTY 8",
+            "EMPTY 9",
+            "EMPTY 10"
+        ]
+    },
+    {
+        "id": "2023a07",
+        "question": "A light source with magenta light illuminates a cyan coloured object. What is the perceived colour of the object?\nSelect one:\na. Green\nb. Blue\nc. White\nd. Red\ne. Black",
+        "answer": "The correct answer is: Blue",
+        "generated": [
+            "EMPTY 1",
+            "EMPTY 2",
+            "EMPTY 3",
+            "EMPTY 4",
+            "EMPTY 5",
+            "EMPTY 6",
+            "EMPTY 7",
+            "EMPTY 8",
+            "EMPTY 9",
+            "EMPTY 10"
+        ]
+    },
+    {
+        "id": "2023a08",
+        "question": "Which of the following statements is false?\nSelect one:\na. The interaction of light with a material can be described using a spectral response function.\nb. Materials can absorb, reflect, and/or transmit light.\nc. The saturation (or purity) of a colour describes the percentage of luminance residing in the dominant component of the spectrum.\nd. Different spectral density functions are perceived as different colours.\ne. The spectral density function shows the strength of the variations(energy) as a function of frequency.",
+        "answer": "The correct answer is: Different spectral density functions are perceived as different colours.",
+        "generated": [
+            "EMPTY 1",
+            "EMPTY 2",
+            "EMPTY 3",
+            "EMPTY 4",
+            "EMPTY 5",
+            "EMPTY 6",
+            "EMPTY 7",
+            "EMPTY 8",
+            "EMPTY 9",
+            "EMPTY 10"
+        ]
+    },
+    {
+        "id": "2023a09",
+        "question": "Given is a triangle with the RGB vertex colours (0.8, 0.6, 0.2) at vertex A, (0.1, 0.1, 0.1) at vertex B, and (0.2, 0.0, 0.6) at vertex C. What us the RGB colour of the point half-way between vertex A and B?\nSelect one:\na. (0.7, 0.5, 0.1)\nb. It depends on the orientation of the triangle.\nc. (0.45, 0.35, 0.15)\nd. (0.5, 0.3, 0.4)\ne. (0.9, 0.7, 0.3)",
+        "answer": "The correct answer is: (0.45, 0.35, 0.15)",
+        "generated": [
+            "EMPTY 1",
+            "EMPTY 2",
+            "EMPTY 3",
+            "EMPTY 4",
+            "EMPTY 5",
+            "EMPTY 6",
+            "EMPTY 7",
+            "EMPTY 8",
+            "EMPTY 9",
+            "EMPTY 10"
+        ]
+    },
+    {
+        "id": "2023a10",
+        "question": "Which of the following statements about colour spaces is false?\nSelect one:\na. The colour gamut describes the range of colours that can be reproduced on an output device.\nb. If we represent two pure spectral colours (i.e., rainbow colours) in HSV coordinates, then linearly interpolating these colours gives also a pure spectral colour (rainbow colour).\nc. If we represent two pure spectral colours (i.e., rainbow colours) in RGB coordinates, then linearly interpolating these colours gives also a pure spectral colour (rainbow colour).\nd. The HSV colour space is more convenient and intuitive than the RGB colour space for colour design.\ne. The RGB colour space mirrors the way colours are represented in display devices, i.e., as combination of red, green and blue light.",
+        "answer": "The correct answer is: If we represent two pure spectral colours (i.e., rainbow colours) in RGB coordinates, then linearly interpolating these colours gives also a pure spectral colour (rainbow colour).",
+        "generated": [
+            "EMPTY 1",
+            "EMPTY 2",
+            "EMPTY 3",
+            "EMPTY 4",
+            "EMPTY 5",
+            "EMPTY 6",
+            "EMPTY 7",
+            "EMPTY 8",
+            "EMPTY 9",
+            "EMPTY 10"
+        ]
+    },
+    {
+        "id": "2023a11",
+        "question": "The CIE XYZ colour space may be represented as a projection on the 2D plane: x + y + Z = 1.\nGiven the color (2, 4, 2), what is the corresponding 2D colour in the CIE chromaticity diagram?\nSelect one:\na. (0.25, 0.5)\nb. (0.5, 1.0)\nc. (2, 4)\nd. (1, 2)\ne. (0.2, 0.4)",
+        "answer": "The correct answer is: (0.25, 0.5)",
+        "generated": [
+            "EMPTY 1",
+            "EMPTY 2",
+            "EMPTY 3",
+            "EMPTY 4",
+            "EMPTY 5",
+            "EMPTY 6",
+            "EMPTY 7",
+            "EMPTY 8",
+            "EMPTY 9",
+            "EMPTY 10"
+        ]
+    },
+    {
+        "id": "2023a12",
+        "question": "Which of the following statements about shadows is false?\nSelect one:\na. Shadow maps are calculated by rendering a scene from the light's perspective.\nb. The shadow of a cube is always a square or rectangle regardless of the orientation of the cube and position of the light source.\nc. Without shadows it is difficult to perceive the position of an object with respect to a ground plane.\nd. The projected shadow of a 3D object cast on a ground plane can be computed by multiplying all vertices of the object with a matrix.\ne. Shadow maps can be used to compute shadows for any surface.",
+        "answer": "The correct answer is: The shadow of a cube is always a square or rectangle regardless of the orientation of the cube and position of the light source.",
+        "generated": [
+            "EMPTY 1",
+            "EMPTY 2",
+            "EMPTY 3",
+            "EMPTY 4",
+            "EMPTY 5",
+            "EMPTY 6",
+            "EMPTY 7",
+            "EMPTY 8",
+            "EMPTY 9",
+            "EMPTY 10"
+        ]
+    },
+    {
+        "id": "2023a13",
+        "question": "Given is a uvn-coordinate system with the origin \n$$O_{uvn} = \\begin{pmatrix} 1 \\\\ 2  \\\\ -1 \\end{pmatrix}$$\nand the coordinate axis \n$${\\bf u} = \\begin{pmatrix} 0 \\\\ -1  \\\\ 0 \\end{pmatrix}\\text{ ,  } {\\bf v} = \\begin{pmatrix} 1 \\\\ 0  \\\\ 0 \\end{pmatrix}\\text{  and } {\\bf n} = \\begin{pmatrix} 0 \\\\ 0  \\\\ 1 \\end{pmatrix}$$\nGiven is a point P with the uvn-coordinates \n$${\\bf p}_{uvn} = \\begin{pmatrix} 2 \\\\ 1  \\\\ 3 \\end{pmatrix}$$\n.\nWhat are the xyz-coordinates (world coordinates) of this point?\nSelect one:\na. $$\\begin{pmatrix} 1 \\\\ 1  \\\\ 4 \\end{pmatrix}$$\nb. $$\\begin{pmatrix} 1 \\\\ -1  \\\\ 4 \\end{pmatrix}$$\nc. $$\\begin{pmatrix} 3 \\\\ 3  \\\\ 2 \\end{pmatrix}$$\nd. $$\\begin{pmatrix} 2 \\\\ 0  \\\\ 2 \\end{pmatrix}$$\ne. $$\\begin{pmatrix} 3 \\\\ -3  \\\\ 2 \\end{pmatrix}$$",
+        "answer": "The correct answer is:\n$$\\begin{pmatrix} 2 \\\\ 0  \\\\ 2 \\end{pmatrix}$$",
+        "generated": [
+            "EMPTY 1",
+            "EMPTY 2",
+            "EMPTY 3",
+            "EMPTY 4",
+            "EMPTY 5",
+            "EMPTY 6",
+            "EMPTY 7",
+            "EMPTY 8",
+            "EMPTY 9",
+            "EMPTY 10"
+        ]
+    },
+    {
+        "id": "2023a14",
+        "question": "Given is a scene containing an illuminated object. The scene contains a single light source with ambient intensity Ia=0.2 and diffuse intensity Id=0.5. The illuminated object has the ambient reflection coefficient \u03c1a=0.5 and \u03c1d=0.9. Given is a point p=(0,0,0)T on the surface of the object. The surface normal at p is (0,0,1)T, the light position is (2,1,2)T, and the viewpoint is  (3,0,0)T.\nUsing the (achromatic) Phong Illumination equation discussed in the lecture and assignment, what is the diffuse component of the reflected light at p?\nNOTE 1: Please assume that there is no distance dependency, i.e. kc=1.0 and kl=kq=0.0.\nNOTE 2: In order to work out your answer you may not need all of the parameters specified above.\nSelect one:\na. 0.4\nb. 0.35\nc. 1/3\nd. 0.45\ne. 0.3",
+        "answer": "The correct answer is: 0.3",
+        "generated": [
+            "EMPTY 1",
+            "EMPTY 2",
+            "EMPTY 3",
+            "EMPTY 4",
+            "EMPTY 5",
+            "EMPTY 6",
+            "EMPTY 7",
+            "EMPTY 8",
+            "EMPTY 9",
+            "EMPTY 10"
+        ]
+    },
+    {
+        "id": "2023a15",
+        "question": "Write a function areaTriangle(), that takes as parameters three 3D vectors representing points, and returns a floating point value representing the area of the triangle. Your function should have the following signature:\ndouble areaTriangle(Vector3 p0, Vector3 p1, Vector3 p2)\nYou can assume that Vector3 is a class that represents a 3D vector, and exposes fields named x, y, and z, and that the following functions are available to you:\ndouble dot(Vector3 u, Vector3 v) //dot product\nVector3 cross(Vector3 u, Vector3 v) //cross product\nYou can assume that the Vector3 class has the following member functions available to you:\nVector3 Vector3.normalized() //returns a vector pointing in the same direction with length 1\ndouble Vector3.magnitude() //returns the length of the vector\nYou can assume that the Vector3 class supports the following operators returning objects of type Vector3:\nVector3 + Vector3\nVector3 - Vector3\nFor example:\nTest1\nVector3 p0 = Vector3(0.0, 0.0, 0.0);\nVector3 p1 = Vector3(3.0, 0.0, 0.0);\nVector3 p2 = Vector3(0.0, 2.0, 0.0);\nprintf(\"area = %.2lf\", areaTriangle(p0,p1,p2));\nResult1\narea = 3.00\nTest2\nVector3 p0 = Vector3(0.0, 0.0, 0.0);\nVector3 p1 = Vector3(3.0, 0.0, 0.0);\nVector3 p2 = Vector3(1.5, 5.0, 0.0);\nprintf(\"area = %.2lf\", areaTriangle(p0,p1,p2));\nResult2\narea = 7.50\nTest3\nVector3 p0 = Vector3(1.0, 0.0, 2.0);\nVector3 p1 = Vector3(2.0, 1.0, 3.5);\nVector3 p2 = Vector3(3.0, 2.0, 5.0);\nprintf(\"area = %.2lf\", areaTriangle(p0,p1,p2));\nResult3\narea = 0.00",
+        "answer": "NULL",
+        "generated": [
+            "EMPTY 1",
+            "EMPTY 2",
+            "EMPTY 3",
+            "EMPTY 4",
+            "EMPTY 5",
+            "EMPTY 6",
+            "EMPTY 7",
+            "EMPTY 8",
+            "EMPTY 9",
+            "EMPTY 10"
+        ]
+    },
+    {
+        "id": "2023a16",
+        "question": "Write a function MixHSV(), that takes as a parameter two HSV colours with each component in the range [0...1], and returns the HSV colour which is the average of the two input colours. Your function should have the following signature:\nHSVColour MixHSV(HSVColour c1, HSVColour c2)\nYou can assume that HSVColour is a class that represents a colour in the 3D HSV space and exposes fields named H, S, and V.\nFor example:\nTest1\nHSVColour mixedColour = MixHSV(HSVColour(0.6, 1.0, 1.0), HSVColour(0.8, 1.0, 1.0));\nprintf(\"Mixed HSV colour = (%.2lf, %.2lf, %.2lf)\", mixedColour.H, mixedColour.S, mixedColour.V); \nResult1\nMixed HSV colour = (0.70, 1.00, 1.00)\nTest2\nHSVColour mixedColour = MixHSV(HSVColour(0.0, 0.0, 0.0), HSVColour(1.0, 1.0, 1.0));\nprintf(\"Mixed HSV colour = (%.2lf, %.2lf, %.2lf)\", mixedColour.H, mixedColour.S, mixedColour.V); \nResult2\nMixed HSV colour = (0.50, 0.50, 0.50)",
+        "answer": "NULL",
+        "generated": [
+            "EMPTY 1",
+            "EMPTY 2",
+            "EMPTY 3",
+            "EMPTY 4",
+            "EMPTY 5",
+            "EMPTY 6",
+            "EMPTY 7",
+            "EMPTY 8",
+            "EMPTY 9",
+            "EMPTY 10"
+        ]
+    },
+    {
+        "id": "2023a17a",
+        "question": "Given are the vertices\nconst int numVertices=9;\nconst float vertices[numVertices][2] = { {100,50},{300,50},{150,150},{250,150},{50,200},{150,200},{250,200},{350,200},{200,300} };\nWhich calling sequence of these vertices results in the shape below if we use the OpenGL commands glBegin(GL_TRIANGLE_FAN) and glEnd()?\nImage description: The image shows a star shape with the bottom two vertices connected by a line. The vertices are labelled according to the vertices array above.\nWrite OpenGL code for drawing the shape. You can assume that the following function is defined:\nvoid v(int i) {glVertex2fv(vertices[i]);}\nYour code should have the following form:\nglBegin(GL_TRIANGLE_FAN);\nv(<start_index>); // draw first vertex\n// draw as many additional vertices as necessary using the above format\nglEnd();\nIMPORTANT:\n1) Use as first vertex the vertex with the smallest possible index resulting in the correct shape. The vertices must be defined in clockwise order.\nIf you get the correct image but an error in the test case then this might indicate that you used anticlockwise order, or that your first vertex index is not correct, or that you have drawn more vertices than necessary.",
+        "answer": "NULL",
+        "generated": [
+            "EMPTY 1",
+            "EMPTY 2",
+            "EMPTY 3",
+            "EMPTY 4",
+            "EMPTY 5",
+            "EMPTY 6",
+            "EMPTY 7",
+            "EMPTY 8",
+            "EMPTY 9",
+            "EMPTY 10"
+        ]
+    },
+    {
+        "id": "2023a17b",
+        "question": "Given are the vertices\nconst int numVertices=9;\nconst float vertices[numVertices][2] = { {100,50},{300,50},{150,150},{250,150},{50,200},{150,200},{250,200},{350,200},{200,300} };\nWhich calling sequence of these vertices results in the shape below if we use the OpenGL commands glBegin(GL_TRIANGLE_FAN) and glEnd()?\nImage description: The image shows a star shape with the bottom two vertices connected by a line. The vertices are labelled according to the vertices array above. Lines connecting the 2nd vertex to every other vertex are all inside the shape.\nWrite OpenGL code for drawing the shape. You can assume that the following function is defined:\nvoid v(int i) {glVertex2fv(vertices[i]);}\nYour code should have the following form:\nglBegin(GL_TRIANGLE_FAN);\nv(<start_index>); // draw first vertex\n// draw as many additional vertices as necessary using the above format\nglEnd();\nIMPORTANT:\n1) Use as first vertex the vertex with the smallest possible index resulting in the correct shape. The vertices must be defined in clockwise order.\nIf you get the correct image but an error in the test case then this might indicate that you used anticlockwise order, or that your first vertex index is not correct, or that you have drawn more vertices than necessary.",
+        "answer": "NULL",
+        "generated": [
+            "EMPTY 1",
+            "EMPTY 2",
+            "EMPTY 3",
+            "EMPTY 4",
+            "EMPTY 5",
+            "EMPTY 6",
+            "EMPTY 7",
+            "EMPTY 8",
+            "EMPTY 9",
+            "EMPTY 10"
+        ]
+    },
+    {
+        "id": "2023a18a",
+        "question": "Given are the vertices\nconst int numVertices=8;\nconst float vertices[numVertices][2] = {{50,50},{100,50},{200,50},{250,50},{50,300},{100,300},{200,300},{250,300} };\nWhich calling sequence of these vertices results in the shape below if we use the OpenGL commands glBegin(GL_TRIANGLE_STRIP) and glEnd()?\nImage description: The image shows an N-shaped triangle strip. The vertices are labelled according to the vertices array above.\nWrite OpenGL code for drawing the shape. You can assume that the following function is defined:\nvoid v(int i) {glVertex2fv(vertices[i]);}\nYour code should have the following form:\nglBegin(GL_TRIANGLE_STRIP);\nv(<start_index>); // draw first vertex\n// draw as many additional vertices as necessary using the above format\nglEnd();\nIMPORTANT:\n1) Use as first vertex the vertex with the smallest possible index resulting in the correct shape.  Do not repeat any vertices. Note that some triangles are allowed to slightly overlap.\nIf you get the correct image but an error in the test case then this might indicate that your first vertex index is not correct, or that you have drawn more vertices than necessary.",
+        "answer": "NULL",
+        "generated": [
+            "EMPTY 1",
+            "EMPTY 2",
+            "EMPTY 3",
+            "EMPTY 4",
+            "EMPTY 5",
+            "EMPTY 6",
+            "EMPTY 7",
+            "EMPTY 8",
+            "EMPTY 9",
+            "EMPTY 10"
+        ]
+    },
+    {
+        "id": "2023a18b",
+        "question": "Given are the vertices\nconst int numVertices=8;\nconst float vertices[numVertices][2] = {{50,50},{100,50},{200,50},{250,50},{50,300},{100,300},{200,300},{250,300} };\nWhich calling sequence of these vertices results in the shape below if we use the OpenGL commands glBegin(GL_TRIANGLE_STRIP) and glEnd()?\nImage description: The image shows an N-shaped triangle strip. The vertices are labelled according to the vertices array above. The vertices 0, 1, 4, 5 form a rectangle, the vertices 4, 5, 2, 3 form a parallelogram, and the vertices 2, 3, 6, 7 form a rectangle.\nWrite OpenGL code for drawing the shape. You can assume that the following function is defined:\nvoid v(int i) {glVertex2fv(vertices[i]);}\nYour code should have the following form:\nglBegin(GL_TRIANGLE_STRIP);\nv(<start_index>); // draw first vertex\n// draw as many additional vertices as necessary using the above format\nglEnd();\nIMPORTANT:\n1) Use as first vertex the vertex with the smallest possible index resulting in the correct shape.  Do not repeat any vertices. Note that some triangles are allowed to slightly overlap.\nIf you get the correct image but an error in the test case then this might indicate that your first vertex index is not correct, or that you have drawn more vertices than necessary.",
+        "answer": "NULL",
+        "generated": [
+            "EMPTY 1",
+            "EMPTY 2",
+            "EMPTY 3",
+            "EMPTY 4",
+            "EMPTY 5",
+            "EMPTY 6",
+            "EMPTY 7",
+            "EMPTY 8",
+            "EMPTY 9",
+            "EMPTY 10"
+        ]
+    },
+    {
+        "id": "2023a19",
+        "question": "Write a function RGB2SV(), that takes as a parameter an RGB colour with each component in the range [0...1], and returns a vector where the x-coordinate is the saturation of the RGB colour and the y-coordinate is the value (intensity) of the RGB colour.\nThe function should have the following format:\nVector2 RGB2SV(RGBColour c)\nYou can assume that RGBColour is a class that represents a colour in the 3D RGB space and exposes fields named R, G, and B.\nYou can assume that Vector2 is a class that represents a 2D vector, and exposes fields named x and y.\nHINT:\nGiven an RGB colour (R, G, B) the saturation S and value V are computed as follows:\nV=max(R, G, B)\ndelta=max(R, G, B) - min(R, G, B)\nS=delta/V if V>0 and otherwise S=0\nNOTE: You can compute the maximum and minimum of two floating point values using the functions max(x,y) and min(x,y)\nFor example:\nTest1\nRGBColour c = RGBColour(0.0, 0.0, 0.0);\nVector2 saturationAndValue = RGB2SV(c);\nprintf(\"Saturation = %.2lf, Value = %.2lf\", saturationAndValue.x, saturationAndValue.y);\nResult1\nSaturation = 0.00, Value = 0.00\nTest2\nRGBColour c = RGBColour(1.0, 1.0, 1.0);\nVector2 saturationAndValue = RGB2SV(c);\nprintf(\"Saturation = %.2lf, Value = %.2lf\", saturationAndValue.x, saturationAndValue.y);\nResult2\nSaturation = 0.00, Value = 1.00\nTest3\nRGBColour c = RGBColour(1.0, 0.3, 0.3);\nVector2 saturationAndValue = RGB2SV(c);\nprintf(\"Saturation = %.2lf, Value = %.2lf\", saturationAndValue.x, saturationAndValue.y);\nResult3\nSaturation = 0.70, Value = 1.00\nTest4\nRGBColour c = RGBColour(0.5, 0.3, 0.3);\nVector2 saturationAndValue = RGB2SV(c);\nprintf(\"Saturation = %.2lf, Value = %.2lf\", saturationAndValue.x, saturationAndValue.y);\nResult4\nSaturation = 0.40, Value = 0.50",
+        "answer": "NULL",
+        "generated": [
+            "EMPTY 1",
+            "EMPTY 2",
+            "EMPTY 3",
+            "EMPTY 4",
+            "EMPTY 5",
+            "EMPTY 6",
+            "EMPTY 7",
+            "EMPTY 8",
+            "EMPTY 9",
+            "EMPTY 10"
+        ]
+    },
+    {
+        "id": "2023a20",
+        "question": "Write a function areaTriangleFan(), that takes as parameters the number of points of the triangle fan, an array with the points defining the triangle fan, and returns a floating point value representing the area of the triangle fan. Your function should have the following signature:\ndouble areaTriangleFan(int numVertices, Vector3 *vertices)\nYou can assume that the triangle fan is defined the same as the corresponding OpenGL primitive, i.e., the first vertex forms triangles with each pair of consecutive vertices. You can also assume that the input is a valid triangle fan and that it has at least 3 vertices.\nHINT:\nThink about how OpenGL divides a triangle fan into triangles.\nYou can assume that Vector3 is a class that represents a 3D vector, and exposes fields named x, y, and z, and that the following functions are available to you:\ndouble dot(Vector3 u, Vector3 v) //dot product\nVector3 cross(Vector3 u, Vector3 v) //cross product\nYou can assume that the Vector3 class has the following member functions available to you:\nVector3 Vector3.normalized() //returns a vector pointing in the same direction with length 1\ndouble Vector3.magnitude() //returns the length of the vector\nYou can assume that the Vector3 class supports the following operators returning an object of type Vector3:\nVector3 + Vector3\nVector3 - Vector3\nFor example:\nTest1\nint numVertices = 3;\nVector3 vertices[numVertices]={Vector3(0.0, 0.0, 0.0),Vector3(3.0, 0.0, 0.0),Vector3(0.0, 2.0, 0.0)};\nprintf(\"area = %.2lf\", areaTriangleFan(numVertices, vertices));\nResult1\narea = 3.00\nTest2\nint numVertices = 4;\nVector3 vertices[numVertices]={Vector3(2.0, 2.0, 0.0),Vector3(0.0, 0.0, 0.0),Vector3(4.0, 2.0, 0.0),Vector3(0.0, 5.0, 0.0)};\nprintf(\"area = %.2lf\", areaTriangleFan(numVertices, vertices));\nResult2\narea = 5.00",
+        "answer": "NULL",
+        "generated": [
+            "EMPTY 1",
+            "EMPTY 2",
+            "EMPTY 3",
+            "EMPTY 4",
+            "EMPTY 5",
+            "EMPTY 6",
+            "EMPTY 7",
+            "EMPTY 8",
+            "EMPTY 9",
+            "EMPTY 10"
+        ]
+    },
+    {
+        "id": "2023a21a",
+        "question": "Phong Shading interpolates the surface normal of a polygon and computes the perceived colour of each pixel using the Phong Illumination model. In OpenGL this is usually implemented using so-called fragment shaders.\nIn order to apply Phong shading to a triangle we need to interpolate the normals at the vertices of the triangle. In this exercise you will implement a function barycentricInterpolation, which interpolates the normals of a triangle for a given point p on the triangle. The signature of the function is:\nCVec3df barycentricInterpolation(CVec3df p, CVec3df p0, CVec3df p1, CVec3df p2, CVec3df n0, CVec3df n1, CVec3df n2)\nThe point p is a point on the triangle. The vertices of the triangle are p0, p1, and p2, and the corresponding normals are n0, n1, and n2. The function returns the interpolated normal at the point p. The interpolation must be performed using barycentric interpolation as discussed in the lecture.\nAfter completing this function you should get the following output:\nImage description: The image shows a grey triangle with some white spots on a yellow background.\nNOTE 1:\nYou can use the function\ndouble areaTriangle(CVec3df p0, CVec3df p1, CVec3df p2)\nwhich returns the area of the triangle defined by three points p0, p1 and p2.\nNOTE 2:\nThe class CVec3df implements a 3D vector as a 3D array. The class defines operations for adding two vectors and scaling vectors, e.g.:\nCVec3df a,b,c;\nc=a+b;\nc=5.0*a;\ndouble xCoor=a[0];    // x-coordinate\ndouble yCoor=a[1];    // y-coordinate\ndouble zCoor=a[2];    // z-coordinate",
+        "answer": "NULL",
+        "generated": [
+            "EMPTY 1",
+            "EMPTY 2",
+            "EMPTY 3",
+            "EMPTY 4",
+            "EMPTY 5",
+            "EMPTY 6",
+            "EMPTY 7",
+            "EMPTY 8",
+            "EMPTY 9",
+            "EMPTY 10"
+        ]
+    },
+    {
+        "id": "2023a21b",
+        "question": "Phong Shading interpolates the surface normal of a polygon and computes the perceived colour of each pixel using the Phong Illumination model. In OpenGL this is usually implemented using so-called fragment shaders.\nIn order to apply Phong shading to a triangle we need to interpolate the normals at the vertices of the triangle. In this exercise you will implement a function barycentricInterpolation, which interpolates the normals of a triangle for a given point p on the triangle. The signature of the function is:\nCVec3df barycentricInterpolation(CVec3df p, CVec3df p0, CVec3df p1, CVec3df p2, CVec3df n0, CVec3df n1, CVec3df n2)\nThe point p is a point on the triangle. The vertices of the triangle are p0, p1, and p2, and the corresponding normals are n0, n1, and n2. The function returns the interpolated normal at the point p. The interpolation must be performed using barycentric interpolation as discussed in the lecture.\nAfter completing this function you should get the following output:\nImage description: The image shows a moderately bright triangle with some brighter spots on a plain, yellow background.\nNOTE 1:\nYou can use the function\ndouble areaTriangle(CVec3df p0, CVec3df p1, CVec3df p2)\nwhich returns the area of the triangle defined by three points p0, p1 and p2.\nNOTE 2:\nThe class CVec3df implements a 3D vector as a 3D array. The class defines operations for adding two vectors and scaling vectors, e.g.:\nCVec3df a,b,c;\nc=a+b;\nc=5.0*a;\ndouble xCoor=a[0];    // x-coordinate\ndouble yCoor=a[1];    // y-coordinate\ndouble zCoor=a[2];    // z-coordinate",
+        "answer": "NULL",
+        "generated": [
+            "EMPTY 1",
+            "EMPTY 2",
+            "EMPTY 3",
+            "EMPTY 4",
+            "EMPTY 5",
+            "EMPTY 6",
+            "EMPTY 7",
+            "EMPTY 8",
+            "EMPTY 9",
+            "EMPTY 10"
+        ]
+    },
+    {
+        "id": "2023a22a",
+        "question": "Given is a triangle with the vertices:\nconst int numVertices=3;\nconst float vertices[numVertices][2] = {{-50,0},{50,0},{0,120}};\nThe triangles has a width of 100 and a height of 120 and is oriented along the y-axis.\nUse this triangle to draw a sun / flower shape as shown in the images below. The given program draws a red circle with centre (250, 250) and radius 100. Please draw n triangles around this red circle in anti-clockwise direction starting with the triangle at the top. To place the triangles around the red circle they are transformed as follows:\n1) The triangle given above is translated by 100 in y-direction\n2) The i-th triangle is rotated by i/n*360 degree around the origin. For example, if n=4 then the first triangle is rotated by 0 degree, the second by 90 degree, the third by 180 degree, and the fourth by 270 degree.\n3) Translate the rotated triangle by 250 in x- and y-direction\nIMPORTANT:\n1) The number n of triangles is  given by the variable numTriangles. Please do not change it.\n2) Please draw the n triangles in anti-clockwise order starting with the triangle at the top (0 degree rotation). Each triangle is drawn using GL_TRIANGLES and the vertex order 0, 1, 2\n3) You are not allowed to use OpenGL transformations, i.e., you need to compute the transformed vertices before you draw them. You can use the functions cos(x) and sin(x).  Note that these functions use an argument in radian. In order to use an angle in degree you can write: cos(2*PI*angleInDegree/360.0f)\nNote that the constant PI is already predefined.\n4) Note that if two arguments are integers C/C++ uses integer division, e.g. 7/3=2. In order to get floating point division one of the arguments must be a floating point number, e.g., 7.0f/3 or ((float) 7)/3\n5) Please draw the transformed vertices using the function\nmyVertex2D(float x, float y)\nwhich calls the corresponding glVertex command and outputs information for the automarker.\nThe image below shows the expected output for n=4, n=8, and n=20.\nImage description: The image shows three red circles, each with four, eight, and twenty yellow triangles around it. The triangles are oriented in a flower pattern.",
+        "answer": "NULL",
+        "generated": [
+            "EMPTY 1",
+            "EMPTY 2",
+            "EMPTY 3",
+            "EMPTY 4",
+            "EMPTY 5",
+            "EMPTY 6",
+            "EMPTY 7",
+            "EMPTY 8",
+            "EMPTY 9",
+            "EMPTY 10"
+        ]
+    },
+    {
+        "id": "2023a22b",
+        "question": "Given is a triangle with the vertices:\nconst int numVertices=3;\nconst float vertices[numVertices][2] = {{-50,0},{50,0},{0,120}};\nThe triangles has a width of 100 and a height of 120 and is oriented along the y-axis.\nUse this triangle to draw a sun / flower shape as shown in the images below. The given program draws a red circle with centre (250, 250) and radius 100. Please draw n triangles around this red circle in anti-clockwise direction starting with the triangle at the top. To place the triangles around the red circle they are transformed as follows:\n1) The triangle given above is translated by 100 in y-direction\n2) The i-th triangle is rotated by i/n*360 degree around the origin. For example, if n=4 then the first triangle is rotated by 0 degree, the second by 90 degree, the third by 180 degree, and the fourth by 270 degree.\n3) Translate the rotated triangle by 250 in x- and y-direction\nIMPORTANT:\n1) The number n of triangles is  given by the variable numTriangles. Please do not change it.\n2) Please draw the n triangles in anti-clockwise order starting with the triangle at the top (0 degree rotation). Each triangle is drawn using GL_TRIANGLES and the vertex order 0, 1, 2\n3) You are not allowed to use OpenGL transformations, i.e., you need to compute the transformed vertices before you draw them. You can use the functions cos(x) and sin(x).  Note that these functions use an argument in radian. In order to use an angle in degree you can write: cos(2*PI*angleInDegree/360.0f)\nNote that the constant PI is already predefined.\n4) Note that if two arguments are integers C/C++ uses integer division, e.g. 7/3=2. In order to get floating point division one of the arguments must be a floating point number, e.g., 7.0f/3 or ((float) 7)/3\n5) Please draw the transformed vertices using the function\nmyVertex2D(float x, float y)\nwhich calls the corresponding glVertex command and outputs information for the automarker.\nThe image below shows the expected output for n=4, n=8, and n=20.\nImage description: The left part of the image shows a red circle, around this circle there are 4 triangles. The first triangle is at the top and is rotated by 0 degrees. The second triangle is rotated by 90 degrees, the third by 180 degrees, and the fourth by 270 degrees. The triangles are oriented such that they form a flower shape. The center part of the image shows a red circle, around this circle there are 8 triangles. The first triangle is at the top and is rotated by 0 degrees. The second triangle is rotated by 45 degrees, the third by 90 degrees, the fourth by 135 degreess, the fifth by 180 degrees, the sixth by 225 degrees, the seventh by 270 degrees, and the eighth by 315 degrees. The triangles are oriented such that they form a flower shape. The right part shows the same as the center part but with 20 triangles.",
+        "answer": "NULL",
+        "generated": [
+            "EMPTY 1",
+            "EMPTY 2",
+            "EMPTY 3",
+            "EMPTY 4",
+            "EMPTY 5",
+            "EMPTY 6",
+            "EMPTY 7",
+            "EMPTY 8",
+            "EMPTY 9",
+            "EMPTY 10"
+        ]
+    },
+    {
+        "id": "",
+        "question": "",
         "answer": "",
         "generated": [
             "EMPTY 1",

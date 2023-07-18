@@ -8,8 +8,8 @@ def preprocess(filename_input, filename_output):
     for i in range(len(l)-1, -1, -1):
         if l[i].strip() == "":
             l.pop(i)
-        elif len(l[i]) == 2 and l[i][1] == ".":
-            l[i] = l[i] + " " + l[i+1]
+        elif len(l[i].strip()) == 2 and l[i][1] == ".":
+            l[i] = l[i].strip() + " " + l[i+1]
             l.pop(i+1)
     k = 1
     l = ["{}{:02d}\n".format(filename_input, k)] + l

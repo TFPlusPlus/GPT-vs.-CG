@@ -7,16 +7,11 @@ and
 .
 For what value of c are u and v orthogonal?
 Select one:
-a.
--4
-b.
--2
-c.
-0
-d.
-3
-e.
-5
+a. -4
+b. -2
+c. 0
+d. 3
+e. 5
 
 The correct answer is: 5
 
@@ -26,16 +21,11 @@ Given is a plane P with a normal n and an unknown vector v.
 The projection of v onto the plane is vP and the projection of the vector v onto the normal n has a length of k.
 What is the vector v?
 Select one:
-a.
-{\bf v}=\frac{{\bf v_{plane}}}{|{\bf v_{plane}}|}-k\frac{{\bf n}}{|{\bf n}|}
-b.
-{\bf v}=\frac{{\bf v_{plane}}}{|{\bf v_{plane}}|}+k\frac{{\bf n}}{|{\bf n}|}
-c.
-None of the others
-d.
-{\bf v}={\bf v_{plane}}-k\frac{{\bf n}}{|{\bf n}|}
-e.
-{\bf v}={\bf v_{plane}}+k\frac{{\bf n}}{|{\bf n}|}
+a. {\bf v}=\frac{{\bf v_{plane}}}{|{\bf v_{plane}}|}-k\frac{{\bf n}}{|{\bf n}|}
+b. {\bf v}=\frac{{\bf v_{plane}}}{|{\bf v_{plane}}|}+k\frac{{\bf n}}{|{\bf n}|}
+c. None of the others
+d. {\bf v}={\bf v_{plane}}-k\frac{{\bf n}}{|{\bf n}|}
+e. {\bf v}={\bf v_{plane}}+k\frac{{\bf n}}{|{\bf n}|}
 
 The correct answer is:
 {\bf v}={\bf v_{plane}}+k\frac{{\bf n}}{|{\bf n}|}
@@ -49,16 +39,11 @@ and
 .
 Assuming c>0, which of the statements below about the cross product of u and v is true?
 Select one:
-a.
-The resulting vector is zero, i.e., it is the origin.
-b.
-None of the others
-c.
-The resulting vector lies in the xy-plane, i.e., its z-coordinate is zero
-d.
-The resulting vector lies in the yz-plane, i.e., its x-coordinate is zero
-e.
-The resulting vector lies in the xz-plane, i.e., its y-coordinate is zero
+a. The resulting vector is zero, i.e., it is the origin.
+b. None of the others
+c. The resulting vector lies in the xy-plane, i.e., its z-coordinate is zero
+d. The resulting vector lies in the yz-plane, i.e., its x-coordinate is zero
+e. The resulting vector lies in the xz-plane, i.e., its y-coordinate is zero
 
 The correct answer is: The resulting vector lies in the yz-plane, i.e., its x-coordinate is zero
 
@@ -67,16 +52,11 @@ The correct answer is: The resulting vector lies in the yz-plane, i.e., its x-co
 \small\text{Consider a plane $P$ defined by the equation $2x - 2y - z = 3$ and a point $Q = \begin{pmatrix} 3 \\ -2  \\ 1 \end{pmatrix}$.}
 \small\text{What is the absolute distance of the point $Q$ to the plane $P$?}
 Select one:
-a.
-3
-b.
-2
-c.
-0 (the point is on the plane)
-d.
-1
-e.
-4
+a. 3
+b. 2
+c. 0 (the point is on the plane)
+d. 1
+e. 4
 
 The correct answer is: 2
 
@@ -86,18 +66,13 @@ Which of the 3D homogeneous matrices below first translates a point by the vecto
 P = \begin{pmatrix} 1 \\ 2 \\ 3  \end{pmatrix}
 and then rotates it by 90 degree around the x-axis?
 Answer
-a.
-\begin{pmatrix} 1 & 0 & 0 & 1 \\ 0 & 0 & 1 & 3 \\ 0 & -1 & 0 & -2 \\ 0 & 0 & 0 & 1 
+a. \begin{pmatrix} 1 & 0 & 0 & 1 \\ 0 & 0 & 1 & 3 \\ 0 & -1 & 0 & -2 \\ 0 & 0 & 0 & 1 
 \end{pmatrix}
-b.
-\begin{pmatrix} 1 & 0 & 0 & 1 \\ 0 & 0 & -1 & 2 \\ 0 & 1 & 0 & 3 \\ 0 & 0 & 0 & 1 
+b. \begin{pmatrix} 1 & 0 & 0 & 1 \\ 0 & 0 & -1 & 2 \\ 0 & 1 & 0 & 3 \\ 0 & 0 & 0 & 1 
 \end{pmatrix}
-c.
-\begin{pmatrix} 1 & 0 & 0 & 1 \\ 0 & 0 & -1 & -3 \\ 0 & 1 & 0 & 2 \\ 0 & 0 & 0 & 1 \end{pmatrix}
-d.
-None of the others.
-e.
-\begin{pmatrix} 1 & 0 & 0 & 1 \\ 0 & 0 & 1 & 2
+c. \begin{pmatrix} 1 & 0 & 0 & 1 \\ 0 & 0 & -1 & -3 \\ 0 & 1 & 0 & 2 \\ 0 & 0 & 0 & 1 \end{pmatrix}
+d. None of the others.
+e. \begin{pmatrix} 1 & 0 & 0 & 1 \\ 0 & 0 & 1 & 2
  \\ 0 & -1 & 0 & 3 \\ 0 & 0 & 0 & 1 
 \end{pmatrix}
 
@@ -108,16 +83,11 @@ The correct answer is:
 
 What is the minimum number of vertices required to draw 20 connected quadrilaterals (like a row of a chessboard) using GL_QUAD_STRIP?
 Select one:
-a.
-80
-b.
-60
-c.
-22
-d.
-42
-e.
-40
+a. 80
+b. 60
+c. 22
+d. 42
+e. 40
 
 The correct answer is: 42
 
@@ -125,16 +95,11 @@ The correct answer is: 42
 
 A light source with magenta light illuminates a cyan coloured object. What is the perceived colour of the object?
 Select one:
-a.
-Green
-b.
-Blue
-c.
-White
-d.
-Red
-e.
-Black
+a. Green
+b. Blue
+c. White
+d. Red
+e. Black
 
 The correct answer is: Blue
 
@@ -142,16 +107,11 @@ The correct answer is: Blue
 
 Which of the following statements is false?
 Select one:
-a.
-The interaction of light with a material can be described using a spectral response function.
-b.
-Materials can absorb, reflect, and/or transmit light.
-c.
-The saturation (or purity) of a colour describes the percentage of luminance residing in the dominant component of the spectrum.
-d.
-Different spectral density functions are perceived as different colours.
-e.
-The spectral density function shows the strength of the variations(energy) as a function of frequency.
+a. The interaction of light with a material can be described using a spectral response function.
+b. Materials can absorb, reflect, and/or transmit light.
+c. The saturation (or purity) of a colour describes the percentage of luminance residing in the dominant component of the spectrum.
+d. Different spectral density functions are perceived as different colours.
+e. The spectral density function shows the strength of the variations(energy) as a function of frequency.
 
 The correct answer is: Different spectral density functions are perceived as different colours.
 
@@ -159,16 +119,11 @@ The correct answer is: Different spectral density functions are perceived as dif
 
 Given is a triangle with the RGB vertex colours (0.8, 0.6, 0.2) at vertex A, (0.1, 0.1, 0.1) at vertex B, and (0.2, 0.0, 0.6) at vertex C. What us the RGB colour of the point half-way between vertex A and B?
 Select one:
-a.
-(0.7, 0.5, 0.1)
-b.
-It depends on the orientation of the triangle.
-c.
-(0.45, 0.35, 0.15)
-d.
-(0.5, 0.3, 0.4)
-e.
-(0.9, 0.7, 0.3)
+a. (0.7, 0.5, 0.1)
+b. It depends on the orientation of the triangle.
+c. (0.45, 0.35, 0.15)
+d. (0.5, 0.3, 0.4)
+e. (0.9, 0.7, 0.3)
 
 The correct answer is: (0.45, 0.35, 0.15)
 
@@ -176,16 +131,11 @@ The correct answer is: (0.45, 0.35, 0.15)
 
 Which of the following statements about colour spaces is false?
 Select one:
-a.
-The colour gamut describes the range of colours that can be reproduced on an output device.
-b.
-If we represent two pure spectral colours (i.e., rainbow colours) in HSV coordinates, then linearly interpolating these colours gives also a pure spectral colour (rainbow colour).
-c.
-If we represent two pure spectral colours (i.e., rainbow colours) in RGB coordinates, then linearly interpolating these colours gives also a pure spectral colour (rainbow colour).
-d.
-The HSV colour space is more convenient and intuitive than the RGB colour space for colour design.
-e.
-The RGB colour space mirrors the way colours are represented in display devices, i.e., as combination of red, green and blue light.
+a. The colour gamut describes the range of colours that can be reproduced on an output device.
+b. If we represent two pure spectral colours (i.e., rainbow colours) in HSV coordinates, then linearly interpolating these colours gives also a pure spectral colour (rainbow colour).
+c. If we represent two pure spectral colours (i.e., rainbow colours) in RGB coordinates, then linearly interpolating these colours gives also a pure spectral colour (rainbow colour).
+d. The HSV colour space is more convenient and intuitive than the RGB colour space for colour design.
+e. The RGB colour space mirrors the way colours are represented in display devices, i.e., as combination of red, green and blue light.
 
 The correct answer is: If we represent two pure spectral colours (i.e., rainbow colours) in RGB coordinates, then linearly interpolating these colours gives also a pure spectral colour (rainbow colour).
 
@@ -194,16 +144,11 @@ The correct answer is: If we represent two pure spectral colours (i.e., rainbow 
 The CIE XYZ colour space may be represented as a projection on the 2D plane: x + y + Z = 1.
 Given the color (2, 4, 2), what is the corresponding 2D colour in the CIE chromaticity diagram?
 Select one:
-a.
-(0.25, 0.5)
-b.
-(0.5, 1.0)
-c.
-(2, 4)
-d.
-(1, 2)
-e.
-(0.2, 0.4)
+a. (0.25, 0.5)
+b. (0.5, 1.0)
+c. (2, 4)
+d. (1, 2)
+e. (0.2, 0.4)
 
 The correct answer is: (0.25, 0.5)
 
@@ -211,16 +156,11 @@ The correct answer is: (0.25, 0.5)
 
 Which of the following statements about shadows is false?
 Select one:
-a.
-Shadow maps are calculated by rendering a scene from the light's perspective.
-b.
-The shadow of a cube is always a square or rectangle regardless of the orientation of the cube and position of the light source.
-c.
-Without shadows it is difficult to perceive the position of an object with respect to a ground plane.
-d.
-The projected shadow of a 3D object cast on a ground plane can be computed by multiplying all vertices of the object with a matrix.
-e.
-Shadow maps can be used to compute shadows for any surface.
+a. Shadow maps are calculated by rendering a scene from the light's perspective.
+b. The shadow of a cube is always a square or rectangle regardless of the orientation of the cube and position of the light source.
+c. Without shadows it is difficult to perceive the position of an object with respect to a ground plane.
+d. The projected shadow of a 3D object cast on a ground plane can be computed by multiplying all vertices of the object with a matrix.
+e. Shadow maps can be used to compute shadows for any surface.
 
 The correct answer is: The shadow of a cube is always a square or rectangle regardless of the orientation of the cube and position of the light source.
 
@@ -235,16 +175,11 @@ Given is a point P with the uvn-coordinates
 .
 What are the xyz-coordinates (world coordinates) of this point?
 Select one:
-a.
-\begin{pmatrix} 1 \\ 1  \\ 4 \end{pmatrix}
-b.
-\begin{pmatrix} 1 \\ -1  \\ 4 \end{pmatrix}
-c.
-\begin{pmatrix} 3 \\ 3  \\ 2 \end{pmatrix}
-d.
-\begin{pmatrix} 2 \\ 0  \\ 2 \end{pmatrix}
-e.
-\begin{pmatrix} 3 \\ -3  \\ 2 \end{pmatrix}
+a. \begin{pmatrix} 1 \\ 1  \\ 4 \end{pmatrix}
+b. \begin{pmatrix} 1 \\ -1  \\ 4 \end{pmatrix}
+c. \begin{pmatrix} 3 \\ 3  \\ 2 \end{pmatrix}
+d. \begin{pmatrix} 2 \\ 0  \\ 2 \end{pmatrix}
+e. \begin{pmatrix} 3 \\ -3  \\ 2 \end{pmatrix}
 
 The correct answer is:
 \begin{pmatrix} 2 \\ 0  \\ 2 \end{pmatrix}
@@ -256,16 +191,11 @@ Using the (achromatic) Phong Illumination equation discussed in the lecture and 
 NOTE 1: Please assume that there is no distance dependency, i.e. kc=1.0 and kl=kq=0.0.
 NOTE 2: In order to work out your answer you may not need all of the parameters specified above.
 Select one:
-a.
-0.4
-b.
-0.35
-c.
-1/3
-d.
-0.45
-e.
-0.3
+a. 0.4
+b. 0.35
+c. 1/3
+d. 0.45
+e. 0.3
 
 The correct answer is: 0.3
 
@@ -572,3 +502,4 @@ The image below shows the expected output for n=4, n=8, and n=20.
 Image description: The left part of the image shows a red circle, around this circle there are 4 triangles. The first triangle is at the top and is rotated by 0 degrees. The second triangle is rotated by 90 degrees, the third by 180 degrees, and the fourth by 270 degrees. The triangles are oriented such that they form a flower shape. The center part of the image shows a red circle, around this circle there are 8 triangles. The first triangle is at the top and is rotated by 0 degrees. The second triangle is rotated by 45 degrees, the third by 90 degrees, the fourth by 135 degreess, the fifth by 180 degrees, the sixth by 225 degrees, the seventh by 270 degrees, and the eighth by 315 degrees. The triangles are oriented such that they form a flower shape. The right part shows the same as the center part but with 20 triangles.
 
 NULL
+

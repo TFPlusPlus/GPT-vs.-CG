@@ -13,7 +13,7 @@ def parse(filename_input, filename_output, num_of_generations = 10):
             question = ""
             while True:
                 line = file.readline()
-                if line == "\n":
+                if line == "\n" or line == "":
                     break
                 question += line
             answer = ""
