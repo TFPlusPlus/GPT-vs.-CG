@@ -16,7 +16,7 @@ options = [
 
 for i in range(num_of_generations):
     category.append("Generation " + str(i+1))
-    options.append(["Correct explanation", "Conceptual error", "Calculation error", "Logic error"])
+    options.append(["Correct explanation", "Correct answer", "Conceptual error", "Calculation error", "Logic error", "No explanation"])
 
 categories = []
 for i in range(len(category)):

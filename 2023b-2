@@ -11,10 +11,23 @@ e. Cyan
 The correct answer is:
 Green
 
-2023b02
+2023b02a
 
 Given is a 3D medical imaging data set of a head which specifies for each point the radiodensity of the material, i.e., to what extend the material blocks x-rays. For example, bone has a higher value (is less transmissible) than muscle, skin, and fluid. What surface representation is most suitable for rendering the bone layer of the head as illustrated in the image below?
-Skull
+Image description: A 3D model of a skull.
+Select one:
+a. Parametric surfaces
+b. CSG (Constructive Solid Geometry)
+c. Subdivision surfaces
+d. Implicit surfaces
+e. First using a CGS object and then smoothing it using a subdivision surface.
+
+The correct answer is: Implicit surfaces
+
+2023b02b
+
+Given is a 3D medical imaging data set of a head which specifies for each point the radiodensity of the material, i.e., to what extend the material blocks x-rays. For example, bone has a higher value (is less transmissible) than muscle, skin, and fluid. What surface representation is most suitable for rendering the bone layer of the head as illustrated in the image below?
+Image description: A 3D model of a skull in white, there are a lot of intricate details in the model.
 Select one:
 a. Parametric surfaces
 b. CSG (Constructive Solid Geometry)
@@ -79,13 +92,30 @@ e. P'=(1, 1, 3)^T
 The correct answer is:
 P'=(1, 1, 2)^T
 
-2023b07
+2023b07a
 
 Given are the following vertices:
 const int numVertices=7;
 const float vertices[numVertices][2] = { {50,50},{300,50},{50,150},{50,200},{200,200},{50,300},{300,300} };
 Consider the image shown below.
-2D shape
+Image description: The image shows a square with a triangle cropped out. The vertices of the square are 0, 1, 6, 5. The vertices of the triangle are 2, 4, 3.
+Which calling sequence of these vertices (using glVertex2fv) results in the shape in the image above, if we use the OpenGL commands glBegin(GL_TRIANGLE_FAN) and glEnd()?
+Select one:
+a. 4, 1, 0, 2, 3, 5, 6
+b. 6, 1, 0, 2, 4, 3, 5
+c. 0, 1, 2, 3, 4, 5, 6
+d. 4, 3, 5, 6, 1, 0, 2
+e. 1, 0, 2, 4, 3, 5, 6
+
+The correct answer is: 4, 3, 5, 6, 1, 0, 2
+
+2023b07b
+
+Given are the following vertices:
+const int numVertices=7;
+const float vertices[numVertices][2] = { {50,50},{300,50},{50,150},{50,200},{200,200},{50,300},{300,300} };
+Consider the image shown below.
+Image description: The image shows a square with a triangle cropped out. The vertices of the square are 0, 1, 6, 5 counterclockwise. The vertices of the triangle are 2, 4, 3 counterclockwise. Lines from the 4th vertex to every other vertex are included in the shape.
 Which calling sequence of these vertices (using glVertex2fv) results in the shape in the image above, if we use the OpenGL commands glBegin(GL_TRIANGLE_FAN) and glEnd()?
 Select one:
 a. 4, 1, 0, 2, 3, 5, 6
@@ -110,10 +140,31 @@ e. c=1
 
 The correct answer is: c=1.5
 
-2023b09
+2023b09a
 
 Given is a function drawHouse() which draws a wire frame house in the xy-plane as shown in the image below:
-2D House
+Image description: A shape of a house is drawn in the xy-plane. The house is made up of a square with a triangle on top.
+We now transform the house in two different ways before drawing it:
+Drawing 1:
+glScalef(2.0, 1.0, 1.0);
+drawHouse();
+Drawing 2:
+glScalef(2.0, 1.0, -1.0);
+drawHouse();
+Which of the following statements is correct?
+Select one:
+a. The two drawings look the same, but the MODEL_VIEW matrices used to transform the house before drawing are different.
+b. The two drawings look different, and the MODEL_VIEW matrices used to transform the house before drawing are different.
+c. The two drawings look the same, and the MODEL_VIEW matrices used to transform the house before drawing are the same.
+d. The transformation is not possible (generates an error).
+e. The two drawings look different, but the MODEL_VIEW matrices used to transform the house before drawing are the same.
+
+The correct answer is: The two drawings look the same, but the MODEL_VIEW matrices used to transform the house before drawing are different.
+
+2023b09b
+
+Given is a function drawHouse() which draws a wire frame house in the xy-plane as shown in the image below:
+Image description: A shape of a house is drawn in the xy-plane. The house is made up of a square with a triangle on top. The square is made up of four points, (0, 0), (2, 0), (2, 2), and (0, 2). The triangle is made up of three points, (0, 2), (2, 2), and (1, 3).
 We now transform the house in two different ways before drawing it:
 Drawing 1:
 glScalef(2.0, 1.0, 1.0);
@@ -171,12 +222,12 @@ e. C_P=(0.52, 0.65, 0.17)
 The correct answer is:
 C_P=(0.49, 0.66, 0.18)
 
-2023b12
+2023b12a
 
 Given is the following texture image:
-Texture image
+Image description: The image shows a 4x4 grid of colours. From left to right, then top to bottom, the colours are red, light green, dark blue, brown, yellow, purple, cyan, dark orange, pink, white, lime, grey, black, light blue, light orange, dark green.
 What texture coordinates do we need to specify if we want to use this texture image to create the textured triangle shown below?
-Texture image
+Image description: The image shows a shifted version of the base image, with the bottom left corner being the top left corner of the pink tile, the bottom right corner being the bottom right corner of the light orange tile, and the top right corner being the top right corner of the dark blue tile.
 Select one:
 a. Texture coordinates for the bottom-left vertex of the triangle: (0.0, 0.5)
 Texture coordinates for the bottom-right vertex of the triangle: (0.75, 0.0)
@@ -198,9 +249,93 @@ The correct answer is: Texture coordinates for the bottom-left vertex of the tri
 Texture coordinates for the bottom-right vertex of the triangle: (0.75, 0.0)
 Texture coordinates for the top vertex of the triangle: (0.75, 1.0)
 
-2023b13
+2023b12b
 
-Texture mapped polygons
+Given is the following texture image:
+Image description: The image shows a 4x4 grid of colours.
+What texture coordinates do we need to specify if we want to use this texture image to create the textured triangle shown below?
+Image description: The image shows a shifted version of the base image. Using grid coordinates from the base image, where the bottom left corner of the base image is (0, 0) and the top right corner of the base image is (4, 4), then the bottom left corner is (0, 2), the bottom right corner is (3, 0), and the top right corner is (3, 4).
+Select one:
+a. Texture coordinates for the bottom-left vertex of the triangle: (0.0, 0.5)
+Texture coordinates for the bottom-right vertex of the triangle: (0.75, 0.0)
+Texture coordinates for the top vertex of the triangle: (0.75, 1.0)
+b. Texture coordinates for the bottom-left vertex of the triangle: (0.0, 0.0)
+Texture coordinates for the bottom-right vertex of the triangle: (1.0, 0.0)
+Texture coordinates for the top vertex of the triangle: (1.0, 1.0)
+c. Texture coordinates for the bottom-left vertex of the triangle: (0.0, 0.0)
+Texture coordinates for the bottom-right vertex of the triangle: (0.75, 0.0)
+Texture coordinates for the top vertex of the triangle: (0.75, 1.0)
+d. Texture coordinates for the bottom-left vertex of the triangle: (0.0, 0.75)
+Texture coordinates for the bottom-right vertex of the triangle: (0.5, 0.5)
+Texture coordinates for the top vertex of the triangle: (0.75, 1.0)
+e. Texture coordinates for the bottom-left vertex of the triangle: (0.75, 0.0)
+Texture coordinates for the bottom-right vertex of the triangle: (0.75, 1.0)
+Texture coordinates for the top vertex of the triangle: (0.0, 0.5)
+
+The correct answer is: Texture coordinates for the bottom-left vertex of the triangle: (0.0, 0.5)
+Texture coordinates for the bottom-right vertex of the triangle: (0.75, 0.0)
+Texture coordinates for the top vertex of the triangle: (0.75, 1.0)
+
+2023b13a
+
+Image description: The image shows the base texture, a shape to be textured, and the resulting textured shape. The base texture is the picture of a mountain, the shape to be texture is made up from three shapes: a rectangle with vertices P1, P2, P5, P3 counterclockwise, where P1 is the bottom left corner of the whole shape, the width of the rectangle is 2, and the height of the rectangle is 0.5; a rectangle with vertices P6, P8, P10, P9 counterwise, where P10 is the top right corner of the whole shape, the width of the rectangle is 2, and the height of the rectangle is 0.5; a square with vertices P4, P5, P7, P6 counterwise, where the center of the shape aligns with the center of the whole shape, the width of the square is 1. The resulting textured shape is the same as the shape to be textured, but with the base texture mapped onto it, repeated 3 times horizontally and 2 times vertically.
+Select one:
+a. Texture coordinate for P1: (0, 0)
+Texture coordinate for P2: (4, 0)
+Texture coordinate for P3: (0, 1)
+Texture coordinate for P4: (2, 1)
+Texture coordinate for P5: (4, 1)
+Texture coordinate for P6: (2, 3)
+Texture coordinate for P7: (4, 3)
+Texture coordinate for P8: (6, 3)
+Texture coordinate for P9: (2, 4)
+Texture coordinate for P10: (6, 4)
+b. Texture coordinate for P1: (0, 0)
+Texture coordinate for P2: (2, 0)
+Texture coordinate for P3: (0, 0.5)
+Texture coordinate for P4: (1, 0.5)
+Texture coordinate for P5: (2, 0.5)
+Texture coordinate for P6: (1, 1.5)
+Texture coordinate for P7: (2, 1.5)
+Texture coordinate for P8: (3, 1.5)
+Texture coordinate for P9: (1, 2)
+Texture coordinate for P10: (3, 2)
+c. Texture coordinate for P1: (0, 0)
+Texture coordinate for P2: (2, 0)
+Texture coordinate for P3: (0, 1)
+Texture coordinate for P4: (2, 1)
+Texture coordinate for P5: (4, 1)
+Texture coordinate for P6: (2, 2)
+Texture coordinate for P7: (4, 2)
+Texture coordinate for P8: (6, 2)
+Texture coordinate for P9: (2, 3)
+Texture coordinate for P10: (6, 3)
+d. Texture coordinate for P1: (0, 0)
+Texture coordinate for P2: (4, 0)
+Texture coordinate for P3: (0, 0.5)
+Texture coordinate for P4: (2, 0.5)
+Texture coordinate for P5: (4, 0.5)
+Texture coordinate for P6: (2, 1.5)
+Texture coordinate for P7: (4, 1.5)
+Texture coordinate for P8: (6, 1.5)
+Texture coordinate for P9: (2, 2)
+Texture coordinate for P10: (6, 2)
+e. None of the others.
+
+The correct answer is: Texture coordinate for P1: (0, 0)
+Texture coordinate for P2: (2, 0)
+Texture coordinate for P3: (0, 0.5)
+Texture coordinate for P4: (1, 0.5)
+Texture coordinate for P5: (2, 0.5)
+Texture coordinate for P6: (1, 1.5)
+Texture coordinate for P7: (2, 1.5)
+Texture coordinate for P8: (3, 1.5)
+Texture coordinate for P9: (1, 2)
+Texture coordinate for P10: (3, 2)
+
+2023b13b
+
+Image description: The image shows the base texture, a shape to be textured, and the resulting textured shape. The base texture is the picture of a mountain, the shape to be texture is made up from three shapes: a rectangle with vertices P1, P2, P5, P3 counterclockwise, where P1 is the bottom left corner of the whole shape, the width of the rectangle is 2, and the height of the rectangle is 0.5; a rectangle with vertices P6, P8, P10, P9 counterwise, where P10 is the top right corner of the whole shape, the width of the rectangle is 2, and the height of the rectangle is 0.5; a square with vertices P4, P5, P7, P6 counterwise, where the center of the shape aligns with the center of the whole shape, the width of the square is 1. The resulting textured shape is the same as the shape to be textured, but with the base texture mapped onto it, repeated 3 times horizontally and 2 times vertically. The bottom left corner of the base texture is mapped to the bottom left corner of the shape to be textured, and the top right corner of the base texture is mapped to the top right corner of the shape to be textured. The base texture has not been shapeshifted, only cropped.
 Select one:
 a. Texture coordinate for P1: (0, 0)
 Texture coordinate for P2: (4, 0)
@@ -283,10 +418,10 @@ e. B_3(1)=0
 
 The correct answer is: The basis functions are the basis functions of a quadratic Bezier curve.
 
-2023b16
+2023b16a
 
 Given is a profile curve c(t)=(x(t), 0, z(t)), 0 ≤ t ≤ 1, which lies in the xz-plane. The resulting surface-of-revolution is shown in the image below. What is the parametric equation of the profile curve indicated in blue in the image below?
-Surface of revolution
+Image description: A surface of revolution is shown with a blue line on the surface. The blue line connects the points (0, 0, 3) and (3, 0, 2), then (3, 0, 2) and (4, 0, 0).
 Select one:
 $$a. c(t)=\begin{cases}$$
 $$\begin{pmatrix} 6*t \\ 0 \\ 3-2*t \end{pmatrix} & \text{if } 0 \le t \le 0.5\\$$
@@ -315,11 +450,68 @@ $$\begin{pmatrix} 6*t \\ 0 \\ 3-2*t \end{pmatrix} & \text{if } 0 \le t \le 0.5\\
 $$\begin{pmatrix} 2*t+2 \\ 0 \\ 4*(1-t) \end{pmatrix} & \text{if } 0.5 \le t \le 1$$
 $$\end{cases}$$
 
-2023b17
+2023b16b
+
+Given is a profile curve c(t)=(x(t), 0, z(t)), 0 ≤ t ≤ 1, which lies in the xz-plane. The resulting surface-of-revolution is shown in the image below. What is the parametric equation of the profile curve indicated in blue in the image below?
+Image description: A surface of revolution is shown with its profile curve on the xz-plane. The blue line connects the points (0, 0, 3) and (3, 0, 2), then (3, 0, 2) and (4, 0, 0).
+Select one:
+$$a. c(t)=\begin{cases}$$
+$$\begin{pmatrix} 6*t \\ 0 \\ 3-2*t \end{pmatrix} & \text{if } 0 \le t \le 0.5\\$$
+$$\begin{pmatrix} 2*t+2 \\ 0 \\ 4*(1-t) \end{pmatrix} & \text{if } 0.5 \le t \le 1$$
+$$\end{cases}$$
+$$b. c(t)=\begin{cases}$$
+$$\begin{pmatrix} 3*t \\ 0 \\ 3-2*t \end{pmatrix} & \text{if } 0 \le t \le 0.5\\$$
+$$\begin{pmatrix} t+3 \\ 0 \\ 4*(1-t) \end{pmatrix} & \text{if } 0.5 \le t \le 1$$
+$$\end{cases}$$
+$$c. c(t)=\begin{cases}$$
+$$\begin{pmatrix} 6*t \\ 0 \\ 3-t \end{pmatrix} & \text{if } 0 \le t \le 0.5\\$$
+$$\begin{pmatrix} 2*t+2 \\ 0 \\ 2-t \end{pmatrix} & \text{if } 0.5 \le t \le 1$$
+$$\end{cases}$$
+$$d. c(t)=\begin{cases}$$
+$$\begin{pmatrix} 3*t \\ 0 \\ 3-t \end{pmatrix} & \text{if } 0 \le t \le 0.5\\$$
+$$\begin{pmatrix} t+3 \\ 0 \\ 2-t \end{pmatrix} & \text{if } 0.5 \le t \le 1$$
+$$\end{cases}$$
+$$e. c(t)=\begin{cases}$$
+$$\begin{pmatrix} 3*t \\ 0 \\ 3-0.5*t \end{pmatrix} & \text{if } 0 \le t \le 0.5\\$$
+$$\begin{pmatrix} 2*t+1 \\ 0 \\ 3-2*t \end{pmatrix} & \text{if } 0.5 \le t \le 1$$
+$$\end{cases}$$
+
+The correct answer is:
+$$c(t)=\begin{cases}$$
+$$\begin{pmatrix} 6*t \\ 0 \\ 3-2*t \end{pmatrix} & \text{if } 0 \le t \le 0.5\\$$
+$$\begin{pmatrix} 2*t+2 \\ 0 \\ 4*(1-t) \end{pmatrix} & \text{if } 0.5 \le t \le 1$$
+$$\end{cases}$$
+
+2023b17a
 
 What is the parametric equation of the donut-shaped surface p(t)=(x(s,t), y(s,t), z(s,t)), 0 ≤ s,t ≤ 1 shown in the image below?
 Hint 1: The surface is a surface-of-revolution as discussed in the lecture. The profile curve is an ellipsoid shown in the image below in blue.
-Donut surface
+Image description: A donut-shaped surface is shown with a blue line on the surface. The blue line is an ellipse covering three squares in the coordinate system, from (1, 0, 0) to (4, 0, 1).
+Select one:
+a. p(t)=
+$$\begin{pmatrix} (1.5*cos(2 \pi t) + 2.5) cos (2 \pi s) \\ (1.5*cos(2 \pi t) + 2.5) sin (2 \pi s) \\ sin (2 \pi t) \end{pmatrix}$$
+b. p(t)=
+$$\begin{pmatrix} 1.5*cos(2 \pi t) cos (2 \pi s) +2.5  \\ 1.5*cos(2 \pi$$
+$$t) sin (2 \pi s)  \\ sin (2 \pi t) \end{pmatrix}$$
+c. p(t)=
+$$\begin{pmatrix} 1.5*cos(2 \pi t) cos (2 \pi s) + 2.5  \\ 1.5*cos(2 \pi$$
+$$t) sin (2 \pi s) +2.5 \\ sin (2 \pi t) \end{pmatrix}$$
+d. p(t)=
+$$\begin{pmatrix} 3*cos(2 \pi t) cos (2 \pi s) \\ cos(2 \pi$$
+$$t) sin (2 \pi s) \\ sin (2 \pi s) \end{pmatrix}$$
+e. p(t)=
+$$\begin{pmatrix} 3*cos(2 \pi t) cos (2 \pi s) + 2.5 \\ cos(2 \pi$$
+$$t) sin (2 \pi s) \\ sin (2 \pi s) \end{pmatrix}$$
+
+The correct answer is:
+p(t)=
+$$\begin{pmatrix} (1.5*cos(2 \pi t) + 2.5) cos (2 \pi s) \\ (1.5*cos(2 \pi t) + 2.5) sin (2 \pi s) \\ sin (2 \pi t) \end{pmatrix}$$
+
+2023b17b
+
+What is the parametric equation of the donut-shaped surface p(t)=(x(s,t), y(s,t), z(s,t)), 0 ≤ s,t ≤ 1 shown in the image below?
+Hint 1: The surface is a surface-of-revolution as discussed in the lecture. The profile curve is an ellipsoid shown in the image below in blue.
+Image description: A donut-shaped surface is shown with its profile curve on the xz-plane. The blue line is an ellipse with the center (2.5, 0, 0.5), width 3, and height 1.
 Select one:
 a. p(t)=
 $$\begin{pmatrix} (1.5*cos(2 \pi t) + 2.5) cos (2 \pi s) \\ (1.5*cos(2 \pi t) + 2.5) sin (2 \pi s) \\ sin (2 \pi t) \end{pmatrix}$$
@@ -385,12 +577,29 @@ e. $$\begin{pmatrix} 1 \\ -3  \\ -5 \end{pmatrix}$$
 The correct answer is:
 $$\begin{pmatrix} 0  \\ -4  \\ -1 \end{pmatrix}$$
 
-2023b20
+2023b20a
 
 A plane n.p=d defines a half-space, where the half space are all points where n.p<=d.
 For example, for the plane x=0 the half space are all points with an x-coordinate <=0.
 Using this definition we can now define a "cut-sphere" as the intersection of a sphere S and a half-space defined by the plane P. I.e., the "cut-sphere" contains all points which are inside the sphere and inside the half-space defined by P. The image below shows an example.
-Cut-sphere
+Image description: The image shows a sphere shown in red with a chunk cut off, in front of a blue and green background. Some shadows of the object are cast on the ground.
+Which of the statements below about the ray intersection with a "cut-sphere" (defined by a sphere S and a plane P) is false?
+NOTE: You can assume that the "cut-sphere" is in front of the eye point.
+Select one:
+a. If the dot product of the ray direction and the normal of P is negative AND the ray intersects the plane P and the sphere S AND the intersection parameter with the plane P is between the two intersection parameters with the sphere S, then the intersection point with the "cut-sphere" is equal to the first intersection point with the sphere S.
+b. If the dot product of the ray direction and the normal of P is positive AND the ray intersects the plane P before it intersects the sphere S, then the "cut-sphere" object does not exist (i.e., the intersection of the sphere and half-space is empty).
+c. If the dot product of the ray direction and the normal of P is negative AND the ray intersects the plane P before it intersects the sphere S, then the "cut-sphere" object is equal to the sphere S (i.e., the intersection of the sphere and half-space is the sphere and nothing gets cut off.).
+d. The surface normal of a cut-sphere is either the normal of the sphere S or the normal of the plane P dependent on where the ray intersects the "cut-sphere" first.
+e. If the dot product of the ray direction and the normal of P is positive AND the ray intersects the plane P after it intersects the sphere S, then the intersection point with the "cut-sphere" is given by the intersection point with the sphere S.
+
+The correct answer is: If the dot product of the ray direction and the normal of P is negative AND the ray intersects the plane P and the sphere S AND the intersection parameter with the plane P is between the two intersection parameters with the sphere S, then the intersection point with the "cut-sphere" is equal to the first intersection point with the sphere S.
+
+2023b20b
+
+A plane n.p=d defines a half-space, where the half space are all points where n.p<=d.
+For example, for the plane x=0 the half space are all points with an x-coordinate <=0.
+Using this definition we can now define a "cut-sphere" as the intersection of a sphere S and a half-space defined by the plane P. I.e., the "cut-sphere" contains all points which are inside the sphere and inside the half-space defined by P. The image below shows an example.
+Image description: The image shows a spherical cap, or a sphere with a portion cut off. The cut portion of the sphere is not shown, and the background behind that portion is shown, since light would past through the cut portion of the sphere.
 Which of the statements below about the ray intersection with a "cut-sphere" (defined by a sphere S and a plane P) is false?
 NOTE: You can assume that the "cut-sphere" is in front of the eye point.
 Select one:
@@ -406,19 +615,20 @@ The correct answer is: If the dot product of the ray direction and the normal of
 
 Consider the 5x5 grayscale image, J, defined by the grid lattice below. Given also, is the a 3x3 Gaussian Kernel, K.
 What is the resulting value at pixel location (2,2) of the image obtained by applying Gaussian Kernel K, to image J?
+Image J:
 4	8	8	8	8	8
 3	16	16	16	16	16
 2	48	48	48	48	48
 1	32	32	32	32	32
 0	8	8	8	8	8
-0	1	2	3	4Image J	
+        0	1	2	3	4
+Gaussian Kernel K:
 2	1/16	1/8	1/16
 1	1/8	1/4	1/8
 0	1/16	1/8	1/16
-0	1	2
-Gaussian Kernel K
+        0	1	2
 Note: Do not process all pixels that are within a 1 pixel border around the image.
-Question 21Select one:
+Select one:
 a. None of the others
 b. 40
 c. 36
@@ -432,17 +642,17 @@ The correct answer is: 36
 Consider the 4x4 binary image, J, defined by the grid lattice below. Given also, is the square-like 3x3 structuring element,S, which contains all "1"-value pixels and has the origin at the center (1,1). The horizontal is x axis and the vertical is y axis. Each pixel location is denoted as (x,y) of position index.
 Use "Padding 0" (Extending border values outside with zeros).
 What is the resulting value at pixel location (3, 2) of the image obtained after performing a binary dilation of image J with structuring element S?
+Image J:
 3	1	0	1	0
 2	0	1	0	0
 1	1	0	1	0
 0	1	0	0	1
-0	1	2	3
-Image J	
+        0	1	2	3
+Structuring Element S
 2	1	1	1
 1	1	1	1
 0	1	1	1
-0	1	2
-Structuring Element S
+        0	1	2
 Select one:
 a. 1
 b. None of the others
@@ -459,7 +669,7 @@ Consider the 4x4 table representing the greyscale (8-bit) image J below. What is
 2	16	16	16	16
 1	64	16	16	8
 0	16	8	32	64
-0	1	2	3
+        0	1	2	3
 The bottom left cell is defined as (0,0). The y-axis is vertical and increases up the image. The x-axis is horizontal and increases to the right.
 Select one:
 a. None of the others
@@ -477,7 +687,7 @@ Consider the 4x4 table representing the greyscale image J below. What is the pix
 2	32	32	32	8
 1	0	0	128	8
 0	8	255	16	8
-0	1	2	3
+        0	1	2	3
 The bottom left cell is defined as (0,0). The y-axis is vertical and increases up the image. The x-axis is horizontal and increases to the right.
 Select one:
 a. 0
@@ -492,17 +702,18 @@ The correct answer is: 16
 
 Consider the 5x5 binary image, J, defined by the grid lattice below. Given also, is the cross-like 3x3 structuring element,S, which contains "1"-value pixels except at the corners and has the origin at the center (1,1).
 What is the value at pixel location (2,2) of the morphological gradient of image J with structuring element S?
+Image J:
 4	0	0	0	0	0
 3	0	0	1	0	0
 2	0	1	1	1	0
 1	0	0	1	0	0
 0	0	0	0	0	0
-0	1	2	3	4Image J	
+        0	1	2	3	4	
+Structuring Element S:
 2	0	1	0
 1	1	1	1
 0	0	1	0
-0	1	2
-Structuring Element S
+        0	1	2
 Note: Do not process all pixels that are within a 1 pixel border around the image.
 Select one:
 a. 0
@@ -520,7 +731,7 @@ Consider the greyscale image J defined below What will be the threshold (rounded
 2	128	32	32	16
 1	128	128	8	128
 0	8	8	16	64
-0	1	2	3
+        0	1	2	3
 The bottom left cell is defined as (0,0). The y-axis is vertical and increases up the image. The x-axis is horizontal and increases to the right.
 Select one:
 a. 63
@@ -538,27 +749,20 @@ Consider the 4x4 table representing the grayscale image J below. What is the res
 2	8	16	32	64
 1	16	32	64	128
 0	64	64	128	128
-0	1	2	3
+        0	1	2	3
 The bottom left cell is defined as (0,0). The y-axis is vertical and increases up the image. The x-axis is horizontal and increases to the right.
-Value of median filtered image at x=0, y=3? Answer 1 Question 27
-16
-Value of median filtered image at x=2, y=1? Answer 2 Question 27
-16
-Value of median filtered image at x=3, y=1? Answer 3 Question 27
-16
+What is the value of median filtered image at x=0, y=3?
+What is the value of median filtered image at x=2, y=1?
+What is the value of median filtered image at x=3, y=1?
 
-NULL
+The correct answer is: 0, 64, 64
 
 2023b28
 
 Which coefficients of the linear mapping operation, g(x,y)=af(x,y) + b, will map the pixel value f(x,y)=75 to g(x,y)=88 and pixel value f(x,y)=155 to g(x,y)=216?
-Answer 1 Question 28
-a is 0.6 and b is 32
 Which effect does this linear mapping operation defined by a and b have, when applied to an image?
-Answer 2 Question 28
-contrast is increased and brightness is increased
 
-NULL
+The correct answer is: a is 1.6 and b is -32, contrast is increased and brightness is decreased
 
 2023b29
 
@@ -568,19 +772,11 @@ $$G(x,y) = \frac{log(1+J(x,y))}{log(1 + Q)}$$
 Here Q is the maximal greyvalue of the greyscale range of the input image.
 The logarithmic function is applied to each input pixel of the 8 bit input range, and generates an output in the range between 0 and 1. You finally have to transform this output range to the same (8-bit) range that the input image has. Round to the nearest integer.
 After computation of G, what is the pixel value of the final resulting image at the pixel location (x=1, y=0)?
-3	8	8
-8
-8
-2	16
-4
-4
-16
-1	32
-128	255
-32
-0	16	64	64
-16
-0	1	2	3
+3	8	8       8       8
+2	16      4       4       16
+1	32      128	255     32
+0	16	64	64      16
+        0	1	2	3
 The bottom left cell is defined as (0,0). The y-axis is vertical and increases up the image. The x-axis is horizontal and increases to the right.
 Select one:
 a. 101

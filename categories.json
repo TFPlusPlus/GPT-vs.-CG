@@ -82,90 +82,110 @@
         "category": "Generation 1",
         "options": [
             "Correct explanation",
+            "Correct answer",
             "Conceptual error",
             "Calculation error",
-            "Logic error"
+            "Logic error",
+            "No explanation"
         ]
     },
     {
         "category": "Generation 2",
         "options": [
             "Correct explanation",
+            "Correct answer",
             "Conceptual error",
             "Calculation error",
-            "Logic error"
+            "Logic error",
+            "No explanation"
         ]
     },
     {
         "category": "Generation 3",
         "options": [
             "Correct explanation",
+            "Correct answer",
             "Conceptual error",
             "Calculation error",
-            "Logic error"
+            "Logic error",
+            "No explanation"
         ]
     },
     {
         "category": "Generation 4",
         "options": [
             "Correct explanation",
+            "Correct answer",
             "Conceptual error",
             "Calculation error",
-            "Logic error"
+            "Logic error",
+            "No explanation"
         ]
     },
     {
         "category": "Generation 5",
         "options": [
             "Correct explanation",
+            "Correct answer",
             "Conceptual error",
             "Calculation error",
-            "Logic error"
+            "Logic error",
+            "No explanation"
         ]
     },
     {
         "category": "Generation 6",
         "options": [
             "Correct explanation",
+            "Correct answer",
             "Conceptual error",
             "Calculation error",
-            "Logic error"
+            "Logic error",
+            "No explanation"
         ]
     },
     {
         "category": "Generation 7",
         "options": [
             "Correct explanation",
+            "Correct answer",
             "Conceptual error",
             "Calculation error",
-            "Logic error"
+            "Logic error",
+            "No explanation"
         ]
     },
     {
         "category": "Generation 8",
         "options": [
             "Correct explanation",
+            "Correct answer",
             "Conceptual error",
             "Calculation error",
-            "Logic error"
+            "Logic error",
+            "No explanation"
         ]
     },
     {
         "category": "Generation 9",
         "options": [
             "Correct explanation",
+            "Correct answer",
             "Conceptual error",
             "Calculation error",
-            "Logic error"
+            "Logic error",
+            "No explanation"
         ]
     },
     {
         "category": "Generation 10",
         "options": [
             "Correct explanation",
+            "Correct answer",
             "Conceptual error",
             "Calculation error",
-            "Logic error"
+            "Logic error",
+            "No explanation"
         ]
     }
 ]
