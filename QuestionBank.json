@@ -1394,23 +1394,6 @@
         ]
     },
     {
-        "id": "",
-        "question": "",
-        "answer": "",
-        "generated": [
-            "EMPTY 1",
-            "EMPTY 2",
-            "EMPTY 3",
-            "EMPTY 4",
-            "EMPTY 5",
-            "EMPTY 6",
-            "EMPTY 7",
-            "EMPTY 8",
-            "EMPTY 9",
-            "EMPTY 10"
-        ]
-    },
-    {
         "id": "2023b01",
         "question": "Consider a surface that reflects the colour yellow when three lights are shining on it: one red, one green, one blue.\nWhat will be the reflected colour if the red light is removed?\na. Yellow\nb. Green\nc. Black\nd. Red\ne. Cyan",
         "answer": "The correct answer is:\nGreen",

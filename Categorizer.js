@@ -20,7 +20,7 @@ function setup() {
     num_of_categories = CATEGORIES.length;
     prepare_list();
     refresh(0, 0);
-    hide_list();
+    // hide_list();
     document.getElementById("loading").remove();
 }
 
@@ -175,6 +175,8 @@ function update_data() {
 }
 
 function save() {
+    console.log(data.length);
+    console.log(QUESTIONS.length);
     const csvData = `${CATEGORIES_OPTIONS.join(',')}\n` + data.map((row, i) => `${QUESTIONS[i].id},` + row.join(',')).join('\n');
     const blob = new Blob([csvData], { type: 'text/csv' });
     const csvURL = URL.createObjectURL(blob);
@@ -198,17 +200,22 @@ document.onkeydown = function(e) {
         default:
             break;
     }
-    if (e.key >= "0" && e.key <= "9") {
-        let checkbox = document.getElementById(`checkbox${e.key - "0"}`);
+    if (e.key >= "1" && e.key <= "9") {
+        let checkbox = document.getElementById(`checkbox${e.key - "1"}`);
         if (checkbox) {
             checkbox.checked = !checkbox.checked;
-            checked.push(e.key - "0");
+            if (checkbox.checked) {
+                checked.push(e.key - "1");
+            }
+            else {
+                checked.splice(checked.indexOf(e.key - "1"), 1);
+            }
         }
     }
 }
 
-fetch("QuestionBank.json")
-// fetch("Questions.json")
+// fetch("QuestionBank.json")
+fetch("Questions.json")
     .then(response => response.json())
     .then(questions_json => {
         fetch("Categories.json")
