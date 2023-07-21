@@ -1,0 +1,580 @@
+[
+    {
+        "id": "2022b01",
+        "question": "Consider a plane\nP\ndefined by the equation\n2x+z=1\nand a point\n$$M = \\begin{pmatrix}-3\\\\2 \\\\ 7 \\end{pmatrix}$$\non this plane.\nWhich statement about the normalized vector\nv\nbeing orthogonal to the plane\nP\nat\nM\nis true?\nSelect one:\n$$a. v = \\frac{1}{\\sqrt{62}}\\begin{pmatrix}-3\\\\2\\\\7 \\end{pmatrix}$$\n$$b. v = \\frac{1}{\\sqrt{5}}\\begin{pmatrix}-3\\\\2\\\\7 \\end{pmatrix}$$\nc. None of the others\n$$d. v = \\frac{1}{\\sqrt{5}}\\begin{pmatrix}2\\\\0\\\\1 \\end{pmatrix}$$\n$$e. v = \\frac{1}{\\sqrt{62}}\\begin{pmatrix}2\\\\0\\\\1 \\end{pmatrix}$$",
+        "answer": "The correct answer is:\n$$v = \\frac{1}{\\sqrt{5}}\\begin{pmatrix}2\\\\0\\\\1 \\end{pmatrix}$$",
+        "generated": [
+            "EMPTY 1",
+            "EMPTY 2",
+            "EMPTY 3",
+            "EMPTY 4",
+            "EMPTY 5",
+            "EMPTY 6",
+            "EMPTY 7",
+            "EMPTY 8",
+            "EMPTY 9",
+            "EMPTY 10"
+        ]
+    },
+    {
+        "id": "2022b02",
+        "question": "Consider the point\nP\n, represented in 3D homogenous coordinates as\n$$P = \\begin{pmatrix} 3 \\\\ 2 \\\\3 \\\\1 \\end{pmatrix}$$\n.\nWhat statement about\nP'\n, the transformed point\nP\nafter first performing a translation by\n$$\\begin{pmatrix} 1 \\\\ -1 \\\\ -1 \\\\ 0 \\end{pmatrix}$$\n, then a rotation by -90 degrees around the z-axis, then a scaling by 2 in the x and y axes is true?\na. None of the others.\n$$b. P' = \\begin{pmatrix} 8 \\\\ 2 \\\\ -2 \\\\ 1 \\end{pmatrix}$$\n$$c. P' = \\begin{pmatrix} -2 \\\\ 8 \\\\ 2 \\\\ 1 \\end{pmatrix}$$\n$$d. P' = \\begin{pmatrix} 2 \\\\ -8 \\\\ 2 \\\\ 1 \\end{pmatrix}$$\n$$e. P' = \\begin{pmatrix} 8 \\\\ 8 \\\\ 2 \\\\ 1 \\end{pmatrix}$$",
+        "answer": "The correct answer is:\n$$P' = \\begin{pmatrix} 2 \\\\ -8 \\\\ 2 \\\\ 1 \\end{pmatrix}$$",
+        "generated": [
+            "EMPTY 1",
+            "EMPTY 2",
+            "EMPTY 3",
+            "EMPTY 4",
+            "EMPTY 5",
+            "EMPTY 6",
+            "EMPTY 7",
+            "EMPTY 8",
+            "EMPTY 9",
+            "EMPTY 10"
+        ]
+    },
+    {
+        "id": "2022b03",
+        "question": "Consider a scene with a single light source, that emits white light. This light passes through one translucent object such that red light is reflected while other light is transmitted. After passing through this object, the light then hits a second, opaque object that appears yellow.\nYou can assume that no objects in the scene other than the light source emit light, and that the only light interactions that may occur are transmission, reflection, and absorption.\nWhich of the following statements about the second object is true?\na. The object's surface must reflect red light, and absorb blue and green light.\nb. The object's surface must absorb blue light, reflect green light, and may either absorb or reflect red light.\nc. The object's surface must reflect red and green light, and absorb blue light.\nd. The scene as described is not possible.\ne. None of the others.",
+        "answer": "The correct answer is:\nThe scene as described is not possible.",
+        "generated": [
+            "EMPTY 1",
+            "EMPTY 2",
+            "EMPTY 3",
+            "EMPTY 4",
+            "EMPTY 5",
+            "EMPTY 6",
+            "EMPTY 7",
+            "EMPTY 8",
+            "EMPTY 9",
+            "EMPTY 10"
+        ]
+    },
+    {
+        "id": "2022b04",
+        "question": "You are working for \"Fancy Fun Furniture\", a company selling furniture online using VR representations. Your manager asks you to create models of different tables and chairs, which all have a blocky appearance with rounded edges and corners. What modelling technique would be most suitable for this?\nSelect one:\na. Define all polygons manual\nb. Parametric surfaces\nc. Point clouds\nd. Subdivision surfaces\ne. Implicit surfaces",
+        "answer": "The correct answer is: Subdivision surfaces",
+        "generated": [
+            "EMPTY 1",
+            "EMPTY 2",
+            "EMPTY 3",
+            "EMPTY 4",
+            "EMPTY 5",
+            "EMPTY 6",
+            "EMPTY 7",
+            "EMPTY 8",
+            "EMPTY 9",
+            "EMPTY 10"
+        ]
+    },
+    {
+        "id": "2022b05",
+        "question": "Given is a equilateral triangle. What colours do you need to specify for the vertices in order to make the centre point light grey (RGB value (2/3, 2/3, 2/3))?\nSelect one:\na. The vertices must be red, yellow and blue.\nb. The vertices must be cyan, magenta, and yellow.\nc. The vertices must be magenta, green and blue.\nd. The vertices must be cyan, red and yellow.\ne. The vertices must be red, green and blue.",
+        "answer": "The correct answer is: The vertices must be cyan, magenta, and yellow.",
+        "generated": [
+            "EMPTY 1",
+            "EMPTY 2",
+            "EMPTY 3",
+            "EMPTY 4",
+            "EMPTY 5",
+            "EMPTY 6",
+            "EMPTY 7",
+            "EMPTY 8",
+            "EMPTY 9",
+            "EMPTY 10"
+        ]
+    },
+    {
+        "id": "2022b06",
+        "question": "Given is a 3D model of a clock where the normal at the centre of the clock face is aligned with the z-axis. The hour hand points at 12 o'clock. What OpenGL rotation command rotates the hour hand such that it points at 4 o'clock?\nSelect one:\na. glRotatef(-135 0, 0, 1);\nb. glRotatef(135, 0, 0, 1);\nc. glRotatef(-120, 0, 0, 1);\nd. glRotatef(120, 0, 0, 1);\ne. glRotatef(150, 0, 0, 1);",
+        "answer": "The correct answer is: glRotatef(-120, 0, 0, 1);",
+        "generated": [
+            "EMPTY 1",
+            "EMPTY 2",
+            "EMPTY 3",
+            "EMPTY 4",
+            "EMPTY 5",
+            "EMPTY 6",
+            "EMPTY 7",
+            "EMPTY 8",
+            "EMPTY 9",
+            "EMPTY 10"
+        ]
+    },
+    {
+        "id": "2022b07a",
+        "question": "The image below on the left is used to texture map a rectangle as illustrated in the image below on the right. Assume the bottom-left vertex of the rectangle has the texture coordinates (2, 1) and that the texture parameter GL_REPEAT is set for both texture coordinate directions.\nWhat are the texture coordinates of the other three vertices?\nNOTE: the texture coordinate of the bottom-left vertex is (2,1) and not (0,0)!\nImage description: The picture of a sheep facing to the right is used as the base image. The image is repeated 4 times in the horizontal direction and 2 times in the vertical direction, where the top half of the second image in the vertical direction is cropped. In the filled texture map, the sheep is facing left.\nSelect one:\na. Bottom-right vertex: (-2, 1); Top-left vertex: (2, 2.5); Top-right vertex: (-2, 2.5)\nb. Bottom-right vertex: (4, 0); Top-left vertex: (0, 1.5); Top-right vertex: (4, 1.5)\nc. Bottom-right vertex: (-4, 0); Top-left vertex: (0, 1.5); Top-right vertex: (-4, 1.5)\nd. Bottom-right vertex: (-4, 1); Top-left vertex: (0, 2.5); Top-right vertex: (-4, 2.5)\ne. Bottom-right vertex: (6, 1.5); Top-left vertex: (2, 2.5); Top-right vertex: (6, 2.5)",
+        "answer": "The correct answer is: Bottom-right vertex: (-2, 1); Top-left vertex: (2, 2.5); Top-right vertex: (-2, 2.5)",
+        "generated": [
+            "EMPTY 1",
+            "EMPTY 2",
+            "EMPTY 3",
+            "EMPTY 4",
+            "EMPTY 5",
+            "EMPTY 6",
+            "EMPTY 7",
+            "EMPTY 8",
+            "EMPTY 9",
+            "EMPTY 10"
+        ]
+    },
+    {
+        "id": "2022b07b",
+        "question": "The image below on the left is used to texture map a rectangle as illustrated in the image below on the right. Assume the bottom-left vertex of the rectangle has the texture coordinates (2, 1) and that the texture parameter GL_REPEAT is set for both texture coordinate directions.\nWhat are the texture coordinates of the other three vertices?\nNOTE: the texture coordinate of the bottom-left vertex is (2,1) and not (0,0)!\nImage description: In the filled texture map, the base image is flipped and repeated 4 times in the horizontal direction and 1.5 times in the vertical direction. The texture coordinate of the bottom-left vertex is (2,1).\nSelect one:\na. Bottom-right vertex: (-2, 1); Top-left vertex: (2, 2.5); Top-right vertex: (-2, 2.5)\nb. Bottom-right vertex: (4, 0); Top-left vertex: (0, 1.5); Top-right vertex: (4, 1.5)\nc. Bottom-right vertex: (-4, 0); Top-left vertex: (0, 1.5); Top-right vertex: (-4, 1.5)\nd. Bottom-right vertex: (-4, 1); Top-left vertex: (0, 2.5); Top-right vertex: (-4, 2.5)\ne. Bottom-right vertex: (6, 1.5); Top-left vertex: (2, 2.5); Top-right vertex: (6, 2.5)",
+        "answer": "The correct answer is: Bottom-right vertex: (-2, 1); Top-left vertex: (2, 2.5); Top-right vertex: (-2, 2.5)",
+        "generated": [
+            "EMPTY 1",
+            "EMPTY 2",
+            "EMPTY 3",
+            "EMPTY 4",
+            "EMPTY 5",
+            "EMPTY 6",
+            "EMPTY 7",
+            "EMPTY 8",
+            "EMPTY 9",
+            "EMPTY 10"
+        ]
+    },
+    {
+        "id": "2022b08a",
+        "question": "The texture image below on the left is mapped onto a triangle producing  the picture below on the right.\nImage description: The picture of a arrow facing to the right is used as the base image. The image is repeated 3 times in the horizontal direction and shifted up diagonally to the right. The resultant texture map is a triangle. In the filled texture map, the arrow is facing right.\nAssumed the texture is repeated in both coordinate directions and the texture coordinate of the bottom left vertex is (0, 0).\nWhat are the texture coordinates at the top-left and top-right vertex of the triangle?\nSelect one:\na. The texture coordinate of the top-left vertex is (0, 1) and of the top-right vertex (3, 0).\nb. The texture coordinate of the top-left vertex is (1, 0) and of the top-right vertex (3, 0).\nc. The texture coordinate of the top-left vertex is (1, 0) and of the top-right vertex (0, 3).\nd. The texture coordinate of the top-left vertex is (0, 1) and of the top-right vertex (0, 3).\ne. The texture coordinate of the top-left vertex is (0, 1) and of the top-right vertex (3, 1).",
+        "answer": "The correct answer is: The texture coordinate of the top-left vertex is (0, 1) and of the top-right vertex (3, 0).",
+        "generated": [
+            "EMPTY 1",
+            "EMPTY 2",
+            "EMPTY 3",
+            "EMPTY 4",
+            "EMPTY 5",
+            "EMPTY 6",
+            "EMPTY 7",
+            "EMPTY 8",
+            "EMPTY 9",
+            "EMPTY 10"
+        ]
+    },
+    {
+        "id": "2022b08b",
+        "question": "The texture image below on the left is mapped onto a triangle producing  the picture below on the right.\nImage description: In the filled texture map, the base image is repeated 3 times in the horizontal direction and shifted up diagonally. The bottom-right corner of the third base image is mapped to the top-right corner of the filled texture map.\nAssumed the texture is repeated in both coordinate directions and the texture coordinate of the bottom left vertex is (0, 0).\nWhat are the texture coordinates at the top-left and top-right vertex of the triangle?\nSelect one:\na. The texture coordinate of the top-left vertex is (0, 1) and of the top-right vertex (3, 0).\nb. The texture coordinate of the top-left vertex is (1, 0) and of the top-right vertex (3, 0).\nc. The texture coordinate of the top-left vertex is (1, 0) and of the top-right vertex (0, 3).\nd. The texture coordinate of the top-left vertex is (0, 1) and of the top-right vertex (0, 3).\ne. The texture coordinate of the top-left vertex is (0, 1) and of the top-right vertex (3, 1).",
+        "answer": "The correct answer is: The texture coordinate of the top-left vertex is (0, 1) and of the top-right vertex (3, 0).",
+        "generated": [
+            "EMPTY 1",
+            "EMPTY 2",
+            "EMPTY 3",
+            "EMPTY 4",
+            "EMPTY 5",
+            "EMPTY 6",
+            "EMPTY 7",
+            "EMPTY 8",
+            "EMPTY 9",
+            "EMPTY 10"
+        ]
+    },
+    {
+        "id": "2022b09",
+        "question": "$$Given is an ellipsoid obtained by first scaling a unit sphere by (s_x, s_y, s_z) and then translating it by \\((t_x, t_y, t_z)\\). What is the normal direction n (not necessarily normalised) at the point \\(P=(p_x, p_y, p_z)\\) on the surface of  the ellipsoid?$$\n$$HINT: Solve this question using your solution to Q4 of the CodeRunner \"Ray Tracing\" programming quiz or use the fact that if an object is transformed by M then the normal is transformed by {\\bf M}^{-T}.$$\nSelect one:\n$$a.  \\(n=(p_x/s_x-t_x, p_y/s_y-t_y, p_z/s_z-t_z)\\)$$\n$$b.  \\(n=((p_x-t_x)/s_x, (p_y-t_y)/s_y, (p_z-t_z)/s_z)\\)$$\n$$c.  \\(n=((p_x+t_x)/s_x^2, (p_y+t_y)/s_y^2, (p_z+t_z)/s_z^2)\\)$$\n$$d.  \\(n=((p_x-t_x)/s_x^2, (p_y-t_y)/s_y^2, (p_z-t_z)/s_z^2)\\)$$\n$$e.  \\(n=((p_x+t_x)/s_x, (p_y+t_y)/s_y, (p_z+t_z)/s_z)\\)$$",
+        "answer": "$$The correct answer is:  \\(n=((p_x-t_x)/s_x^2, (p_y-t_y)/s_y^2, (p_z-t_z)/s_z^2)\\)$$",
+        "generated": [
+            "EMPTY 1",
+            "EMPTY 2",
+            "EMPTY 3",
+            "EMPTY 4",
+            "EMPTY 5",
+            "EMPTY 6",
+            "EMPTY 7",
+            "EMPTY 8",
+            "EMPTY 9",
+            "EMPTY 10"
+        ]
+    },
+    {
+        "id": "2022b10",
+        "question": "Given is a sphere centered at the origin with radius r=3 and a ray\n$$p(t)=\n$$\\begin{pmatrix} 4 \\\\ -1 \\\\ 2 \\end{pmatrix}$$\n+t\n$$\\begin{pmatrix} -2 \\\\ 1 \\\\ -1 \\end{pmatrix}$$\n$$.\nWhich of the following statements is true?\nSelect one:\na. The ray intersects the sphere in two points p(t1) and p(t2) where t1<1 and t2>1.\nb. The ray intersects the sphere in exactly one point p(t) (i.e. it touches the sphere), where t>1.\nc. The ray intersects the sphere in exactly one point p(t) (i.e. it touches the sphere), where t<1.\nd. The ray does not intersect the sphere.\ne. The ray intersects the sphere in two points p(t1) and p(t2) where t1>1 and t2>1.",
+        "answer": "The correct answer is: The ray intersects the sphere in two points p(t1) and p(t2) where t1<1 and t2>1.",
+        "generated": [
+            "EMPTY 1",
+            "EMPTY 2",
+            "EMPTY 3",
+            "EMPTY 4",
+            "EMPTY 5",
+            "EMPTY 6",
+            "EMPTY 7",
+            "EMPTY 8",
+            "EMPTY 9",
+            "EMPTY 10"
+        ]
+    },
+    {
+        "id": "2022b11",
+        "question": "$$Given is a quadratic spline with the power basis $$T=\\begin{pmatrix} t^2 & t & 1\\end{pmatrix}$$ and the basis matrix:$$\n$$$$\\begin{pmatrix}$$\n$$2 & -1 & -1\\\\$$\n$$1 & -2 & 1 \\\\$$\n1 & 1 & -1\n$$\\end{pmatrix}$$$$\nWhich statement about the resulting basis functions B_1(t), B_2(t), and B_3(t) is true?\nSelect one:\na. The basis functions are all cubic.\nb. B_1(t)=2*t^2-t-1\nc. The sum of the three basis functions is always 1.\nd. B_3(t) is positive for 0<=t<=1\ne. The basis functions are the basis functions of a quadratic Bezier curve.",
+        "answer": "The correct answer is: The sum of the three basis functions is always 1.",
+        "generated": [
+            "EMPTY 1",
+            "EMPTY 2",
+            "EMPTY 3",
+            "EMPTY 4",
+            "EMPTY 5",
+            "EMPTY 6",
+            "EMPTY 7",
+            "EMPTY 8",
+            "EMPTY 9",
+            "EMPTY 10"
+        ]
+    },
+    {
+        "id": "2022b12",
+        "question": "Which coefficients of the linear mapping operation, g(x,y)=af(x,y) + b, will map the pixel value f(x,y)=75 to g(x,y)=88 and pixel value f(x,y)=155 to g(x,y)=216?\nWhich effect does this linear mapping operation defined by a and b have, when applied to an image?",
+        "answer": "NULL",
+        "generated": [
+            "EMPTY 1",
+            "EMPTY 2",
+            "EMPTY 3",
+            "EMPTY 4",
+            "EMPTY 5",
+            "EMPTY 6",
+            "EMPTY 7",
+            "EMPTY 8",
+            "EMPTY 9",
+            "EMPTY 10"
+        ]
+    },
+    {
+        "id": "2022b13",
+        "question": "Consider the 4x4 table representing the greyscale (8-bit) image J below. Compute the effect of a logarithmic contrast stretching on the image, which aims to increase the dynamic range of darker regions in the image.\nThe logarithmic contrast stretching operation transforms the input image J(x,y) pixelwise to an output image G(x,y) according to the equation:\n$$G(x,y) = \\frac{log(1+J(x,y))}{log(1 + Q)}$$\nHere Q is the maximal greyvalue of the greyscale range of the input image.\nThe logarithmic function is applied to each input pixel of the 8 bit input range, and generates an output in the range between 0 and 1. You finally have to transform this output range to the same (8-bit) range that the input image has. Round to the nearest integer.\nAfter computation of G, what is the pixel value of the final resulting image at the pixel location (x=1, y=3)?\n3\t8\t8   8   8\n2\t16  4   4   16\n1\t32  128 255 32\n0\t16\t64\t64  16\n    0\t1\t2\t3\nThe bottom left cell is defined as (0,0). The y-axis is vertical and increases up the image. The x-axis is horizontal and increases to the right.\nSelect one:\na. 255\nb. 161\nc. 74\nd. 130\ne. 101\nf. 223\ng. 192\nh. None of the others.",
+        "answer": "The correct answer is: 101",
+        "generated": [
+            "EMPTY 1",
+            "EMPTY 2",
+            "EMPTY 3",
+            "EMPTY 4",
+            "EMPTY 5",
+            "EMPTY 6",
+            "EMPTY 7",
+            "EMPTY 8",
+            "EMPTY 9",
+            "EMPTY 10"
+        ]
+    },
+    {
+        "id": "2022b14",
+        "question": "Consider the 4x4 table representing the grayscale image J below. What is the result when a 3x3 median filter is applied? For boundary handling, use BoundaryPaddingZero.\n3\t0\t8\t16\t64\n2\t8\t16\t32\t64\n1\t16\t32\t64\t128\n0\t64\t64\t128\t128\n    0\t1\t2\t3\nThe bottom left cell is defined as (0,0). The y-axis is vertical and increases up the image. The x-axis is horizontal and increases to the right.\nValue of median filtered image at x=0, y=3?\nValue of median filtered image at x=2, y=1?\nValue of median filtered image at x=3, y=1?",
+        "answer": "NULL",
+        "generated": [
+            "EMPTY 1",
+            "EMPTY 2",
+            "EMPTY 3",
+            "EMPTY 4",
+            "EMPTY 5",
+            "EMPTY 6",
+            "EMPTY 7",
+            "EMPTY 8",
+            "EMPTY 9",
+            "EMPTY 10"
+        ]
+    },
+    {
+        "id": "2022b15a",
+        "question": "Given is a function drawShape() which draws a wireframe representation of the letter \"L\" in the xy-plane as shown in the image below.\nImage description: A letter L is placed on the x-y plane.\nPlease write OpenGL code to transform this shape such that you obtain the scene displayed in the image below:\nImage description: A letter L with twice the size is placed on the x-z plane.\nIMPORTANT:\nPlease only use OpenGL transformations, e.g. glScalef, glTranslatef, glRotatef\nPlease do NOT draw the shape itself - this is done automatically by the uploaded code",
+        "answer": "NULL",
+        "generated": [
+            "EMPTY 1",
+            "EMPTY 2",
+            "EMPTY 3",
+            "EMPTY 4",
+            "EMPTY 5",
+            "EMPTY 6",
+            "EMPTY 7",
+            "EMPTY 8",
+            "EMPTY 9",
+            "EMPTY 10"
+        ]
+    },
+    {
+        "id": "2022b15b",
+        "question": "Given is a function drawShape() which draws a wireframe representation of the letter \"L\" in the xy-plane as shown in the image below.\nImage description: A letter L is placed on the x-y plane. The vertices on the shape are p1 = (0, 0, 0), p2 = (0, 2, 0), p3 = (1.5, 0, 0).\nPlease write OpenGL code to transform this shape such that you obtain the scene displayed in the image below:\nImage description: A letter L with twice the size is placed on the x-z plane. The vertices on the shape are p1 = (0, 0, 0), p2 = (0, 0, 4), p3 = (3, 0, 0).\nIMPORTANT:\nPlease only use OpenGL transformations, e.g. glScalef, glTranslatef, glRotatef\nPlease do NOT draw the shape itself - this is done automatically by the uploaded code",
+        "answer": "NULL",
+        "generated": [
+            "EMPTY 1",
+            "EMPTY 2",
+            "EMPTY 3",
+            "EMPTY 4",
+            "EMPTY 5",
+            "EMPTY 6",
+            "EMPTY 7",
+            "EMPTY 8",
+            "EMPTY 9",
+            "EMPTY 10"
+        ]
+    },
+    {
+        "id": "2022b16a",
+        "question": "Given is a function drawShape() which draws a wireframe representation of the letter \"F\" in the xy-plane as shown in the image below.\nImage description: A letter F is placed on the x-y plane.\nPlease write OpenGL code to transform this shape such that you obtain the scene displayed in the image below:\nImage description: A letter F with twice the size is placed on the x-z plane and moved one unit to the right.\nIMPORTANT:\nPlease only use OpenGL transformations, e.g. glScalef, glTranslatef, glRotatef\nPlease do NOT draw the shape itself - this is done automatically by the uploaded code",
+        "answer": "NULL",
+        "generated": [
+            "EMPTY 1",
+            "EMPTY 2",
+            "EMPTY 3",
+            "EMPTY 4",
+            "EMPTY 5",
+            "EMPTY 6",
+            "EMPTY 7",
+            "EMPTY 8",
+            "EMPTY 9",
+            "EMPTY 10"
+        ]
+    },
+    {
+        "id": "2022b16b",
+        "question": "Given is a function drawShape() which draws a wireframe representation of the letter \"F\" in the xy-plane as shown in the image below.\nImage description: A letter F is placed on the x-y plane. The vertices on the shape are p1 = (0, 0, 0), p2 = (0, 2, 0), p3 = (1, 2, 0).\nPlease write OpenGL code to transform this shape such that you obtain the scene displayed in the image below:\nImage description: A letter F with twice the size is placed on the x-z plane and moved one unit to the the positive direction of the x-axis. The vertices on the shape are p1 = (1, 0, 0), p2 = (1, 0, 4), p3 = (3, 0, 4).\nIMPORTANT:\nPlease only use OpenGL transformations, e.g. glScalef, glTranslatef, glRotatef\nPlease do NOT draw the shape itself - this is done automatically by the uploaded code",
+        "answer": "NULL",
+        "generated": [
+            "EMPTY 1",
+            "EMPTY 2",
+            "EMPTY 3",
+            "EMPTY 4",
+            "EMPTY 5",
+            "EMPTY 6",
+            "EMPTY 7",
+            "EMPTY 8",
+            "EMPTY 9",
+            "EMPTY 10"
+        ]
+    },
+    {
+        "id": "2022b17a",
+        "question": "Given is an RGB colour cube with side length 2 as illustrated in the image below\"\nImage description: The image shows a RGB colour cube with side length 2. The colours shown are green, cyan, blue, pink, red, and yellow in counterclockwise order, where red is on the x-axis.\nPlease write OpenGL code to rotate this cube as illustrated in the image below.\nImage description: The image shows a RGB colour cube with side length 2 shifted one unit to the right. The colours shown are red, pink, white, cyan, green, and black in counterclockwise order, where green is on the x-axis.\nIMPORTANT:\nPlease only use OpenGL transformations, e.g. glTranslatef, glRotatef\nPlease do NOT draw the shape itself - this is done automatically by the uploaded code",
+        "answer": "NULL",
+        "generated": [
+            "EMPTY 1",
+            "EMPTY 2",
+            "EMPTY 3",
+            "EMPTY 4",
+            "EMPTY 5",
+            "EMPTY 6",
+            "EMPTY 7",
+            "EMPTY 8",
+            "EMPTY 9",
+            "EMPTY 10"
+        ]
+    },
+    {
+        "id": "2022b17b",
+        "question": "Given is an RGB colour cube with side length 2 as illustrated in the image below\"\nImage description: The image shows a RGB colour cube with side length 2. The point representing white is on (2, 2, 2), the point representing blue is on (0, 0, 2), and the point representing red is on (2, 0, 0).\nPlease write OpenGL code to rotate this cube as illustrated in the image below.\nImage description: The image shows a RGB colour cube with side length 2 shifted one unit to the positive direction of the x-axis. The point representing white is on (1, 0, 2), the point representing blue is on (3, 2, 2), and the point representing red is on (1, 2, 0).\nIMPORTANT:\nPlease only use OpenGL transformations, e.g. glTranslatef, glRotatef\nPlease do NOT draw the shape itself - this is done automatically by the uploaded code",
+        "answer": "NULL",
+        "generated": [
+            "EMPTY 1",
+            "EMPTY 2",
+            "EMPTY 3",
+            "EMPTY 4",
+            "EMPTY 5",
+            "EMPTY 6",
+            "EMPTY 7",
+            "EMPTY 8",
+            "EMPTY 9",
+            "EMPTY 10"
+        ]
+    },
+    {
+        "id": "2022b18a",
+        "question": "Given is a function drawTorus() which draws a torus with coloured \"blobs\" centered at the origin and aligned with the z-axis as shown in the image below.\nImage description: The image shows a torus centered at the origin and aligned with z-axis. The torus is coloured with green, blue, yellow, and pink in counterclockwise order, where green is on the x-axis.\nPlease write OpenGL code to render the the chain of tori displayed in the image below:\nImage description: The image shows a chain of tori. The first torus is centered at the origin, with yellow, pink, green, and blue in counterclockwise order, where yellow is on the x-axis. The second torus is centered at (1.5, 0, 0), with green, blue, yellow, and pink in counterclockwise order, where green is to the right of yellow on the x-axis. The third torus is centered at (0, 1.5, 0), with green, blue, yellow, and pink in counterclockwise order, where blue is above pink on the y-axis.\nNote that the second torus is rotated such that it lies in the xz-plane and has a centre of (1.5, 0, 0), and the third torus lies again in the zy-plane and has a centre of (0, 1.5, 0).\nIMPORTANT:\nYour code must first draw the torus centered at the origin, then the torus centered at (1.5, 0, 0), and then the torus centered at (0, 1.5, 0). Your code should have the format:\n<insert your transformations>\ndrawTorus();\n<insert your transformations>\ndrawTorus();\n<insert your transformations>\ndrawTorus();\nYou can use any OpenGL transformations, e.g. glRotatef, glTranslatef, glScalef, glPushMatrix and glPopMatrix;",
+        "answer": "NULL",
+        "generated": [
+            "EMPTY 1",
+            "EMPTY 2",
+            "EMPTY 3",
+            "EMPTY 4",
+            "EMPTY 5",
+            "EMPTY 6",
+            "EMPTY 7",
+            "EMPTY 8",
+            "EMPTY 9",
+            "EMPTY 10"
+        ]
+    },
+    {
+        "id": "2022b18b",
+        "question": "Given is a function drawTorus() which draws a torus with coloured \"blobs\" centered at the origin and aligned with the z-axis as shown in the image below.\nImage description: The image shows a torus centered at the origin and on the x-y plane. The torus is coloured with green, blue, yellow, and pink in counterclockwise order, where green is on the x-axis.\nPlease write OpenGL code to render the the chain of tori displayed in the image below:\nImage description: The image shows a chain of tori. The first torus is centered at the origin and on the x-y plane, with yellow, pink, green, and blue in counterclockwise order, where yellow is on the x-axis. The second torus is centered at (1.5, 0, 0) and on the x-z plane, with green, blue, yellow, and pink in counterclockwise order, where green is to the right of yellow on the x-axis. The third torus is centered at (0, 1.5, 0) and on the y-z plane, with green, blue, yellow, and pink in counterclockwise order, where blue is above pink on the y-axis.\nNote that the second torus is rotated such that it lies in the xz-plane and has a centre of (1.5, 0, 0), and the third torus lies again in the zy-plane and has a centre of (0, 1.5, 0).\nIMPORTANT:\nYour code must first draw the torus centered at the origin, then the torus centered at (1.5, 0, 0), and then the torus centered at (0, 1.5, 0). Your code should have the format:\n<insert your transformations>\ndrawTorus();\n<insert your transformations>\ndrawTorus();\n<insert your transformations>\ndrawTorus();\nYou can use any OpenGL transformations, e.g. glRotatef, glTranslatef, glScalef, glPushMatrix and glPopMatrix;",
+        "answer": "NULL",
+        "generated": [
+            "EMPTY 1",
+            "EMPTY 2",
+            "EMPTY 3",
+            "EMPTY 4",
+            "EMPTY 5",
+            "EMPTY 6",
+            "EMPTY 7",
+            "EMPTY 8",
+            "EMPTY 9",
+            "EMPTY 10"
+        ]
+    },
+    {
+        "id": "2022b19a",
+        "question": "The image below is used to texture map a rectangle:\nImage description: A mountain.\nThe texture mapping code to be used is:\nglBegin(GL_QUADS);\nglTexCoord2f(0,2);\nglVertex3f(0,0,0);\nglTexCoord2f(A,C);\nglVertex3f(6,0,0);\nglTexCoord2f(A,B);\nglVertex3f(6,4,0);\nglTexCoord2f(0,B);\nglVertex3f(0,4,0);\nglEnd();\nand produces the image shown below:\nImage description: A mountain facing downwards, repeated 2 times horizontally and 2 times vertically.\nPlease copy and paste the following code to define the correct values for the variables A, B and C, i.e.\nA=<Your Answer>;\nB=<Your Answer>;\nC=<Your Answer>;",
+        "answer": "NULL",
+        "generated": [
+            "EMPTY 1",
+            "EMPTY 2",
+            "EMPTY 3",
+            "EMPTY 4",
+            "EMPTY 5",
+            "EMPTY 6",
+            "EMPTY 7",
+            "EMPTY 8",
+            "EMPTY 9",
+            "EMPTY 10"
+        ]
+    },
+    {
+        "id": "2022b19b",
+        "question": "The image below is used to texture map a rectangle:\nImage description: A mountain facing upright.\nThe texture mapping code to be used is:\nglBegin(GL_QUADS);\nglTexCoord2f(0,2);\nglVertex3f(0,0,0);\nglTexCoord2f(A,C);\nglVertex3f(6,0,0);\nglTexCoord2f(A,B);\nglVertex3f(6,4,0);\nglTexCoord2f(0,B);\nglVertex3f(0,4,0);\nglEnd();\nand produces the image shown below:\nImage description: The base image is rotated 180 degrees, and repeated 2 times horizontally and 2 times vertically.\nPlease copy and paste the following code to define the correct values for the variables A, B and C, i.e.\nA=<Your Answer>;\nB=<Your Answer>;\nC=<Your Answer>;",
+        "answer": "NULL",
+        "generated": [
+            "EMPTY 1",
+            "EMPTY 2",
+            "EMPTY 3",
+            "EMPTY 4",
+            "EMPTY 5",
+            "EMPTY 6",
+            "EMPTY 7",
+            "EMPTY 8",
+            "EMPTY 9",
+            "EMPTY 10"
+        ]
+    },
+    {
+        "id": "2022b20a",
+        "question": "The image below is used to texture map a square:\nImage description: The image shows a 4x4 grid of colours. From left to right, then top to bottom, the colours are red, light green, dark blue, brown, yellow, purple, cyan, dark orange, pink, white, lime, grey, black, light blue, light orange, dark green.\nThe texture mapping code to be used is:\nglBegin(GL_QUADS);\nglTexCoord2f(0.0,0.5);\nglVertex3f(0,0,0);\nglTexCoord2f(A,B);\nglVertex3f(4,0,0);\nglTexCoord2f(C,D);\nglVertex3f(4,4,0);\nglTexCoord2f(E,F);\nglVertex3f(0,4,0);\nglEnd();\nand produces the image shown below:\nImage description: The image shows a shifted version of the base image, with the top left corner of the texture map being the the top right corner of the red tile, the bottom left corner being the top left corner of the pink tile, the bottom right corner being the bottom left corner of the dark green tile, and the top right corner being the bottom right corner of the dark orange tile.\nPlease use the following code to define the correct values for the variables A, B, C, D, E, F. NOTE: The texture coordinates must be between 0 and 1. Write the correct values into the answer space using C/C++ notation.\nA=?;\nB=?;\netc.",
+        "answer": "NULL",
+        "generated": [
+            "EMPTY 1",
+            "EMPTY 2",
+            "EMPTY 3",
+            "EMPTY 4",
+            "EMPTY 5",
+            "EMPTY 6",
+            "EMPTY 7",
+            "EMPTY 8",
+            "EMPTY 9",
+            "EMPTY 10"
+        ]
+    },
+    {
+        "id": "2022b20b",
+        "question": "The image below is used to texture map a square:\nImage description: The image shows a 4x4 grid of colours.\nThe texture mapping code to be used is:\nglBegin(GL_QUADS);\nglTexCoord2f(0.0,0.5);\nglVertex3f(0,0,0);\nglTexCoord2f(A,B);\nglVertex3f(4,0,0);\nglTexCoord2f(C,D);\nglVertex3f(4,4,0);\nglTexCoord2f(E,F);\nglVertex3f(0,4,0);\nglEnd();\nand produces the image shown below:\nImage description: The image shows a shifted version of the base image. Using grid coordinates from the base image, where the bottom left corner of the base image is (0, 0) and the top right corner of the base image is (4, 4), then the top left corner of the texture map is (1, 4), the bottom left corner is (0, 2), the bottom right corner is (3, 0), and the top right corner is (4, 2).\nPlease use the following code to define the correct values for the variables A, B, C, D, E, F. NOTE: The texture coordinates must be between 0 and 1. Write the correct values into the answer space using C/C++ notation.\nA=?;\nB=?;\netc.",
+        "answer": "NULL",
+        "generated": [
+            "EMPTY 1",
+            "EMPTY 2",
+            "EMPTY 3",
+            "EMPTY 4",
+            "EMPTY 5",
+            "EMPTY 6",
+            "EMPTY 7",
+            "EMPTY 8",
+            "EMPTY 9",
+            "EMPTY 10"
+        ]
+    },
+    {
+        "id": "2022b21a",
+        "question": "In this exercise you need to complete the function below defining an intersection between a Ray and a convex quadrilateral with circular hole. The convex quadrilateral (and its circular hole) lie on a plane with the normal n. The quadrilateral is defined by four vertices A, B, C and D, and the circular hole by its centre and radius.\nComplete the template in the answer space for the function for computing the intersection between a ray and a quadrilateral with a circular hole. You can use the algorithms explained in the lecture slide and/or use any of your solutions of the graded and ungraded CodeRunner quizzes.\nNOTE: A point is inside a convex quadrilateral, if it lies on the same side of all edges when traversing the edges in clockwise or anti-clockwise order. We can hence use the same inside-outside test as for the triangle, except that we have four instead of three edges.\ndouble QuadWithCircleHole::Intersect(Vector source, Vector d)\n{\n\t// complete calculation of ray-quadrilateral-with-circular-hole intersection in the answer box below\n\t// and return correct value for t. If there is no intersection t should be -1.0\n}\nNote: The following variables and functions are already defined for you to use:\nVector A, B, C, D - coordinates of the 4 vertices of the convex quadrilateral in winding order (either clockwise or anti-clockwise)\nVector n - normal of the plane of the quadrilateral\nVector Centre - centre of the circular hole\ndouble radius - radius of the circular hole\nVector: v1+v2 - adds the vectors v1 and v2 and returns resulting vector\nVector: v1-v2 - subtracts v2 from v1 and returns resulting vector\nVector: v1 * t - scales the vector v1 by t and returns resulting vector\nVector v.Scale(float a, float b, float c) - scales each component of the vector v\nfloat v1.Dot(Vector v2) - returns the dot product of vector v1 and v2\nVector v1.Cross(Vector v2) - returns the cross product of vector v1 and v2\nYou can compute the length of a vector v as \"sqrt(v.Dot(v))\"\nPlease paste the completed code fragment into the answer space. If your solution is correct you should get the following image (note: the quadrilateral is the green surface at the bottom and the circular hole appears blue (since we can see the background colour through it):\nImage description: A red sphere is placed above a green quadrilateral with a circular hole in it.",
+        "answer": "NULL",
+        "generated": [
+            "EMPTY 1",
+            "EMPTY 2",
+            "EMPTY 3",
+            "EMPTY 4",
+            "EMPTY 5",
+            "EMPTY 6",
+            "EMPTY 7",
+            "EMPTY 8",
+            "EMPTY 9",
+            "EMPTY 10"
+        ]
+    },
+    {
+        "id": "2022b21b",
+        "question": "In this exercise you need to complete the function below defining an intersection between a Ray and a convex quadrilateral with circular hole. The convex quadrilateral (and its circular hole) lie on a plane with the normal n. The quadrilateral is defined by four vertices A, B, C and D, and the circular hole by its centre and radius.\nComplete the template in the answer space for the function for computing the intersection between a ray and a quadrilateral with a circular hole. You can use the algorithms explained in the lecture slide and/or use any of your solutions of the graded and ungraded CodeRunner quizzes.\nNOTE: A point is inside a convex quadrilateral, if it lies on the same side of all edges when traversing the edges in clockwise or anti-clockwise order. We can hence use the same inside-outside test as for the triangle, except that we have four instead of three edges.\ndouble QuadWithCircleHole::Intersect(Vector source, Vector d)\n{\n\t// complete calculation of ray-quadrilateral-with-circular-hole intersection in the answer box below\n\t// and return correct value for t. If there is no intersection t should be -1.0\n}\nNote: The following variables and functions are already defined for you to use:\nVector A, B, C, D - coordinates of the 4 vertices of the convex quadrilateral in winding order (either clockwise or anti-clockwise)\nVector n - normal of the plane of the quadrilateral\nVector Centre - centre of the circular hole\ndouble radius - radius of the circular hole\nVector: v1+v2 - adds the vectors v1 and v2 and returns resulting vector\nVector: v1-v2 - subtracts v2 from v1 and returns resulting vector\nVector: v1 * t - scales the vector v1 by t and returns resulting vector\nVector v.Scale(float a, float b, float c) - scales each component of the vector v\nfloat v1.Dot(Vector v2) - returns the dot product of vector v1 and v2\nVector v1.Cross(Vector v2) - returns the cross product of vector v1 and v2\nYou can compute the length of a vector v as \"sqrt(v.Dot(v))\"\nPlease paste the completed code fragment into the answer space. If your solution is correct you should get the following image (note: the quadrilateral is the green surface at the bottom and the circular hole appears blue (since we can see the background colour through it):\nImage description: A red sphere is placed above a green quadrilateral with a circular hole in it. There exists a gap between the red sphere and the green quadrilateral, and the background colour is visible through the gap.",
+        "answer": "NULL",
+        "generated": [
+            "EMPTY 1",
+            "EMPTY 2",
+            "EMPTY 3",
+            "EMPTY 4",
+            "EMPTY 5",
+            "EMPTY 6",
+            "EMPTY 7",
+            "EMPTY 8",
+            "EMPTY 9",
+            "EMPTY 10"
+        ]
+    },
+    {
+        "id": "2022b22a",
+        "question": "Given is a cubic spline curve c(t)=T M G with the geometric constraint vector\nG=(p0, p1, r0, r0.5)^T\nThe curve c(t) is defined by the four conditions c(0)=p0 (start point), c(1)=p1 (end point), c'(0)=r0 (start tangent), and c'(0.5)=r0.5 (mid-point tangent).\nImplement this curve by computing its basis functions and completing the code fragment below.\nTIP: You can use the same idea we used in the lecture to derive the basis functions of the Hermite curve.\nNote that in order to get the basis functions you need to invert a 4x4 matrix.\nThis is easiest done by using an online tool such as:\nhttps://www.wolframalpha.com/calculators/matrix-inverse-calculator\nPlease write your answer into the answer space using the following format:\ndouble Basis1(double t){ return <Insert code>;} // B1(t) \ndouble Basis2(double t){ return <Insert code>;} // B2(t) \ndouble Basis3(double t){ return <Insert code>;} // B3(t)\ndouble Basis4(double t){ return <Insert code>;} // B4(t)\nCVec3df c(float t, CVec3df p0, CVec3df p1, CVec3df r0, CVec3df r05) { \n   CVec3df p=<Insert code>; \n   return p; \n}\nThe first test case uses the geometric constraints\np0.setVector(4, 0, 0);      // This is p0\np1.setVector(0, 0, 3);      // This is p1\nr0.setVector(-10, 10, 0);   // This is r0\nr05.setVector(0, 0, 10);    // This is r05\nand should result in the image below:\nImage description: A red curve in space.",
+        "answer": "NULL",
+        "generated": [
+            "EMPTY 1",
+            "EMPTY 2",
+            "EMPTY 3",
+            "EMPTY 4",
+            "EMPTY 5",
+            "EMPTY 6",
+            "EMPTY 7",
+            "EMPTY 8",
+            "EMPTY 9",
+            "EMPTY 10"
+        ]
+    },
+    {
+        "id": "2022b22b",
+        "question": "Given is a cubic spline curve c(t)=T M G with the geometric constraint vector\nG=(p0, p1, r0, r0.5)^T\nThe curve c(t) is defined by the four conditions c(0)=p0 (start point), c(1)=p1 (end point), c'(0)=r0 (start tangent), and c'(0.5)=r0.5 (mid-point tangent).\nImplement this curve by computing its basis functions and completing the code fragment below.\nTIP: You can use the same idea we used in the lecture to derive the basis functions of the Hermite curve.\nNote that in order to get the basis functions you need to invert a 4x4 matrix.\nThis is easiest done by using an online tool such as:\nhttps://www.wolframalpha.com/calculators/matrix-inverse-calculator\nPlease write your answer into the answer space using the following format:\ndouble Basis1(double t){ return <Insert code>;} // B1(t) \ndouble Basis2(double t){ return <Insert code>;} // B2(t) \ndouble Basis3(double t){ return <Insert code>;} // B3(t)\ndouble Basis4(double t){ return <Insert code>;} // B4(t)\nCVec3df c(float t, CVec3df p0, CVec3df p1, CVec3df r0, CVec3df r05) { \n   CVec3df p=<Insert code>; \n   return p; \n}\nThe first test case uses the geometric constraints\np0.setVector(4, 0, 0);      // This is p0\np1.setVector(0, 0, 3);      // This is p1\nr0.setVector(-10, 10, 0);   // This is r0\nr05.setVector(0, 0, 10);    // This is r05\nand should result in the image below:\nImage desciption: A cubic spline curve in space, starting from p0 = (4, 0, 0), ending at p1 = (0, 0, 3), with start tangent r0 = (-10, 10, 0) and mid-point tangent r05 = (0, 0, 10).",
+        "answer": "NULL",
+        "generated": [
+            "EMPTY 1",
+            "EMPTY 2",
+            "EMPTY 3",
+            "EMPTY 4",
+            "EMPTY 5",
+            "EMPTY 6",
+            "EMPTY 7",
+            "EMPTY 8",
+            "EMPTY 9",
+            "EMPTY 10"
+        ]
+    },
+    {
+        "id": "2022b23",
+        "question": "Given is a greyscale 8 bit input image in the form of a pixel array (a list of pixel rows, with each row represented again as a list). Every pixel contains an integer value between 0 and 255.\nWrite a Python3 function 'computeInterquartileRange3x3(pixel_array, image_width, image_height)' which computes and returns a filtered image containing the interquartile range of the values in the 3x3 pixel neighourhood. Similar to the standard deviation, the interquartile range measures the variation of greyvalues in a neighbourhood.\nWe define the interquartile range as the difference between the 25th percentile and the 75th percentile of the values in the 3x3 neighbourhood. While the 50th percentile is the median of all values in the neighbourhood, the 25th percentile is the median of the values smaller (<) than the median, and the 75th percentile is the median of the values larger (>) than the median. Remember, if any of these subsets has an even number of values, then we compute the mean of the two values in the middle.\nBorder handling: Border pixels should be handled with the BorderIgnore strategy, with pixels at the boundary of the output image set to 0.\nReturn the result image in our list of lists representation. Resulting pixels are floating point values, without any rounding!\nNote: You may assume that the Python3 function 'createInitializedGreyscalePixelArray(image_width, image_height, initValue)' is available, which creates an empty greyscale array (values 0) as a list of lists of integers or a greyscale array with values 0.0 as a list of lists of floats (if initValue is 0.0).\nFor example:\nTest1\nimage_width = 6\nimage_height = 5\npixel_array = [ [6, 3, 2, 6, 4, 7], \n                [5, 3, 2, 7, 0, 6], \n                [6, 2, 7, 7, 1, 7], \n                [7, 6, 6, 2, 7, 3], \n                [2, 2, 2, 5, 1, 2] ]\nprintPixelArray(computeInterquartileRange3x3(pixel_array, image_width, image_height))\nResult1\n0.0 0.0 0.0 0.0 0.0 0.0\n0.0 4.0 5.0 5.5 4.5 0.0\n0.0 4.0 5.0 5.5 5.5 0.0\n0.0 4.5 4.5 5.5 5.5 0.0\n0.0 0.0 0.0 0.0 0.0 0.0\nTest2\nimage_width = 7\nimage_height = 6\npixel_array = [ [244, 126, 101, 174, 168, 75, 62], \n                [155, 145, 15, 149, 116, 163, 238], \n                [63, 138, 132, 207, 74, 227, 163], \n                [25, 9, 85, 172, 202, 108, 193], \n                [85, 123, 49, 53, 106, 60, 197], \n                [113, 196, 35, 19, 126, 130, 48] ] \nprintPixelArray(computeInterquartileRange3x3(pixel_array, image_width, image_height))\nResult2\n0.0 0.0 0.0 0.0 0.0 0.0 0.0\n0.0 68.0 48.0 83.5 95.0 123.0 0.0\n0.0 121.5 110.5 107.5 92.5 102.5 0.0\n0.0 90.5 104.0 123.5 137.5 109.5 0.0\n0.0 88.0 120.5 107.0 94.5 112.0 0.0\n0.0 0.0 0.0 0.0 0.0 0.0 0.0",
+        "answer": "NULL",
+        "generated": [
+            "EMPTY 1",
+            "EMPTY 2",
+            "EMPTY 3",
+            "EMPTY 4",
+            "EMPTY 5",
+            "EMPTY 6",
+            "EMPTY 7",
+            "EMPTY 8",
+            "EMPTY 9",
+            "EMPTY 10"
+        ]
+    },
+    {
+        "id": "2022b24",
+        "question": "Given is a greyscale input image in the form of a pixel array (a list of pixel rows, with each row represented again as a list). Every pixel contains an integer value between 0 and nr_bins-1! For a 3 bit input image, nr_bins is 8.\nWrite a Python3 function 'computeLookupTableHistEq(pixel_array, image_width, image_height, nr_bins)' which computes the lookup table for histogram equalization of the input image according to the strategy we discussed in the lecture.\nReturn solely the lookup table as a list datastructure, with the length of the lookup table being equal to the number of bins. The datatype of the lookup table is floating point. You don't have to do any rounding of the result values.\nNote: You can assume that a method computeCumulativeHistogram(pixel_array, image_width, image_height, nr_bins) is available for your use, which you can call from within your code (see below).\ndef computeCumulativeHistogram(pixel_array, image_width, image_height, nr_bins = 256):\n    # compute histogram\n    histogram = [0.0 for q in range(nr_bins)]\n    for y in range(image_height):\n        for x in range(image_width):\n            histogram[pixel_array[y][x]] += 1.0\n    # compute cumulative histogram\n    cumulative_histogram = [0.0 for q in range(nr_bins)]\n    running_sum = 0.0\n    for q in range(nr_bins):\n        running_sum += histogram[q]\n        cumulative_histogram[q] = running_sum\n    return cumulative_histogram\nFor example:\nTest1\nimage_width = 6\nimage_height = 5\npixel_array = [ [6, 3, 2, 6, 4, 7], \n                [5, 3, 2, 7, 0, 6], \n                [6, 2, 7, 7, 1, 7], \n                [7, 6, 6, 2, 7, 3], \n                [2, 2, 2, 5, 1, 2] ]\nnr_bins = 8\nlookup_table= computeLookupTableHistEq(pixel_array, image_width, image_height, nr_bins)\nfor q in range(len(lookup_table)):\n   print(\"{}: {}\".format(q, round(lookup_table[q], 2)))\nResult1\n0: 0.0\n1: 0.48\n2: 2.41\n3: 3.14\n4: 3.38\n5: 3.86\n6: 5.31\n7: 7.0\nTest2\nimage_width = 6\nimage_height = 5\npixel_array = [ [3, 7, 2, 3, 2, 3], \n                [0, 4, 3, 1, 4, 4], \n                [3, 1, 2, 2, 2, 2], \n                [1, 3, 3, 1, 2, 2], \n                [4, 4, 3, 2, 0, 0] ]\nnr_bins = 8\nlookup_table= computeLookupTableHistEq(pixel_array, image_width, image_height, nr_bins)\nfor q in range(len(lookup_table)):\n   print(\"{}: {}\".format(q, round(lookup_table[q], 2)))\nResult2\n0: 0.0\n1: 1.04\n2: 3.37\n3: 5.44\n4: 6.74\n5: 6.74\n6: 6.74\n7: 7.0",
+        "answer": "NULL",
+        "generated": [
+            "EMPTY 1",
+            "EMPTY 2",
+            "EMPTY 3",
+            "EMPTY 4",
+            "EMPTY 5",
+            "EMPTY 6",
+            "EMPTY 7",
+            "EMPTY 8",
+            "EMPTY 9",
+            "EMPTY 10"
+        ]
+    }
+]

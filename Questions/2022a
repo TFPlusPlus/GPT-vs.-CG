@@ -1,0 +1,385 @@
+Given a triangle comprised of the following vertex array:
+
+vertices = {(0.0, 0.0, 0.0), (2.0, 3.0, 0.0), (-3.0, 3.0, -1.0)}
+
+If the triangle is drawn using the indices {0, 1, 2}, and anticlockwise winding order represents front faces, which of the following represents the surface normal of the front face of the triangle?
+
+a.
+\frac{1}{\sqrt{238}}\begin{pmatrix} 3 \\ -2 \\-15 \end{pmatrix}
+
+
+b.
+\frac{1}{\sqrt{238}}\begin{pmatrix} 3 \\ -15 \\-2 \end{pmatrix}
+
+
+
+c.
+\frac{1}{\sqrt{238}}\begin{pmatrix} -3 \\ 2 \\15 \end{pmatrix}
+
+
+d.
+None of the others.
+
+
+e.
+\frac{1}{\sqrt{238}}\begin{pmatrix} -3 \\ 15 \\2 \end{pmatrix}
+
+The correct answer is:
+\frac{1}{\sqrt{238}}\begin{pmatrix} -3 \\ 2 \\15 \end{pmatrix}
+~~
+The orthogonal projection of vector
+\textbf{u} = \begin{pmatrix}0\\2\\3 \end{pmatrix}
+onto vector
+\textbf{v} = \begin{pmatrix} 1 \\3\\0 \end{pmatrix}
+is equal to:
+
+
+
+Select one:
+
+a.
+\frac{6}{10}\begin{pmatrix}0 \\2 \\3 \end{pmatrix}
+
+
+
+
+b.
+\frac{6}{10}\begin{pmatrix}1 \\3 \\0 \end{pmatrix}
+
+
+
+
+
+
+
+c.
+None of the others
+
+
+d.
+\frac{6}{\sqrt{10}} \begin{pmatrix}0\\2 \\3 \end{pmatrix}
+
+
+
+
+
+e.
+\frac{6}{\sqrt{10}}
+
+
+
+The correct answer is:
+\frac{6}{10}\begin{pmatrix}1 \\3 \\0 \end{pmatrix}
+
+~~
+
+Given a plane
+P
+defined by the equation:
+2x+2y+z=2
+, and a point
+Q = \begin{pmatrix} 1 \\1 \\-2 \end{pmatrix}
+
+,
+
+What is the smallest absolute distance between
+P
+and
+Q
+?
+
+Select one:
+
+a.
+None of the others
+
+
+b.
+1
+
+
+c.
+13
+
+
+d.
+2
+
+
+e.
+0
+, Q is on the plane, P.
+
+The correct answer is:
+0
+, Q is on the plane, P.
+~~
+Consider a matrix of 3D geometric transformations in homogeneous coordinates. Which of the following statements about the matrix
+M = \begin{bmatrix}-1 & 0 & 0 & -4 \\ 0 & -1 & 0 & -1 \\ 0 & 0 & 1 & -4 \\ 0 & 0 & 0 & 1\end{bmatrix}
+is true?
+Select one:
+
+a.
+M represents a shear parallel to the z axis with magnitude 4 followed by a scaling along the x axis and y axis by -1.
+
+b.
+M represents a rotation about the z axis by -180 degrees followed by a translation by
+M = \begin{bmatrix}-1 & 0 & 0 & -4 \\ 0 & -1 & 0 & -1 \\ 0 & 0 & 1 & -4 \\ 0 & 0 & 0 & 1\end{bmatrix}
+.
+
+c.
+M represents a scaling along the x axis and y axis by -1 followed by a shear parallel to the z axis with magnitude 4.
+
+d.
+None of the others
+
+e.
+M represents a translation by
+\begin{pmatrix}4 \\ 1 \\ -4\end{pmatrix}
+followed by a rotation about the z axis by -180 degrees.
+
+The correct answer is: M represents a translation by
+\begin{pmatrix}4 \\ 1 \\ -4\end{pmatrix}
+followed by a rotation about the z axis by -180 degrees.
+
+~~
+
+Given are the vertices (labelled in the image)
+
+const int numVertices=8;
+
+const float vertices[numVertices][2] = {{100,100},{400,100},{100,200},{400,200},{100,300},{400,300},{100,400},{400,400}};
+
+Which of the following represents a possible indices array that will generate the image shown below if we use the OpenGL commands glBegin(GL_TRIANGLES) and glEnd()?
+
+a.
+None of the others.
+
+
+b.
+{0, 1, 2, 0, 3, 2, 0, 5, 2, 0, 7, 2, 1, 4, 3, 1, 6, 3, 4, 5, 7, 4, 7, 6}
+
+
+c.
+{0, 1, 2, 3, 4, 5, 6, 7}
+
+
+d.
+{4, 5, 7, 4, 7, 6, 0, 1, 3, 0, 3, 2, 0, 5, 7, 0, 7, 2, 4, 1, 3, 4, 3, 6}
+
+
+e.
+{0, 1, 3, 0, 3, 2, 1, 3, 4, 4, 3, 6, 4, 6, 7, 4, 7, 5, 7, 2, 5, 7, 0, 5}
+
+The correct answer is:
+{4, 5, 7, 4, 7, 6, 0, 1, 3, 0, 3, 2, 0, 5, 7, 0, 7, 2, 4, 1, 3, 4, 3, 6}
+
+~~
+
+Which of the following statements about drawing meshes is true?
+
+a.
+By using a mesh data structure, multiple instances of a mesh may be drawn using the same mesh data and different transformations.
+
+
+b.
+Meshes can only be used when drawing with triangle primitives.
+
+
+c.
+By using a mesh data structure, multiple instances of a mesh may be drawn without increasing rendering time.
+
+
+d.
+None of the others.
+
+
+e.
+Using an indices array to represent vertex usage will always result in less memory being required to represent a mesh.
+
+The correct answer is:
+By using a mesh data structure, multiple instances of a mesh may be drawn using the same mesh data and different transformations.
+
+~~
+
+Consider a surface that reflects the colour magenta when three lights are shining on it: one red, one green, one blue.
+
+What will be the reflected colour if the blue light is removed?
+
+a.
+Green
+
+
+b.
+Yellow
+
+
+c.
+Black
+
+
+d.
+Magenta
+
+
+e.
+Red
+
+The correct answer is:
+Red
+
+~~
+
+The CIE XYZ colour space may be represented as a projection on the 2D plane: x + y + Z = 1.
+
+Given the color (3, 9, 3), what is the corresponding 2D colour?
+
+Select one:
+
+a.
+None of the others
+
+
+b.
+(3, 9)
+
+c.
+(0.2, 0.6)
+
+
+d.
+(3, 15)
+
+
+e.
+(0.3, 0.9)
+
+The correct answer is: (0.2, 0.6)
+
+~~
+
+Which of the following statements is true for a spectral density function (SDF)?
+
+Select one:
+
+a.
+None of the others
+
+
+b.
+All light sources can be defined by their SDF.
+
+
+c.
+The SDF describes the light absorption of a surface.
+
+
+d.
+Only natural light can be defined by the SDF.
+
+
+e.
+Only artificial light sources can be defined by their SDF.
+
+The correct answer is: All light sources can be defined by their SDF.
+
+~~
+
+Consider the following image of a sphere:
+
+Reflections
+
+Assuming a scene where the light intensities and reflection coefficients for ambient, diffuse, and specular are non-zero, which types of reflection are enabled for this scene?
+
+
+
+a.
+Ambient, Diffuse, and Specular
+
+
+b.
+Diffuse only
+
+
+c.
+Ambient and Diffuse
+
+
+d.
+Diffuse and Specular
+
+
+e.
+Ambient Only
+
+The correct answer is:
+Diffuse only
+
+~~
+
+Consider a viewport of 800x800 pixels, with a coordinate system that ranges from 0-800 in the x and y axes, where (0, 0) is the bottom left corner of the viewport, and (800, 800) is the top right corner of the viewport.
+
+In this viewport are drawn three triangles, where triangle T1 is drawn in red, triangle T2 is drawn in green, and triangle T3 is drawn in blue. The triangles are also being redrawn in wireframe, such that border pixels are drawn in black. The clear-colour for the viewport is white.
+
+The triangles are being drawn in the order T1, T2, T3, with projection and depth testing set up such that if two triangles occupy the same pixel, the pixel will always be the colour of the more recently drawn triangle.
+
+If the projected vertex locations of the triangles in the viewport are as follows:
+
+T1: {(0, 0, 0), (0, 800, 0), (800, 800, 0)}
+
+T2: {(260, 800, 0), (540, 800, 0), (380, 390, 0)}
+
+T3 {(120, 440, 0), (420, 440, 0), (410, 380, 0)}
+
+What colour will the pixel located at the viewport coordinates (410, 410) be?
+
+
+a.
+Blue
+
+
+b.
+White
+
+
+c.
+Black
+
+
+d.
+Red
+
+
+e.
+Green
+
+The correct answer is:
+Blue
+
+~~
+
+Which of the following statements about the Phong illumination model is false?
+
+Select one:
+
+a.
+Ambient reflection is constant over the entire surface.
+
+
+b.
+Diffuse reflection does not vary with the angle between surface normal and view vector.
+
+
+c.
+Diffuse reflection models rough surfaces such as clay and cardboard.
+
+
+d.
+Diffuse reflection does not vary with the angle between surface normal and light direction.
+
+
+e.
+Ambient reflection does NOT depend on the surface normal.
+
+The correct answer is: Diffuse reflection does not vary with the angle between surface normal and light direction.
+~~
