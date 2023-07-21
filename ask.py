@@ -54,11 +54,17 @@ def ask_txt(filename_input, filename_output, num_of_generations = 10, test = Tru
 def ask_json(filename_input, filename_output, num_of_generations = 10, test = True):
     with open(filename_input, "r") as file:
         data = json.load(file)
-        for i in range(len(data)):
-            if test:
-                generated = ask2(data[i]["question"], num_of_generations = num_of_generations)
-            else:
-                generated = ask(data[i]["question"], num_of_generations = num_of_generations)
-            data[i]["generated"] = generated
+        length = len(data)
+        try:
+            for i in range(length):
+                if test:
+                    generated = ask2(data[i]["question"], num_of_generations = num_of_generations)
+                else:
+                    generated = ask(data[i]["question"], num_of_generations = num_of_generations)
+                data[i]["generated"] = generated
+                print("{} / {}: {:.2f}%".format(i+1, length, (i+1) / length * 100))
+        except:
+            with open(filename_output, "w") as file:
+                json.dump(data, file, indent = 4)
     with open(filename_output, "w") as file:
         json.dump(data, file, indent = 4)

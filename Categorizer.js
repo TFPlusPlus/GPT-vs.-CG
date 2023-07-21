@@ -207,8 +207,8 @@ document.onkeydown = function(e) {
     }
 }
 
-// fetch("http://localhost:8080/Questions.json")
-fetch("2022a.json")
+fetch("QuestionBank.json")
+// fetch("Questions.json")
     .then(response => response.json())
     .then(questions_json => {
         fetch("Categories.json")

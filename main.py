@@ -3,7 +3,7 @@ from ask import ask_json
 from parse import parse
 import codecs
 
-filename = "2023b"
+# filename = "2023b"
 
 # preprocess(filename, filename + "-1")
 
@@ -30,8 +30,10 @@ filename = "2023b"
 #     for i in range(len(l)):
 #         g.write(l[i] + "\n")
 
-parse(filename + "-2", filename + ".json", num_of_generations=0)
+# parse(filename + "-2", filename + ".json", num_of_generations=0)
 
 # ask_json(filename + "-q.json", filename + "-a.json", num_of_generations = 10, test = True)
 
 # parse(filename + "-2", filename + ".json", num_of_generations = 10)
+
+ask_json("QuestionBank.json", "Questions.json", num_of_generations = 10, test = False)
