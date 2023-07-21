@@ -2228,8 +2228,8 @@
     },
     {
         "id": "2023b36a",
-        "question": "In this exercise you need to complete the function below defining a Ray-CutSphere Intersection:\ndouble CutSphere::Intersect(Vector source, Vector d)\nNOTE: The pre-loaded answer box contains already code for the ray sphere intersection and sorts the intersection points such that t1 is the first intersection point with the original sphere.\nAdd additional code such that the function returns instead the intersection points with the \"cut-sphere\".\nThe cutting plane n.p=a is defined by the variables n (type Vector) and a (type double).\nHINT: Compute the ray-plane intersection and develop an algorithm to decide whether the ray intersects the round (un-cut part) of the sphere, the cutting plane, or doesn't intersect the cut sphere at all (e.g. the ray might pass through the cut-off part of the sphere)\nIMPORTANT: If the ray first intersects the cutting plane of the cut sphere (the flat part of it) then you need to set cuttingPlaneIntersected = true; . This is used in the normal calculation and without the automarker will mark your solution as false.\nNote: The following variables and functions are already defined for you to use:\nThe plane n.p=a is defined by the variables n (type Vector) and a (type double).\nVector: v1+v2 - adds the vectors v1 and v2 and returns resulting vector\nVector: v1-v2 - subtracts v2 from v1 and returns resulting vector\nVector: v1 * t - scales the vector v1 by t and returns resulting vector\nVector v.Scale(float a, float b, float c) - scales each component of the vector v\nfloat v1.Dot(Vector v2) - returns the dot product of vector v1 and v2\nVector v1.Cross(Vector v2) - returns the cross product of vector v1 and v2\nAfter completing the code in the pre-loaded answer box you should get the images below:\nImage description: The image shows a sphere shown in red with a chunk cut off, in front of a blue and green background. Some shadows of the object are cast on the ground.\nImage description: The image shows the cut off chunk placed on the ground, in front of a blue and green background. Some shadows of the object are cast on the ground.\nTemplate code:\ndouble CutSphere::Intersect(Vector source, Vector d)\n{\n\t// A, B, and C are the parameters of quadratic equation for finding the \n\t// ray intersection parameter t (see slide 16 of the \"Ray Tracing\" lecture notes)\n\tfloat A = d.Dot(d);\n\tfloat B = 2 * source.Dot(d);\n\tfloat C = source.Dot(source) - 1;",
-        "answer": "float t; // the parameter t for the closest intersection point or ray with the sphere. If no intersection t=-1.0",
+        "question": "In this exercise you need to complete the function below defining a Ray-CutSphere Intersection:\ndouble CutSphere::Intersect(Vector source, Vector d)\nNOTE: The pre-loaded answer box contains already code for the ray sphere intersection and sorts the intersection points such that t1 is the first intersection point with the original sphere.\nAdd additional code such that the function returns instead the intersection points with the \"cut-sphere\".\nThe cutting plane n.p=a is defined by the variables n (type Vector) and a (type double).\nHINT: Compute the ray-plane intersection and develop an algorithm to decide whether the ray intersects the round (un-cut part) of the sphere, the cutting plane, or doesn't intersect the cut sphere at all (e.g. the ray might pass through the cut-off part of the sphere)\nIMPORTANT: If the ray first intersects the cutting plane of the cut sphere (the flat part of it) then you need to set cuttingPlaneIntersected = true; . This is used in the normal calculation and without the automarker will mark your solution as false.\nNote: The following variables and functions are already defined for you to use:\nThe plane n.p=a is defined by the variables n (type Vector) and a (type double).\nVector: v1+v2 - adds the vectors v1 and v2 and returns resulting vector\nVector: v1-v2 - subtracts v2 from v1 and returns resulting vector\nVector: v1 * t - scales the vector v1 by t and returns resulting vector\nVector v.Scale(float a, float b, float c) - scales each component of the vector v\nfloat v1.Dot(Vector v2) - returns the dot product of vector v1 and v2\nVector v1.Cross(Vector v2) - returns the cross product of vector v1 and v2\nAfter completing the code in the pre-loaded answer box you should get the images below:\nImage description: The image shows a sphere shown in red with a chunk cut off, in front of a blue and green background. Some shadows of the object are cast on the ground.\nImage description: The image shows the cut off chunk placed on the ground, in front of a blue and green background. Some shadows of the object are cast on the ground.\nTemplate code:\ndouble CutSphere::Intersect(Vector source, Vector d)\n{\n\t// A, B, and C are the parameters of quadratic equation for finding the \n\t// ray intersection parameter t (see slide 16 of the \"Ray Tracing\" lecture notes)\n\tfloat A = d.Dot(d);\n\tfloat B = 2 * source.Dot(d);\n\tfloat C = source.Dot(source) - 1;\n\tfloat t; // the parameter t for the closest intersection point or ray with the sphere. If no intersection t=-1.0\n\t// BEGIN SOLUTION RAY-SPHERE INTERSECTION\n\tif (B * B - 4 * A * C <= 0) return t=-1;  // no hit\n\tfloat t1;\n\tif (B > 0)   // for numerical precision\n\t\tt1 = (-B - sqrt(B * B - 4 * A * C)) / (2 * A);\n\telse\n\t\tt1 = (-B + sqrt(B * B - 4 * A * C)) / (2 * A);\n\tfloat t2 = C / (A * t1); // easier way to get t2\n\t// END SOLUTION RAY-SPHERE INTERSECTION\n\t// if t1>t2 swap, so t1 is always first intersection point\n\tfloat temp;\n\tif (t1 > t2) {\n\t\ttemp = t1;\n\t\tt1 = t2;\n\t\tt2 = temp;\n\t}\n\tt = t1;\n\tcuttingPlaneIntersected = false; // variable of type bool - true if ray first intersects the flat part of the cut sphere\n\t// ===================================================================\n\t// == The above method code computes the intersection parameters of ==\n\t// == the ray with the sphere. Add additional code such that the    ==\n\t// == function returns instead the intersections points with the    ==\n\t// == \"cut-sphere\".                                                 ==\n\t// == Tip: Compute the ray-plane interscetion and develop an        ==\n\t// ==      algorithm to decide whether the ray intersected the      ==\n\t// ==      round (un-cut part) of the sphere, the cutting plane,    ==\n\t// ==      or doesn't intersect the cut spere at all (e.g. the ray  ==\n\t// ==      might pass through the cut-off part of the sphere        ==\n    // == IMPORTANT: If the ray first intersects the cutting plane of   ==\n\t// ==            the cut sphere (the flat part of it) then you need ==\n\t// ==            to set cuttingPlaneIntersected = true;             ==\n\t// ==            This is used in the normal calculation and without ==\n\t// ==            the automarker will mark your solution as false    ==\n\t// ===================================================================\n    // Please complete the missing code\n\treturn t;\n}",
+        "answer": "NULL",
         "generated": [
             "EMPTY 1",
             "EMPTY 2",
@@ -2244,144 +2244,8 @@
         ]
     },
     {
-        "id": "// BEGIN SOLUTION RAY-SPHERE INTERSECTION",
-        "question": "",
-        "answer": "float t1;\n\tif (B > 0)   // for numerical precision\n\t\tt1 = (-B - sqrt(B * B - 4 * A * C)) / (2 * A);\n\telse\n\t\tt1 = (-B + sqrt(B * B - 4 * A * C)) / (2 * A);",
-        "generated": [
-            "EMPTY 1",
-            "EMPTY 2",
-            "EMPTY 3",
-            "EMPTY 4",
-            "EMPTY 5",
-            "EMPTY 6",
-            "EMPTY 7",
-            "EMPTY 8",
-            "EMPTY 9",
-            "EMPTY 10"
-        ]
-    },
-    {
-        "id": "float t2 = C / (A * t1); // easier way to get t2",
-        "question": "",
-        "answer": "",
-        "generated": [
-            "EMPTY 1",
-            "EMPTY 2",
-            "EMPTY 3",
-            "EMPTY 4",
-            "EMPTY 5",
-            "EMPTY 6",
-            "EMPTY 7",
-            "EMPTY 8",
-            "EMPTY 9",
-            "EMPTY 10"
-        ]
-    },
-    {
-        "id": "// if t1>t2 swap, so t1 is always first intersection point",
-        "question": "if (t1 > t2) {\n\t\ttemp = t1;\n\t\tt1 = t2;\n\t\tt2 = temp;\n\t}\n\tt = t1;",
-        "answer": "cuttingPlaneIntersected = false; // variable of type bool - true if ray first intersects the flat part of the cut sphere\n\t// ===================================================================\n\t// == The above method code computes the intersection parameters of ==\n\t// == the ray with the sphere. Add additional code such that the    ==\n\t// == function returns instead the intersections points with the    ==\n\t// == \"cut-sphere\".                                                 ==\n\t// == Tip: Compute the ray-plane interscetion and develop an        ==\n\t// ==      algorithm to decide whether the ray intersected the      ==\n\t// ==      round (un-cut part) of the sphere, the cutting plane,    ==\n\t// ==      or doesn't intersect the cut spere at all (e.g. the ray  ==\n\t// ==      might pass through the cut-off part of the sphere        ==\n    // == IMPORTANT: If the ray first intersects the cutting plane of   ==\n\t// ==            the cut sphere (the flat part of it) then you need ==\n\t// ==            to set cuttingPlaneIntersected = true;             ==\n\t// ==            This is used in the normal calculation and without ==\n\t// ==            the automarker will mark your solution as false    ==\n\t// ===================================================================",
-        "generated": [
-            "EMPTY 1",
-            "EMPTY 2",
-            "EMPTY 3",
-            "EMPTY 4",
-            "EMPTY 5",
-            "EMPTY 6",
-            "EMPTY 7",
-            "EMPTY 8",
-            "EMPTY 9",
-            "EMPTY 10"
-        ]
-    },
-    {
-        "id": "// Please complete the missing code",
-        "question": "return t;\n}",
-        "answer": "2023b36b",
-        "generated": [
-            "EMPTY 1",
-            "EMPTY 2",
-            "EMPTY 3",
-            "EMPTY 4",
-            "EMPTY 5",
-            "EMPTY 6",
-            "EMPTY 7",
-            "EMPTY 8",
-            "EMPTY 9",
-            "EMPTY 10"
-        ]
-    },
-    {
-        "id": "In this exercise you need to complete the function below defining a Ray-CutSphere Intersection:",
-        "question": "NOTE: The pre-loaded answer box contains already code for the ray sphere intersection and sorts the intersection points such that t1 is the first intersection point with the original sphere.\nAdd additional code such that the function returns instead the intersection points with the \"cut-sphere\".\nThe cutting plane n.p=a is defined by the variables n (type Vector) and a (type double).\nHINT: Compute the ray-plane intersection and develop an algorithm to decide whether the ray intersects the round (un-cut part) of the sphere, the cutting plane, or doesn't intersect the cut sphere at all (e.g. the ray might pass through the cut-off part of the sphere)\nIMPORTANT: If the ray first intersects the cutting plane of the cut sphere (the flat part of it) then you need to set cuttingPlaneIntersected = true; . This is used in the normal calculation and without the automarker will mark your solution as false.\nNote: The following variables and functions are already defined for you to use:\nThe plane n.p=a is defined by the variables n (type Vector) and a (type double).\nVector: v1+v2 - adds the vectors v1 and v2 and returns resulting vector\nVector: v1-v2 - subtracts v2 from v1 and returns resulting vector\nVector: v1 * t - scales the vector v1 by t and returns resulting vector\nVector v.Scale(float a, float b, float c) - scales each component of the vector v\nfloat v1.Dot(Vector v2) - returns the dot product of vector v1 and v2\nVector v1.Cross(Vector v2) - returns the cross product of vector v1 and v2\nAfter completing the code in the pre-loaded answer box you should get the images below:\nImage description: The image shows a spherical cap, or a sphere with a portion cut off. The cut portion of the sphere is not shown, and the background behind that portion is shown, since light would past through the cut portion of the sphere.\nImage description: The image shows the cut off portion placed on the ground, in front of a blue and green background. Some shadows of the object are cast on the ground.\nTemplate code:\ndouble CutSphere::Intersect(Vector source, Vector d)\n{\n\t// A, B, and C are the parameters of quadratic equation for finding the \n\t// ray intersection parameter t (see slide 16 of the \"Ray Tracing\" lecture notes)\n\tfloat A = d.Dot(d);\n\tfloat B = 2 * source.Dot(d);\n\tfloat C = source.Dot(source) - 1;",
-        "answer": "float t; // the parameter t for the closest intersection point or ray with the sphere. If no intersection t=-1.0",
-        "generated": [
-            "EMPTY 1",
-            "EMPTY 2",
-            "EMPTY 3",
-            "EMPTY 4",
-            "EMPTY 5",
-            "EMPTY 6",
-            "EMPTY 7",
-            "EMPTY 8",
-            "EMPTY 9",
-            "EMPTY 10"
-        ]
-    },
-    {
-        "id": "// BEGIN SOLUTION RAY-SPHERE INTERSECTION",
-        "question": "",
-        "answer": "float t1;\n\tif (B > 0)   // for numerical precision\n\t\tt1 = (-B - sqrt(B * B - 4 * A * C)) / (2 * A);\n\telse\n\t\tt1 = (-B + sqrt(B * B - 4 * A * C)) / (2 * A);",
-        "generated": [
-            "EMPTY 1",
-            "EMPTY 2",
-            "EMPTY 3",
-            "EMPTY 4",
-            "EMPTY 5",
-            "EMPTY 6",
-            "EMPTY 7",
-            "EMPTY 8",
-            "EMPTY 9",
-            "EMPTY 10"
-        ]
-    },
-    {
-        "id": "float t2 = C / (A * t1); // easier way to get t2",
-        "question": "",
-        "answer": "",
-        "generated": [
-            "EMPTY 1",
-            "EMPTY 2",
-            "EMPTY 3",
-            "EMPTY 4",
-            "EMPTY 5",
-            "EMPTY 6",
-            "EMPTY 7",
-            "EMPTY 8",
-            "EMPTY 9",
-            "EMPTY 10"
-        ]
-    },
-    {
-        "id": "// if t1>t2 swap, so t1 is always first intersection point",
-        "question": "if (t1 > t2) {\n\t\ttemp = t1;\n\t\tt1 = t2;\n\t\tt2 = temp;\n\t}\n\tt = t1;",
-        "answer": "cuttingPlaneIntersected = false; // variable of type bool - true if ray first intersects the flat part of the cut sphere\n\t// ===================================================================\n\t// == The above method code computes the intersection parameters of ==\n\t// == the ray with the sphere. Add additional code such that the    ==\n\t// == function returns instead the intersections points with the    ==\n\t// == \"cut-sphere\".                                                 ==\n\t// == Tip: Compute the ray-plane interscetion and develop an        ==\n\t// ==      algorithm to decide whether the ray intersected the      ==\n\t// ==      round (un-cut part) of the sphere, the cutting plane,    ==\n\t// ==      or doesn't intersect the cut spere at all (e.g. the ray  ==\n\t// ==      might pass through the cut-off part of the sphere        ==\n    // == IMPORTANT: If the ray first intersects the cutting plane of   ==\n\t// ==            the cut sphere (the flat part of it) then you need ==\n\t// ==            to set cuttingPlaneIntersected = true;             ==\n\t// ==            This is used in the normal calculation and without ==\n\t// ==            the automarker will mark your solution as false    ==\n\t// ===================================================================",
-        "generated": [
-            "EMPTY 1",
-            "EMPTY 2",
-            "EMPTY 3",
-            "EMPTY 4",
-            "EMPTY 5",
-            "EMPTY 6",
-            "EMPTY 7",
-            "EMPTY 8",
-            "EMPTY 9",
-            "EMPTY 10"
-        ]
-    },
-    {
-        "id": "// Please complete the missing code",
-        "question": "return t;\n}",
+        "id": "2023b36b",
+        "question": "In this exercise you need to complete the function below defining a Ray-CutSphere Intersection:\ndouble CutSphere::Intersect(Vector source, Vector d)\nNOTE: The pre-loaded answer box contains already code for the ray sphere intersection and sorts the intersection points such that t1 is the first intersection point with the original sphere.\nAdd additional code such that the function returns instead the intersection points with the \"cut-sphere\".\nThe cutting plane n.p=a is defined by the variables n (type Vector) and a (type double).\nHINT: Compute the ray-plane intersection and develop an algorithm to decide whether the ray intersects the round (un-cut part) of the sphere, the cutting plane, or doesn't intersect the cut sphere at all (e.g. the ray might pass through the cut-off part of the sphere)\nIMPORTANT: If the ray first intersects the cutting plane of the cut sphere (the flat part of it) then you need to set cuttingPlaneIntersected = true; . This is used in the normal calculation and without the automarker will mark your solution as false.\nNote: The following variables and functions are already defined for you to use:\nThe plane n.p=a is defined by the variables n (type Vector) and a (type double).\nVector: v1+v2 - adds the vectors v1 and v2 and returns resulting vector\nVector: v1-v2 - subtracts v2 from v1 and returns resulting vector\nVector: v1 * t - scales the vector v1 by t and returns resulting vector\nVector v.Scale(float a, float b, float c) - scales each component of the vector v\nfloat v1.Dot(Vector v2) - returns the dot product of vector v1 and v2\nVector v1.Cross(Vector v2) - returns the cross product of vector v1 and v2\nAfter completing the code in the pre-loaded answer box you should get the images below:\nImage description: The image shows a sphere shown in red with a chunk cut off, in front of a blue and green background. Some shadows of the object are cast on the ground.\nImage description: The image shows the cut off chunk placed on the ground, in front of a blue and green background. Some shadows of the object are cast on the ground.\nTemplate code:\ndouble CutSphere::Intersect(Vector source, Vector d)\n{\n\t// A, B, and C are the parameters of quadratic equation for finding the \n\t// ray intersection parameter t (see slide 16 of the \"Ray Tracing\" lecture notes)\n\tfloat A = d.Dot(d);\n\tfloat B = 2 * source.Dot(d);\n\tfloat C = source.Dot(source) - 1;\n\tfloat t; // the parameter t for the closest intersection point or ray with the sphere. If no intersection t=-1.0\n\t// BEGIN SOLUTION RAY-SPHERE INTERSECTION\n\tif (B * B - 4 * A * C <= 0) return t=-1;  // no hit\n\tfloat t1;\n\tif (B > 0)   // for numerical precision\n\t\tt1 = (-B - sqrt(B * B - 4 * A * C)) / (2 * A);\n\telse\n\t\tt1 = (-B + sqrt(B * B - 4 * A * C)) / (2 * A);\n\tfloat t2 = C / (A * t1); // easier way to get t2\n\t// END SOLUTION RAY-SPHERE INTERSECTION\n\t// if t1>t2 swap, so t1 is always first intersection point\n\tfloat temp;\n\tif (t1 > t2) {\n\t\ttemp = t1;\n\t\tt1 = t2;\n\t\tt2 = temp;\n\t}\n\tt = t1;\n\tcuttingPlaneIntersected = false; // variable of type bool - true if ray first intersects the flat part of the cut sphere\n\t// ===================================================================\n\t// == The above method code computes the intersection parameters of ==\n\t// == the ray with the sphere. Add additional code such that the    ==\n\t// == function returns instead the intersections points with the    ==\n\t// == \"cut-sphere\".                                                 ==\n\t// == Tip: Compute the ray-plane interscetion and develop an        ==\n\t// ==      algorithm to decide whether the ray intersected the      ==\n\t// ==      round (un-cut part) of the sphere, the cutting plane,    ==\n\t// ==      or doesn't intersect the cut spere at all (e.g. the ray  ==\n\t// ==      might pass through the cut-off part of the sphere        ==\n    // == IMPORTANT: If the ray first intersects the cutting plane of   ==\n\t// ==            the cut sphere (the flat part of it) then you need ==\n\t// ==            to set cuttingPlaneIntersected = true;             ==\n\t// ==            This is used in the normal calculation and without ==\n\t// ==            the automarker will mark your solution as false    ==\n\t// ===================================================================\n    // Please complete the missing code\n\treturn t;\n}",
         "answer": "NULL",
         "generated": [
             "EMPTY 1",

@@ -32,8 +32,4 @@ import codecs
 
 # parse(filename + "-2", filename + ".json", num_of_generations=0)
 
-# ask_json(filename + "-q.json", filename + "-a.json", num_of_generations = 10, test = True)
-
-# parse(filename + "-2", filename + ".json", num_of_generations = 10)
-
-ask_json("QuestionBank.json", "Questions.json", num_of_generations = 10, test = False)
+# ask_json("Q.json", "Qs.json", num_of_generations = 10, test = False)

@@ -1169,9 +1169,7 @@ double CutSphere::Intersect(Vector source, Vector d)
 
 NULL
 
-
-
-2023b36a
+2023b36b
 
 In this exercise you need to complete the function below defining a Ray-CutSphere Intersection:
 double CutSphere::Intersect(Vector source, Vector d)
