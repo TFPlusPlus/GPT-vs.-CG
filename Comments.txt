@@ -1,0 +1,11 @@
+Generated answers contradict each other, e.g. (a) was stated to be the correct answer at the start, then (b) was stated to be correct at the end.
+
+Not a lot of variety was shown in some generated answers, even wrong ones. (Temperature = 0.75)
+
+The language is not specified, so some Python/Java solutions are produced instead of C++.
+
+Some OpenGL specifics could not be generated consistently (only sometimes), such as glBegin() and glEnd().
+
+Minor errors are found consistently which stop programs from working (only slight tweaks are needed, e.g. function calls: pq.cross(pr) instead of cross(pq, pr) [2022a13])
+
+2022a15: Small details such as vertex order (anticlockwise) could not be captured.
