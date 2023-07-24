@@ -1,0 +1,26 @@
+// 2022a15
+void drawGrid(double width, double height) {
+    for (double x = 0.0; x < width; x++) {
+        for (double z = 0.0; z < height; z++) {
+            double y1 = cos(x) + cos(z);
+            double y2 = cos(x + 1) + cos(z);
+            double y3 = cos(x + 1) + cos(z + 1);
+            double y4 = cos(x) + cos(z + 1);
+            glBegin(GL_TRIANGLES);
+            CRVertex3d(x, y1, z);
+            CRVertex3d(x, y4, z + 1);
+            CRVertex3d(x + 1, y2, z);
+            CRVertex3d(x + 1, y3, z + 1);
+            CRVertex3d(x + 1, y2, z);
+            CRVertex3d(x, y4, z + 1);
+            glEnd();
+        }
+    }
+}
+
+// 2022a16
+Vector3 projectVertex(Vector3 vertex, double a, double b, double c, double d) {
+    double t = -d / (a * vertex.x + b * vertex.y + c * vertex.z);
+    return Vector3(t * vertex.x, t * vertex.y, t * vertex.z);
+}
+

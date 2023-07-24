@@ -308,7 +308,7 @@
     {
         "id": "2022a16a",
         "question": "Write a function projectVertex(), that computes the projection of a vertex on to a plane for the purpose of creating a shadow.\nThe plane is given in the form ax + by + cz + d = 0\nYour function should have the following signature:\nVector3 projectVertex(Vector3 vertex, double a, double b, double c, double d)\nThe function should return the location of a vertex given by the vertex parameter when projected from the origin on to a plane given by the a, b, c,  & d parameters.\nIf working correctly, the program will produce the following output:\nImage description: A ruby shape on top of a dark triangle on top of a grey square.\nYou can assume that Vector3 is a class that represents a 3D vector, and exposes fields named x, y, and z.\nYour code can assume that this is a straightforward case for generating shadows: the light source (the origin of the projection) is located at (0, 0, 0), and you do not need to account for any transformations on the object.\nYou do not need to handle the actual display of the object or the shadow, only the calculation of the shadow vertex location.",
-        "answer": "NULL",
+        "answer": "Vector3 projectVertex(Vector3 vertex, double a, double b, double c, double d) {\ndouble t = -d / (a * vertex.x + b * vertex.y + c * vertex.z);\nreturn Vector3(t * vertex.x, t * vertex.y, t * vertex.z);\n}",
         "generated": [
             "EMPTY 1",
             "EMPTY 2",
@@ -325,7 +325,7 @@
     {
         "id": "2022a16b",
         "question": "Write a function projectVertex(), that computes the projection of a vertex on to a plane for the purpose of creating a shadow.\nThe plane is given in the form ax + by + cz + d = 0\nYour function should have the following signature:\nVector3 projectVertex(Vector3 vertex, double a, double b, double c, double d)\nThe function should return the location of a vertex given by the vertex parameter when projected from the origin on to a plane given by the a, b, c,  & d parameters.\nIf working correctly, the program will produce the following output:\nImage description: A red object resembling the shape of a ruby is shown floating in space, with a grey square representing the plane, a triangular shadow of the object is shown on the plane as black.\nYou can assume that Vector3 is a class that represents a 3D vector, and exposes fields named x, y, and z.\nYour code can assume that this is a straightforward case for generating shadows: the light source (the origin of the projection) is located at (0, 0, 0), and you do not need to account for any transformations on the object.\nYou do not need to handle the actual display of the object or the shadow, only the calculation of the shadow vertex location.",
-        "answer": "NULL",
+        "answer": "Vector3 projectVertex(Vector3 vertex, double a, double b, double c, double d) {\ndouble t = -d / (a * vertex.x + b * vertex.y + c * vertex.z);\nreturn Vector3(t * vertex.x, t * vertex.y, t * vertex.z);\n}",
         "generated": [
             "EMPTY 1",
             "EMPTY 2",
