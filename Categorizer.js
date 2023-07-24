@@ -46,6 +46,7 @@ function refresh() {
     document.getElementById("category").innerText = `Category: ${current_category + 1}/${num_of_categories} (${CATEGORIES[current_category].category})`;
     document.getElementById("options").innerHTML = "";
     let options = CATEGORIES[current_category].options, input, label;
+    checked = [];
     for (let i = 0; i < options.length; i++) {
         input = document.createElement("input");
         input.type = "checkbox";
@@ -63,6 +64,7 @@ function refresh() {
 }
 
 function prev_question() {
+    update_data();
     if (current_question > 0) {
         current_question--;
         current_generation = 0;
@@ -72,6 +74,7 @@ function prev_question() {
 }
 
 function next_question() {
+    update_data();
     if (current_question < num_of_questions - 1) {
         current_question++;
         current_generation = 0;
@@ -103,7 +106,7 @@ function prev_category() {
         current_category = num_of_categories - 1;
         current_question--;
         current_generation = num_of_generations - 1;
-        save();
+        // save();
     }
     if (num_of_categories - num_of_generations <= current_category) {
         current_generation = current_category + num_of_generations - num_of_categories;
@@ -175,8 +178,6 @@ function update_data() {
 }
 
 function save() {
-    console.log(data.length);
-    console.log(QUESTIONS.length);
     const csvData = `${CATEGORIES_OPTIONS.join(',')}\n` + data.map((row, i) => `${QUESTIONS[i].id},` + row.join(',')).join('\n');
     const blob = new Blob([csvData], { type: 'text/csv' });
     const csvURL = URL.createObjectURL(blob);
