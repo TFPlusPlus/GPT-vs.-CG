@@ -48,7 +48,7 @@
             "Mathematical formula",
             "Image description (novice)",
             "Image description (informed)",
-            "Code (OpenGL)"
+            "Code"
         ]
     },
     {
@@ -58,14 +58,14 @@
             "Mathematical formula",
             "Image description (novice)",
             "Image description (informed)",
-            "Code (OpenGL)"
+            "Code"
         ]
     },
     {
         "category": "Reasoning",
         "options": [
-            "Inductive",
             "Deductive",
+            "Inductive",
             "Abductive"
         ]
     },
@@ -81,8 +81,9 @@
     {
         "category": "Generation 1",
         "options": [
-            "Correct explanation",
             "Correct answer",
+            "Minor error",
+            "Correct explanation",
             "Conceptual error",
             "Calculation error",
             "Logic error",
@@ -92,8 +93,9 @@
     {
         "category": "Generation 2",
         "options": [
-            "Correct explanation",
             "Correct answer",
+            "Minor error",
+            "Correct explanation",
             "Conceptual error",
             "Calculation error",
             "Logic error",
@@ -103,8 +105,9 @@
     {
         "category": "Generation 3",
         "options": [
-            "Correct explanation",
             "Correct answer",
+            "Minor error",
+            "Correct explanation",
             "Conceptual error",
             "Calculation error",
             "Logic error",
@@ -114,8 +117,9 @@
     {
         "category": "Generation 4",
         "options": [
-            "Correct explanation",
             "Correct answer",
+            "Minor error",
+            "Correct explanation",
             "Conceptual error",
             "Calculation error",
             "Logic error",
@@ -125,8 +129,9 @@
     {
         "category": "Generation 5",
         "options": [
-            "Correct explanation",
             "Correct answer",
+            "Minor error",
+            "Correct explanation",
             "Conceptual error",
             "Calculation error",
             "Logic error",
@@ -136,8 +141,9 @@
     {
         "category": "Generation 6",
         "options": [
-            "Correct explanation",
             "Correct answer",
+            "Minor error",
+            "Correct explanation",
             "Conceptual error",
             "Calculation error",
             "Logic error",
@@ -147,8 +153,9 @@
     {
         "category": "Generation 7",
         "options": [
-            "Correct explanation",
             "Correct answer",
+            "Minor error",
+            "Correct explanation",
             "Conceptual error",
             "Calculation error",
             "Logic error",
@@ -158,8 +165,9 @@
     {
         "category": "Generation 8",
         "options": [
-            "Correct explanation",
             "Correct answer",
+            "Minor error",
+            "Correct explanation",
             "Conceptual error",
             "Calculation error",
             "Logic error",
@@ -169,8 +177,9 @@
     {
         "category": "Generation 9",
         "options": [
-            "Correct explanation",
             "Correct answer",
+            "Minor error",
+            "Correct explanation",
             "Conceptual error",
             "Calculation error",
             "Logic error",
@@ -180,8 +189,9 @@
     {
         "category": "Generation 10",
         "options": [
-            "Correct explanation",
             "Correct answer",
+            "Minor error",
+            "Correct explanation",
             "Conceptual error",
             "Calculation error",
             "Logic error",

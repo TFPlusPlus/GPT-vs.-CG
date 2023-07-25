@@ -8,15 +8,15 @@ options = [
     ["Remember", "Understand", "Apply", "Analyze", "Evaluate", "Create"],
     ["Multiple-Choice Question", "Written response", "Programming"],
     ["Easy", "Easy - Medium", "Medium", "Medium - Hard", "Hard"],
-    ["Text", "Mathematical formula", "Image description (novice)", "Image description (informed)", "Code (OpenGL)"],
-    ["Text", "Mathematical formula", "Image description (novice)", "Image description (informed)", "Code (OpenGL)"],
-    ["Inductive", "Deductive", "Abductive"],
+    ["Text", "Mathematical formula", "Image description (novice)", "Image description (informed)", "Code"],
+    ["Text", "Mathematical formula", "Image description (novice)", "Image description (informed)", "Code"],
+    ["Deductive", "Inductive", "Abductive"],
     ["Concept recall", "Calculation", "Geometry/Transformation", "Programming"]
 ]
 
 for i in range(num_of_generations):
     category.append("Generation " + str(i+1))
-    options.append(["Correct explanation", "Correct answer", "Conceptual error", "Calculation error", "Logic error", "No explanation"])
+    options.append(["Correct answer", "Minor error", "Correct explanation", "Conceptual error", "Calculation error", "Logic error", "No explanation"])
 
 categories = []
 for i in range(len(category)):

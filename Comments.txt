@@ -9,3 +9,5 @@ Some OpenGL specifics could not be generated consistently (only sometimes), such
 Minor errors are found consistently which stop programs from working (only slight tweaks are needed, e.g. function calls: pq.cross(pr) instead of cross(pq, pr) [2022a13])
 
 2022a15: Small details such as vertex order (anticlockwise) could not be captured.
+
+2022a17: Small details such as operand order ("Vector3 * int" instead of "int * Vector") could not be captured. Concepts are "well understood", but implementations are lacking slightly in terms of specific requirements.
