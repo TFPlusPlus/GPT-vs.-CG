@@ -2,7 +2,7 @@ let QUESTIONS = [], CATEGORIES = [], CATEGORIES_OPTIONS = [], CATEGORIES_INDICES
 let num_of_questions, num_of_generations, num_of_categories, current_question = 0, current_generation = 0, current_category = 0;
 
 function setup() {
-    CATEGORIES_OPTIONS = CATEGORIES.map(category => category.options);
+    CATEGORIES_OPTIONS = CATEGORIES.map(category => category.options.map(option => `${category.category}: ${option}`));
     CATEGORIES_OPTIONS = [].concat.apply(["Question ID"], CATEGORIES_OPTIONS);
     let current_index = 0, i = 0;
     for (i = 0; i < CATEGORIES.length; i++) {

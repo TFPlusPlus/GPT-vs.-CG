@@ -1,10 +1,10 @@
-data = """
-X,A,B,C,D,D,D
-a,0,0,1,0,0,1
-b,0,1,1,1,1,1
-c,1,0,1,0,0,0
-d,0,0,0,0,0,0
-"""
+# data = """
+# X,AA,B,C,D,D,D
+# a,0,0,1,0,0,1
+# b,0,1,1,1,1,1
+# c,1,0,1,0,0,0
+# d,0,0,0,0,0,0
+# """
 file = open("data.csv", "r")
 data = file.read()
 
@@ -22,10 +22,12 @@ def P(var, conditions = [], collective = False):    # The conditions are joined 
     var_array = []
     cond_array = []
     for i in range(len(headers)):
-        if headers[i] == var:
+        if var in headers[i]:
             var_array.append(i)
-        if headers[i] in conditions:
-            cond_array.append(i)
+        for cond in conditions:
+            if cond in headers[i]:
+                cond_array.append(i)
+                break
     if collective:
         results = []
         for row in data:
@@ -53,6 +55,6 @@ def P(var, conditions = [], collective = False):    # The conditions are joined 
             return "N/A"
         return "\n".join(results)
 
-# print(P("", conditions=["A", "B"], collective=False))
-print(P("Correct answer"))
+# print(P("D", conditions=["A", "B"], collective=False))
+# print(P("Correct answer"))
 print(P("Correct answer", collective=True))
