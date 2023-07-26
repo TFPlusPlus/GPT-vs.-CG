@@ -24,3 +24,26 @@ Vector3 projectVertex(Vector3 vertex, double a, double b, double c, double d) {
     return Vector3(t * vertex.x, t * vertex.y, t * vertex.z);
 }
 
+// 2022b17
+glTranslatef(3.0f, 2.0f, 0.0f);
+glRotatef(180.0f, 0.0f, 0.0f, 1.0f);
+
+// 2022b18
+// Draw the first torus at (0, 0, 0)
+glPushMatrix();
+glRotatef(180.0f, 0.0f, 0.0f, 1.0f); // Rotate the first torus to match the image description
+drawTorus();
+glPopMatrix();
+// Draw the second torus at (1.5, 0, 0)
+glPushMatrix();
+glTranslatef(1.5f, 0.0f, 0.0f); // Move the torus to the desired position
+glRotatef(-90.0f, 1.0f, 0.0f, 0.0f); // Rotate the torus to match the image description
+drawTorus();
+glPopMatrix();
+// Draw the third torus at (0, 1.5, 0)
+glPushMatrix();
+glTranslatef(0.0f, 1.5f, 0.0f); // Move the torus to the desired position
+glRotatef(90.0f, 0.0f, 1.0f, 0.0f); // Rotate the torus to match the image description
+drawTorus();
+glPopMatrix();
+

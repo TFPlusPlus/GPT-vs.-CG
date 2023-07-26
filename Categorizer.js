@@ -195,7 +195,13 @@ document.onkeydown = function(e) {
         case "ArrowRight":
             next_category();
             break;
-        case "Space":
+        case "=":
+            next_question();
+            break;
+        case "-":
+            prev_question();
+            break;
+        case "s":
             save();
             break;
         default:

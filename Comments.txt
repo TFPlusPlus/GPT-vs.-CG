@@ -11,3 +11,22 @@ Minor errors are found consistently which stop programs from working (only sligh
 2022a15: Small details such as vertex order (anticlockwise) could not be captured.
 
 2022a17: Small details such as operand order ("Vector3 * int" instead of "int * Vector") could not be captured. Concepts are "well understood", but implementations are lacking slightly in terms of specific requirements.
+
+The model performs poorly on Color questions.
+
+The model chooses the correct option but the wrong corresponding letter.
+
+2022b10: The correct answer is generated sometimes, but they are always flukes, and there were always some calculation errors in the steps.
+
+★ Results could vary between different preprocessing techniques and methods, this research only outlines what a typical student would do and achieve if they were to use GPT to "aid" their question solving.
+
+2022b13 & 2022b14: The representation of image matrices using \n and \t may be confusing for the model. Some values are made up.
+
+2022b15b: Rotation was still towards the other direction, despite before and after vertices being stated. Stating vertices did not change the proportion of right answers generated.
+
+2022b17a: Several instances of the same incorrect answer were generated.
+
+2022b17 (RGB Cube) & 2022b18 (drawTorus()) & 2022b19 (Mountain texture mapping): 0/40 generations were successful.
+
+2022b20: Novice 0/10 vs Informed 9/10 because of vital information captured in the image description.
+

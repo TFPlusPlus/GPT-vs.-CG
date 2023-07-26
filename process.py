@@ -56,5 +56,5 @@ def P(var, conditions = [], collective = False):    # The conditions are joined 
         return "\n".join(results)
 
 # print(P("D", conditions=["A", "B"], collective=False))
-# print(P("Correct answer"))
+print(P("Correct answer"))
 print(P("Correct answer", collective=True))

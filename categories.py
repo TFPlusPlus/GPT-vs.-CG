@@ -4,7 +4,7 @@ num_of_generations = 10
 
 category = ["Topic", "Bloom's Taxonomy", "Question Type", "Difficulty Level", "Input Type", "Output Type", "Reasoning", "Solution Process"]
 options = [
-    ["Geometry", "Graphics Introduction", "Color", "Illumination and Shading", "3D Modelling", "Texture Mapping", "Ray Tracing", "Parametric Curves and Surfaces"],
+    ["Geometry", "Graphics Introduction", "Color", "Illumination and Shading", "3D Modelling", "Texture Mapping", "Ray Tracing", "Parametric Curves and Surfaces", "Image Processing"],
     ["Remember", "Understand", "Apply", "Analyze", "Evaluate", "Create"],
     ["Multiple-Choice Question", "Written response", "Programming"],
     ["Easy", "Easy - Medium", "Medium", "Medium - Hard", "Hard"],
