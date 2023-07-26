@@ -40,7 +40,18 @@ function refresh() {
     document.getElementById("generated").innerHTML = "";
     let generated = item.generated[current_generation].split("\n");
     for (let i = 0; i < generated.length; i++) {
-        document.getElementById("generated").appendChild(document.createElement("h3")).innerHTML = generated[i].replace(" ", "&nbsp;");
+        if (generated[i].startsWith("            ")) {
+            document.getElementById("generated").appendChild(document.createElement("h3")).innerHTML = `&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${generated[i]}`;
+        }
+        else if (generated[i].startsWith("        ")) {
+            document.getElementById("generated").appendChild(document.createElement("h3")).innerHTML = `&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${generated[i]}`;
+        }
+        else if (generated[i].startsWith("    ")) {
+            document.getElementById("generated").appendChild(document.createElement("h3")).innerHTML = `&nbsp;&nbsp;&nbsp;&nbsp;${generated[i]}`;
+        }
+        else {
+            document.getElementById("generated").appendChild(document.createElement("h3")).innerHTML = generated[i];
+        }
     }
     document.getElementById("generated-index").innerText = `Generation: ${current_generation + 1}/${num_of_generations}`;
     document.getElementById("category").innerText = `Category: ${current_category + 1}/${num_of_categories} (${CATEGORIES[current_category].category})`;
