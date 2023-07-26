@@ -47,3 +47,13 @@ glRotatef(90.0f, 0.0f, 1.0f, 0.0f); // Rotate the torus to match the image descr
 drawTorus();
 glPopMatrix();
 
+// 2022b22a
+double Basis1(double t){ return -4*t*t*t + 3*t*t + 1;} // B1(t)
+double Basis2(double t){ return 4*t*t*t - 3*t*t;} // B2(t)
+double Basis3(double t){ return -t*t + t;} // B3(t)
+double Basis4(double t){ return -4*t*t*t + 4*t*t;} // B4(t)
+CVec3df c(float t, CVec3df p0, CVec3df p1, CVec3df r0, CVec3df r05) {
+    CVec3df p = p0*Basis1(t) + r0*Basis2(t) + p1*Basis3(t) + r05*Basis4(t);
+    return p;
+}
+// \begin{pmatrix}0&0&0&1\\ \:1&1&1&1\\ \:0&0&1&0\\ \:0.75&1&1&0\end{pmatrix}^{-1}

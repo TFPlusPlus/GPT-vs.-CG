@@ -40,7 +40,7 @@ function refresh() {
     document.getElementById("generated").innerHTML = "";
     let generated = item.generated[current_generation].split("\n");
     for (let i = 0; i < generated.length; i++) {
-        document.getElementById("generated").appendChild(document.createElement("h3")).innerText = generated[i];
+        document.getElementById("generated").appendChild(document.createElement("h3")).innerHTML = generated[i].replace(" ", "&nbsp;");
     }
     document.getElementById("generated-index").innerText = `Generation: ${current_generation + 1}/${num_of_generations}`;
     document.getElementById("category").innerText = `Category: ${current_category + 1}/${num_of_categories} (${CATEGORIES[current_category].category})`;
