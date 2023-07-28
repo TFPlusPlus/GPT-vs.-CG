@@ -42,7 +42,7 @@ def P(var, conditions = [], collective = False):    # The conditions are joined 
             return "N/A"
         return "{:.2f}%".format(sum(results) / len(var_array) / len(results) * 100)
     else:
-        results = []
+        results = {}
         for row in data:
             valid = True
             for cond in cond_array:
@@ -50,11 +50,18 @@ def P(var, conditions = [], collective = False):    # The conditions are joined 
                     valid = False
                     break
             if valid:
-                results.append("{},{:.2f}%".format(row[0], sum([row[i] for i in var_array]) / len(var_array) * 100))
+                results[row[0]] = sum([row[i] for i in var_array]) / len(var_array) * 100
+                # results.append("{},{:.2f}%".format(row[0], sum([row[i] for i in var_array]) / len(var_array) * 100))
         if len(results) == 0:
             return "N/A"
-        return "\n".join(results)
+        return results
 
 # print(P("D", conditions=["A", "B"], collective=False))
-print(P("Correct answer"))
-print(P("Correct answer", collective=True))
+# print(P("Correct answer"))
+# print(P("Correct answer", collective=True))
+# print(P("Correct answer", conditions=["Question Type: Multiple-Choice Question"], collective=True))
+# print(P("Correct answer", conditions=["Question Type: Programming"], collective=True))
+# l = P("Correct answer", conditions=["Question Type: Programming"], collective=False)
+# print(sum([1 for i in l.values() if i > 0]) / len(l))
+print(P("Correct answer", conditions=["Input Type: Image description (novice)"], collective=True))
+print(P("Correct answer", conditions=["Input Type: Image description (informed)"], collective=True))

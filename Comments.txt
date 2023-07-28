@@ -1,5 +1,18 @@
 ### AFTER FINISHED: CHECK ALL CATEGORIES HAVE AT LEAST ONE SELECTION ###
 
+### STATS ###
+
+Correct Overall: 40.00%
+MCQ: 53.33%
+Programming: 22.50%
+Programming (nonzero in 10 attempts): 50.00%
+Image Questions (novice): 22.35%
+Image Questions (informed): 29.33%
+
+###
+
+No nonsense is generated, all solutions look convincing.
+
 Generated answers contradict each other, e.g. (a) was stated to be the correct answer at the start, then (b) was stated to be correct at the end.
 
 Not a lot of variety was shown in some generated answers, even wrong ones. (Temperature = 0.75)
@@ -34,3 +47,4 @@ The model chooses the correct option but the wrong corresponding letter.
 
 2022b22: The model keeps generating the solution for p0, p1, r0, r1.
 
+2023a05: When applying transformation matrices, the order of the matrices was not taken into account (although it was considered in the explanation).
