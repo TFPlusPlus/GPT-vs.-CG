@@ -48,3 +48,16 @@ The model chooses the correct option but the wrong corresponding letter.
 2022b22: The model keeps generating the solution for p0, p1, r0, r1.
 
 2023a05: When applying transformation matrices, the order of the matrices was not taken into account (although it was considered in the explanation).
+
+Minor errors occur (not limited to) when generated code does not follow specified rules (e.g. operation order).
+
+2023a21a: For some generations, the ratios for corners do not get paired with the correct corners.
+
+2023a21b: normalise() vs normalize();
+
+Use a paired t-test to test whether the knowledge level of the student makes a significant difference in the performance. Also depends on how much information the image holds that is relevant and crucial for solving the question.
+
+2023a22a: Need to know where to extract the relevant code snippets.
+
+2023a22: Generated code usually contains functions, which are not allowed in this question.
+
