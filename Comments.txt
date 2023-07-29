@@ -61,3 +61,13 @@ Use a paired t-test to test whether the knowledge level of the student makes a s
 
 2023a22: Generated code usually contains functions, which are not allowed in this question.
 
+Check ID[-1] == "a" or "b" then "Image description" has to be ticked.
+
+2023b11: Why halfway between B and C??
+
+2023b12 & 2023b13: Surprisingly good performance for these two questions. (Texture mapping)
+
+2023b16a: "...the x-coordinate varies from 0 to 3 as t varies from 0 to 0.5, which is achieved by 3*t."??  "At t = 0.5, c(t) = (3*t, 0, 3-2*t) = (3*0.5, 0, 3-2*0.5) = (3/2, 0, 1.5) = (3, 0, 2)"??
+
+★ Transfer XXXXa data to XXXXb but change Image description novice to informed.
+
