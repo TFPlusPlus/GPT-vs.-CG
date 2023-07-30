@@ -1955,23 +1955,6 @@
         ]
     },
     {
-        "id": "2023b26",
-        "question": "Consider the greyscale image J defined below What will be the threshold (rounded to the nearest integer) computed after running three iterations of the adaptive threshold technique as described in class?\n3\t128\t16\t64\t16\n2\t128\t32\t32\t16\n1\t128\t128\t8\t128\n0\t8\t8\t16\t64\n        0\t1\t2\t3\nThe bottom left cell is defined as (0,0). The y-axis is vertical and increases up the image. The x-axis is horizontal and increases to the right.\nSelect one:\na. 63\nb. 73\nc. 56\nd. 58\ne. 68",
-        "answer": "The correct answer is: 63",
-        "generated": [
-            "EMPTY 1",
-            "EMPTY 2",
-            "EMPTY 3",
-            "EMPTY 4",
-            "EMPTY 5",
-            "EMPTY 6",
-            "EMPTY 7",
-            "EMPTY 8",
-            "EMPTY 9",
-            "EMPTY 10"
-        ]
-    },
-    {
         "id": "2023b27",
         "question": "Consider the 4x4 table representing the grayscale image J below. What is the result when a 3x3 median filter is applied? For boundary handling, use BoundaryPaddingZero.\n3\t0\t8\t16\t64\n2\t8\t16\t32\t64\n1\t16\t32\t64\t128\n0\t64\t64\t128\t128\n        0\t1\t2\t3\nThe bottom left cell is defined as (0,0). The y-axis is vertical and increases up the image. The x-axis is horizontal and increases to the right.\nWhat is the value of median filtered image at x=0, y=3?\nWhat is the value of median filtered image at x=2, y=1?\nWhat is the value of median filtered image at x=3, y=1?",
         "answer": "The correct answer is: 0, 64, 64",
