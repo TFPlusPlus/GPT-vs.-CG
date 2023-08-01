@@ -1,15 +1,31 @@
-### AFTER FINISHED: CHECK ALL CATEGORIES HAVE AT LEAST ONE SELECTION ###
-
 ### STATS ###
 
-Correct Overall: 40.00%
-MCQ: 53.33%
-Programming: 22.50%
-Programming (nonzero in 10 attempts): 50.00%
-Image Questions (novice): 22.35%
-Image Questions (informed): 29.33%
+Correct Overall: 42.71%
+Correct + Minor error: 49.70%
+MCQ: 53.51%
+Programming: 27.92%
+Programming (nonzero in 10 attempts): 54.72%
+Image Questions (novice): 27.94%
+Image Questions (informed): 36.47%
+
+Novice vs Informed p-value: 0.3983 (Insignificant)
+
+Inductive: 46.17%
+Deductive: 35.00%
+
+Geometry: 50.00%
+Graphics Introduction: 30.00%
+Color: 46.67%
+Illumination and Shading: 43.57%
+3D Modelling: 75.00%
+Texture Mapping: 60.00%
+Ray Tracing: 36.43%
+Parametric Curves and Surfaces: 44.55%
+Image Processing: 28.46%
 
 ###
+
+Marks/Weights of questions?
 
 No nonsense is generated, all solutions look convincing.
 
