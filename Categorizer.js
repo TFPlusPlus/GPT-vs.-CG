@@ -245,6 +245,9 @@ fetch("Questions.json")
                     .then(response => response.text())
                     .then(csv => {
                         let rows = csv.split("\n");
+                        if (rows[rows.length-1] == "") {
+                            rows.pop();
+                        }
                         let array = rows.map(row => row.split(","));
                         for (let i = 1; i < array.length; i++) {
                             data.push(Array(array[i].length - 1).fill(0));

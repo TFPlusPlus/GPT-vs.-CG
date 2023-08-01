@@ -12,7 +12,6 @@ data = [row.split(',') for row in data.strip().split('\n')]
 headers = data[0]
 data = data[1:]
 for i in range(len(data)-1, -1, -1):
-    delete = True
     for j in range(1, len(data[0])):
         data[i][j] = int(data[i][j])
     if sum(data[i][1:]) == 0:
