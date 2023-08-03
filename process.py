@@ -1,78 +1,84 @@
-def P_AND(var, conditions = [], collective = False):
+def P(var, cond_and = [], cond_not = [], cond_or1 = [], cond_or2 = [], cond_or3 = [], collective = False):
     var_array = []
-    cond_array = []
+    and_array = []
+    not_array = []
+    or1_array = []
+    or2_array = []
+    or3_array = []
     for i in range(len(headers)):
         if var in headers[i]:
             var_array.append(i)
-        for cond in conditions:
+        for cond in cond_and:
             if cond in headers[i]:
-                cond_array.append(i)
+                and_array.append(i)
                 break
-    if collective:
-        results = []
-        for row in data:
-            valid = True
-            for cond in cond_array:
-                if not row[cond]:
-                    valid = False
-                    break
-            if valid:
-                results.append(sum([row[i] for i in var_array]))
-        if len(results) == 0:
-            return "N/A"
-        return "{:.2f}% ({} / {})".format(sum(results) / len(var_array) / len(results) * 100, sum(results), len(var_array) * len(results))
-    else:
-        results = {}
-        for row in data:
-            valid = True
-            for cond in cond_array:
-                if not row[cond]:
-                    valid = False
-                    break
-            if valid:
-                results[row[0]] = sum([row[i] for i in var_array]) / len(var_array) * 100
-                # results.append("{},{:.2f}%".format(row[0], sum([row[i] for i in var_array]) / len(var_array) * 100))
-        if len(results) == 0:
-            return "N/A"
-        return results
-
-def P_OR(var, conditions = [], collective = False):
-    var_array = []
-    cond_array = []
-    for i in range(len(headers)):
-        if var in headers[i]:
-            var_array.append(i)
-        for cond in conditions:
+        for cond in cond_not:
             if cond in headers[i]:
-                cond_array.append(i)
+                not_array.append(i)
                 break
+        for cond in cond_or1:
+            if cond in headers[i]:
+                or1_array.append(i)
+                break
+        for cond in cond_or2:
+            if cond in headers[i]:
+                or2_array.append(i)
+                break
+        for cond in cond_or3:
+            if cond in headers[i]:
+                or3_array.append(i)
+                break
+    results = {}
+    numerator = {}
+    denominator = {}
+    for row in data:
+        valid = True
+        # AND
+        for cond in and_array:
+            if not row[cond]:
+                valid = False
+                break
+        if not valid:
+            continue
+        # NOT
+        for cond in not_array:
+            if row[cond]:
+                valid = False
+                break
+        if not valid:
+            continue
+        # OR1
+        valid = or1_array == []
+        for cond in or1_array:
+            if row[cond]:
+                valid = True
+                break
+        if not valid:
+            continue
+        # OR2
+        valid = or2_array == []
+        for cond in or2_array:
+            if row[cond]:
+                valid = True
+                break
+        if not valid:
+            continue
+        # OR3
+        valid = or3_array == []
+        for cond in or3_array:
+            if row[cond]:
+                valid = True
+                break
+        if not valid:
+            continue
+        results[row[0]] = sum([row[i] for i in var_array]) / len(var_array)
+        numerator[row[0]] = sum([row[i] for i in var_array])
+        denominator[row[0]] = len(var_array)
+    if len(results) == 0:
+        return "N/A"
     if collective:
-        results = []
-        for row in data:
-            valid = False
-            for cond in cond_array:
-                if row[cond]:
-                    valid = True
-                    break
-            if valid:
-                results.append(sum([row[i] for i in var_array]))
-        if len(results) == 0:
-            return "N/A"
-        return "{:.2f}% ({} / {})".format(sum(results) / len(var_array) / len(results) * 100, sum(results), len(var_array) * len(results))
-    else:
-        results = {}
-        for row in data:
-            valid = False
-            for cond in cond_array:
-                if row[cond]:
-                    valid = True
-                    break
-            if valid:
-                results[row[0]] = sum([row[i] for i in var_array]) / len(var_array) * 100
-                # results.append("{},{:.2f}%".format(row[0], sum([row[i] for i in var_array]) / len(var_array) * 100))
-        if len(results) == 0:
-            return "N/A"
-        return results
+        return "{:.2f}% ({} / {})".format(sum(numerator.values()) / sum(denominator.values()) * 100, sum(numerator.values()), sum(denominator.values()))
+    return results
     
 # data = """
 # X,AA,B,C,D,D,D
@@ -81,11 +87,10 @@ def P_OR(var, conditions = [], collective = False):
 # c,1,0,1,0,0,0
 # d,0,0,0,0,0,0
 # """
-# print(P_AND("D", conditions=["A", "B"], collective=False))
+# print(P("D", cond_and=["A", "B"], collective=False))
 
 file = open("data.csv", "r")
 data = file.read()
-
 data = [row.split(',') for row in data.strip().split('\n')]
 headers = data[0]
 data = data[1:]
@@ -96,18 +101,18 @@ for i in range(len(data)-1, -1, -1):
         data.pop(i)
 
 """ General Statistics """
-print(P_AND("Correct answer", collective=True))
-print(P_AND("Minor error", collective=True))
-# print(P_AND("Correct answer", conditions=["Question Type: Multiple-Choice Question"], collective=True))
-# print(P_AND("Correct answer", conditions=["Question Type: Programming"], collective=True))
-# l = P_AND("Correct answer", conditions=["Question Type: Programming"], collective=False)
+# print(P("Correct answer", collective=True))
+# print(P("Minor error", collective=True))
+# print(P("Correct answer", cond_and=["Question Type: Multiple-Choice Question"], collective=True))
+# print(P("Correct answer", cond_and=["Question Type: Programming"], collective=True))
+# l = P("Correct answer", cond_and=["Question Type: Programming"], collective=False)
 # print("{:.2f}%".format(sum([1 for i in l.values() if i > 0]) / len(l) * 100))
-# print(P_AND("Correct answer", conditions=["Input Type: Image description (novice)"], collective=True))
-# print(P_AND("Correct answer", conditions=["Input Type: Image description (informed)"], collective=True))
+# print(P("Correct answer", cond_and=["Input Type: Image description (novice)"], collective=True))
+# print(P("Correct answer", cond_and=["Input Type: Image description (informed)"], collective=True))
 
 """ Novice vs Informed"""
-# novice = P_AND("Correct answer", conditions=["Input Type: Image description (novice)"], collective=False).values()
-# informed = P_AND("Correct answer", conditions=["Input Type: Image description (informed)"], collective=False).values()
+# novice = P("Correct answer", cond_and=["Input Type: Image description (novice)"], collective=False).values()
+# informed = P("Correct answer", cond_and=["Input Type: Image description (informed)"], collective=False).values()
 # for i in novice:
 #     print(i)
 # print()
@@ -115,16 +120,16 @@ print(P_AND("Minor error", collective=True))
 #     print(i)
 
 """ Inductive vs Deductive """
-# print(P_AND("Correct answer", conditions=["Reasoning: Deductive"], collective=True))
-# print(P_AND("Correct answer", conditions=["Reasoning: Inductive"], collective=True))
+# print(P("Correct answer", cond_and=["Reasoning: Deductive"], collective=True))
+# print(P("Correct answer", cond_and=["Reasoning: Inductive"], collective=True))
 
 """ Topic """
-# print(P_AND("Correct answer", conditions=["Topic: Geometry"], collective=True))
-# print(P_AND("Correct answer", conditions=["Topic: Graphics Introduction"], collective=True))
-# print(P_AND("Correct answer", conditions=["Topic: Color"], collective=True))
-# print(P_AND("Correct answer", conditions=["Topic: Illumination and Shading"], collective=True))
-# print(P_AND("Correct answer", conditions=["Topic: 3D Modelling"], collective=True))
-# print(P_AND("Correct answer", conditions=["Topic: Texture Mapping"], collective=True))
-# print(P_AND("Correct answer", conditions=["Topic: Ray Tracing"], collective=True))
-# print(P_AND("Correct answer", conditions=["Topic: Parametric Curves and Surfaces"], collective=True))
-# print(P_AND("Correct answer", conditions=["Topic: Image Processing"], collective=True))
+# print(P("Correct answer", cond_and=["Topic: Geometry"], collective=True))
+# print(P("Correct answer", cond_and=["Topic: Graphics Introduction"], collective=True))
+# print(P("Correct answer", cond_and=["Topic: Color"], collective=True))
+# print(P("Correct answer", cond_and=["Topic: Illumination and Shading"], collective=True))
+# print(P("Correct answer", cond_and=["Topic: 3D Modelling"], collective=True))
+# print(P("Correct answer", cond_and=["Topic: Texture Mapping"], collective=True))
+# print(P("Correct answer", cond_and=["Topic: Ray Tracing"], collective=True))
+# print(P("Correct answer", cond_and=["Topic: Parametric Curves and Surfaces"], collective=True))
+# print(P("Correct answer", cond_and=["Topic: Image Processing"], collective=True))
