@@ -1,3 +1,5 @@
+import json
+
 def P(var, cond_and = [], cond_not = [], cond_or1 = [], cond_or2 = [], cond_or3 = [], collective = False):
     var_array = []
     and_array = []
@@ -79,7 +81,30 @@ def P(var, cond_and = [], cond_not = [], cond_or1 = [], cond_or2 = [], cond_or3 
     if collective:
         return "{:.2f}% ({} / {})".format(sum(numerator.values()) / sum(denominator.values()) * 100, sum(numerator.values()), sum(denominator.values()))
     return results
-    
+
+def search(terms = []):
+    terms_indices = {}
+    results = {}
+    for term in terms:
+        terms_indices[term] = []
+    for i in range(len(headers)):
+        for term in terms:
+            if term in headers[i]:
+                terms_indices[term].append(i)
+    for row in data:
+        valid = [False] * len(terms)
+        valid_indices = [[] for i in range(len(terms))]
+        for i in range(len(terms)):
+            for index in terms_indices[terms[i]]:
+                if row[index]:
+                    valid[i] = True
+                    valid_indices[i].append(index)
+        if all(valid):
+            results[row[0]] = []
+            for indices in valid_indices:
+                results[row[0]] += [headers[index] for index in indices]
+    return results
+
 # data = """
 # X,AA,B,C,D,D,D
 # a,0,0,1,0,0,1
@@ -99,6 +124,8 @@ for i in range(len(data)-1, -1, -1):
         data[i][j] = int(data[i][j])
     if sum(data[i][1:]) == 0:
         data.pop(i)
+
+marks = json.load(open("marks.json", "r"))
 
 """ General Statistics """
 # print(P("Correct answer", collective=True))
@@ -133,3 +160,6 @@ for i in range(len(data)-1, -1, -1):
 # print(P("Correct answer", cond_and=["Topic: Ray Tracing"], collective=True))
 # print(P("Correct answer", cond_and=["Topic: Parametric Curves and Surfaces"], collective=True))
 # print(P("Correct answer", cond_and=["Topic: Image Processing"], collective=True))
+
+""" Search """
+# print(search(["Color", "Correct answer"]))

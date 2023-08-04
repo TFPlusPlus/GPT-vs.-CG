@@ -2259,5 +2259,56 @@
             "EMPTY 9",
             "EMPTY 10"
         ]
+    },
+    {
+        "id": "2023b38",
+        "question": "Given is a binary 8 bit input image in the form of a pixel array (a list of pixel rows, with each row represented again as a list). Every pixel contains an integer value which is either 0 or a single other non-zero value (e.g. 1 or 255), thus representing a binary image.\nWrite a Python3 function 'morphologicalGradient(pixel_array, image_width, image_height)' which computes and returns the morphological gradient image. We define the input pixel value larger than 0 as the value of the foreground structure.\nWe assume a cross shaped morphological structuring element of size 3x3, where all kernel elements adjacent to the centre, or the centre are set to 1 (flat, 4-neighourhood structuring element). The resulting image has to contain 1 for the pixels that are part of the morphological gradient structure, regardless of the value of the foreground structure in the input binary image.\nBorder handling: Note that when applying the 3x3 dilation, the filtering procedure has to access pixels that are outside the input image. For this function we assume that pixels outside the image border are background pixels (i.e. equal to 0, BoundaryZeroPadding).\nYou may assume that the Python3 function 'createInitializedGreyscalePixelArray(image_width, image_height)' is available, which creates an empty greyscale array (values 0) as a list of lists of integers.\nThe test case code will run a function to output the returned image array visually.",
+        "answer": "NULL",
+        "generated": [
+            "EMPTY 1",
+            "EMPTY 2",
+            "EMPTY 3",
+            "EMPTY 4",
+            "EMPTY 5",
+            "EMPTY 6",
+            "EMPTY 7",
+            "EMPTY 8",
+            "EMPTY 9",
+            "EMPTY 10"
+        ]
+    },
+    {
+        "id": "2023b39",
+        "question": "Given is a greyscale 3 bit input image in the form of a pixel array (a list of pixel rows, with each row represented again as a list). Every pixel contains an integer value between 0 and 7 (inclusive).\nBuilding on your knowledge of histograms, write a Python3 function 'histogramPairs(pixel_array, image_width, image_height)' which computes a two-dimensional histogram that counts (as an integer) how many times each pixel value (i) is present to the right of another pixel value (j). This will require you to create a 2D array with a height and width equal to the number of possible pixel intensities. The pixel value i corresponds to the row, and j corresponds to the column in the 2D array.\nReturn the histogram as a list of lists (2D greyscale pixel array).\nYou may assume that the Python3 function 'createInitializedGreyscalePixelArray(image_width, image_height)' is available, which creates an empty greyscale/2D array (values 0) as a list of lists of integers.\nThe test case code will run a function to output the returned list of lists as a table.",
+        "answer": "NULL",
+        "generated": [
+            "EMPTY 1",
+            "EMPTY 2",
+            "EMPTY 3",
+            "EMPTY 4",
+            "EMPTY 5",
+            "EMPTY 6",
+            "EMPTY 7",
+            "EMPTY 8",
+            "EMPTY 9",
+            "EMPTY 10"
+        ]
+    },
+    {
+        "id": "2023b40",
+        "question": "Given is a grayscale 8 bit input image in the form of a pixel array (a list of pixel rows, with each row represented again as a list). Every pixel contains an integer value between 0 and 255. Write a Python3 function 'angleOfGradients(pixel_array, image_width, image_height)' that calculates and returns the average angle of the gradients across the image, and the angle at each pixel in the image.\nTo do this, you will need to compute the Sobel gradient images in the x and y direction using the filters given below, calculate the angle (\theta) at each pixel using the equation θ = atan2(gy, gx), and then average the angles.\nTo compute the average angle, you should sum the result of the sine of the angles (sa), the sum of the cosine of the angles (ca), and calculate the mean angle as atan2(sa, ca). Then convert this angle to degrees by multiplying by 180/math.pi.\nHorizontal = \\begin{bmatrix}1 & 0 & -1\\\\2 & 0 & -2\\\\1 & 0 & -1\\end{bmatrix}\nVertical= \\begin{bmatrix}1 & 2 & 1\\\\0 & 0 & 0\\\\-1 & -2 & -1\\end{bmatrix}\nReturn your result using the dictionary structure provided: with the array of angles across the image (in radians) and the average angle (in degrees). You will receive partial marks for returning the correct angles at each image position, and full marks for returning both.\nYou can use the built-in functions math.sin(), math.cos(), and math.atan2().\nYou may assume that the Python3 function 'createInitializedGreyscalePixelArray(image_width, image_height)' is available, which creates an empty greyscale array (values 0) as a list of lists of integers.\nBorder handling: Note that when applying the Sobel filters, the filtering procedure has to access pixels that are outside the input image. For this function, we will ignore the pixels near the boundary (i.e. BoundaryIgnore).",
+        "answer": "NULL",
+        "generated": [
+            "EMPTY 1",
+            "EMPTY 2",
+            "EMPTY 3",
+            "EMPTY 4",
+            "EMPTY 5",
+            "EMPTY 6",
+            "EMPTY 7",
+            "EMPTY 8",
+            "EMPTY 9",
+            "EMPTY 10"
+        ]
     }
 ]
