@@ -172,6 +172,7 @@ function hide_list() {
 }
 
 function show_list() {
+    update_data();
     document.getElementById("cover").style.display = "block";
     document.getElementById("main").style.display = "none";
 }
