@@ -1,6 +1,6 @@
 import json
 
-def P(var, cond_and = [], cond_not = [], cond_or1 = [], cond_or2 = [], cond_or3 = [], collective = False):
+def P(var, cond_and = [], cond_not = [], cond_or1 = [], cond_or2 = [], cond_or3 = [], filter = "", collective = False):
     var_array = []
     and_array = []
     not_array = []
@@ -34,6 +34,8 @@ def P(var, cond_and = [], cond_not = [], cond_or1 = [], cond_or2 = [], cond_or3 
     numerator = {}
     denominator = {}
     for row in data:
+        if filter != "" and filter not in row[0]:
+            continue
         valid = True
         # AND
         for cond in and_array:
@@ -163,3 +165,15 @@ marks = json.load(open("marks.json", "r"))
 
 """ Search """
 # print(search(["Color", "Correct answer"]))
+
+""" Marks """
+# print(P("Correct answer", filter="2022a", collective=False))
+for i in range(10):
+    d = P("Generation {}: Correct answer".format(i + 1), filter="2023b", collective=False)
+    score = 0
+    total = 0
+    for key in d:
+        score += d[key] * marks[key[:7]]
+        total += marks[key[:7]]
+    # print("{} {:.2f} ({} / {})".format(i, score / total * 100, score, total))
+    print("{:.4f}".format(score / total))

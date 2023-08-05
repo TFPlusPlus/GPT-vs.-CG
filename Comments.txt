@@ -1,17 +1,17 @@
 ### STATS ###
 
-Correct Overall: 42.71%
-Correct + Minor error: 49.70%
+Correct Overall: 42.39%
+Correct + Minor error: 49.33%
 MCQ: 53.51%
-Programming: 27.92%
-Programming (nonzero in 10 attempts): 54.72%
+Programming: 27.41%
+Programming (nonzero in 10 attempts): 53.70%
 Image Questions (novice): 27.94%
 Image Questions (informed): 36.47%
 
 Novice vs Informed p-value: 0.3983 (Insignificant)
 
 Inductive: 46.17%
-Deductive: 35.00%
+Deductive: 34.22%
 
 Geometry: 50.00%
 Graphics Introduction: 30.00%
@@ -21,7 +21,7 @@ Illumination and Shading: 43.57%
 Texture Mapping: 60.00%
 Ray Tracing: 36.43%
 Parametric Curves and Surfaces: 44.55%
-Image Processing: 28.46%
+Image Processing: 26.43%
 
 ###
 
