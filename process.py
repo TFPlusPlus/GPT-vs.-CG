@@ -114,7 +114,13 @@ def search(terms = []):
 # c,1,0,1,0,0,0
 # d,0,0,0,0,0,0
 # """
-# print(P("D", cond_and=["A", "B"], collective=False))
+# data = [row.split(',') for row in data.strip().split('\n')]
+# headers = data[0]
+# data = data[1:]
+# for i in range(len(data)-1, -1, -1):
+#     for j in range(1, len(data[0])):
+#         data[i][j] = int(data[i][j])
+# print(P("D", cond_not=["C"], collective=False))
 
 file = open("data.csv", "r")
 data = file.read()
@@ -126,7 +132,6 @@ for i in range(len(data)-1, -1, -1):
         data[i][j] = int(data[i][j])
     if sum(data[i][1:]) == 0:
         data.pop(i)
-
 marks = json.load(open("marks.json", "r"))
 
 """ General Statistics """
@@ -167,14 +172,18 @@ marks = json.load(open("marks.json", "r"))
 # print(search(["Color", "Correct answer"]))
 
 """ Marks """
-# print(P("Correct answer", filter="2022a", collective=False))
-for i in range(10):
-    d = P("Generation {}: Correct answer".format(i + 1), filter="2023b", collective=False)
-    score = 0
-    total = 0
-    for key in d:
-        if len(key) == 7 or key[-1] == "b":
-            score += d[key] * marks[key[:7]]
-            total += marks[key[:7]]
-    # print("{} {:.2f} ({} / {})".format(i, score / total * 100, score, total))
-    print("{:.4f}".format(score / total))
+codes = ["2022a", "2022b", "2023a", "2023b"]
+versions = ["a", "b"]
+for code in codes:
+    for version in versions:
+        print(code, version)
+        for i in range(10):
+            d = P("Generation {}: Correct answer".format(i + 1), cond_not=["Topic: Image Processing"], filter=code, collective=False)
+            score = 0
+            total = 0
+            for key in d:
+                if len(key) == 7 or key[-1] == version:
+                    score += d[key] * marks[key[:7]]
+                    total += marks[key[:7]]
+            # print("{} {:.2f} ({} / {})".format(i, score / total * 100, score, total))
+            print("{:.4f}".format(score / total))
