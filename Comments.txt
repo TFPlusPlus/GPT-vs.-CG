@@ -90,3 +90,5 @@ Check ID[-1] == "a" or "b" then "Image description" has to be ticked.
 2023b34: Matrix is multiplied in the wrong orientation in most generated answers.
 
 2023b36: Interesting errors: fragmented solid, hollow solid interior, square holes at front, only cut intersection is shown.
+
+2023b26: Question was taken out because it references material taught in class which is beyond the scope of the exam.

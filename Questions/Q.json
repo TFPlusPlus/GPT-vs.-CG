@@ -1,3 +1,19 @@
 [
-    
+    {
+        "id": "2023b26",
+        "question": "Consider the greyscale image J defined below What will be the threshold (rounded to the nearest integer) computed after running three iterations of the adaptive threshold technique as described in class?\n3\t128\t8\t16\t16\n2\t8\t32\t64\t64\n1\t128\t8\t32\t16\n0\t16\t32\t32\t128\n\t0\t1\t2\t3\nThe bottom left cell is defined as (0,0). The y-axis is vertical and increases up the image. The x-axis is horizontal and increases to the right.\nSelect one:\na. 56\nb. 61\nc. 71\nd. 66\ne. 54",
+        "answer": "The correct answer is: 61",
+        "generated": [
+            "b. Undefined",
+            "d. 1",
+            "b. Undefined",
+            "d. 1",
+            "b. Undefined",
+            "d. 1",
+            "b. Undefined",
+            "c. 2",
+            "d. 1",
+            "d. 1"
+        ]
+    }
 ]

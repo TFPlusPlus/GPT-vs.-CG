@@ -173,7 +173,8 @@ for i in range(10):
     score = 0
     total = 0
     for key in d:
-        score += d[key] * marks[key[:7]]
-        total += marks[key[:7]]
+        if len(key) == 7 or key[-1] == "b":
+            score += d[key] * marks[key[:7]]
+            total += marks[key[:7]]
     # print("{} {:.2f} ({} / {})".format(i, score / total * 100, score, total))
     print("{:.4f}".format(score / total))
