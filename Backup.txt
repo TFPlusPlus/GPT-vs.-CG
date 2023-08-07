@@ -1,0 +1,87 @@
+\documentclass{article}
+
+% Language setting
+% Replace `english' with e.g. `spanish' to change the document language
+\usepackage[english]{babel}
+
+% Set page size and margins
+% Replace `letterpaper' with `a4paper' for UK/EU standard size
+\usepackage[letterpaper,top=2cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
+
+% Useful packages
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+
+\usepackage{multicol}
+\usepackage{lipsum}
+% \setlength\parindent{0pt}
+
+\title{GPT vs CG: Evaluating the performance of GPT-4 on Computer Graphics assessment questions}
+\date{\vspace{-5ex}}
+\author{Haoran Feng}
+
+\begin{document}
+\maketitle
+
+\begin{multicols}{2}
+\section*{Abstract}
+
+
+\section*{Keywords}
+AI, LLM, GPT, Computer Graphics, Evaluation, Assessment
+
+\section{Introduction}
+With the recent breakthrough in AI (Artificial Intelligence), particularly LLMs (Large Language Models), tools utilizing such technologies have been made widely available to the public. The most notable example of such tools is ChatGPT, amassing one million users within the first five days of its release, and it has been proven to be helpful in an endless variety of tasks, saving countless hours of work for users worldwide \cite{chatgpt}. Many other specialized tools based on LLMs have also been published or commercialized for public use, such as Midjourney for image processing, GitHub Copilot for programming, and Google Assistant for assisting with everyday tasks.
+
+In the education sector, tools utilizing LLMs focused on teaching and learning have also been developed. Most notably Khan Academy's Khanmigo, which is a GPT-powered teaching assistant (chatbot) capable of providing personal feedback for students, and guiding the students to the correct answer instead of giving the answer directly. With the rapid popularization of Khanmigo and various education tools based on LLMs, more aspects of human-based teaching will be replaced by computers, and feedback for students can also become more readily available, even without the presence of a teacher.
+
+However, there are also caveats to the popularization of LLMs, such as the more frequent occurrences of academic dishonesty. Since ChatGPT is free for public use, students can easily conduct academic dishonesty by generating solutions to assignments, or even exams. As shown in multiple studies, LLMs are capable of achieving, even exceeding, human performance in solving assessment questions \cite{testcodex, testcopilot, testgpt, testbar, testmed}. This disadvantages honest students that complete their work independently, while also causing the learning of dishonest students to be ineffective, hence countermeasures must be taken to ensure the fairness and effectiveness of education following the popularization of ChatGPT and other LLM-based tools.
+
+One obvious method is invigilation, but this may only apply to assessments and cannot always be enforced, such as for assignments. Another approach is using questions that ChatGPT, or other LLM-based tools, performs poorly on. Despite there being some past research on performance evaluations of LLMs on questions in several fields \cite{testcodex, testcopilot, testgpt, testbar, testmed}, there still only exists limited knowledge on the topic, hence more research in a wider range of fields is needed for this method to become viable. Alternatively, a recent study has concluded that the performance of ChatGPT on some assessment questions has decreased over the past few months \cite{gptworse}, hence it is necessary to evaluate and monitor the performance of LLMs continuously.
+
+Several research projects have been conducted to evaluate the performance of LLMs on introductory programming questions \cite{testcodex, testcopilot, testgpt}, but there exist many disciplines in Computer Science that are yet to be explored with LLMs. For this project, we aim to explore a discipline with diverse question types and concepts, hence the performance can be evaluated and contrasted between questions in different categories. A suitable discipline is Computer Graphics, since a wide variety of concepts are taught and assessed in Computer Graphics courses, and many types of questions are used in assessments, varying in question formats, solution processes, and reasoning. From the results of the evaluation, we aim to connect different question categories with the different performance outcomes, devise possible explanations and theories for the observed data, and suggest characteristics of questions on which LLMs perform poorly in the general scope. For this project, we chose GPT-4 as the LLM to be investigated.
+
+In summary, we aim to answer the following research questions with this project.
+\begin{enumerate}
+    \item[\textbf{RQ1:}] Can GPT-4 achieve human performance on assessment questions used in an introductory Computer Graphics course?
+    \item[\textbf{RQ2:}] Does GPT-4 perform differently on different question categories? If so, what question categories does GPT-4 perform well/poorly on?
+\end{enumerate}
+
+\section{Related Work}
+The term ``Artificial Intelligence" dates back as far as 1961 \cite{steps}, and extensive research has been conducted throughout the years, thus it is a discipline that has been studied comprehensively for a long time. Nilsson's 1982 book ``Principles of Artificial Intelligence" recorded the foundation and fundamental theories that are crucial to the field even today \cite{principles}. Over the decades, AI has been used in many areas, such as medicine \cite{aimed}, education \cite{aiedu}, and business \cite{aibus}. More recently, many AI models specialized in understanding human languages, i.e. LLMs, were developed, such as Google's BERT model in 2018 \cite{bert}, Google's T5 model in 2020 \cite{t5}, and OpenAI's GPT-3 model in 2020 \cite{gpt3}. These models achieved impressive performances in various language-related tasks, and this showed exceptional potential in AI-based applications. The popularity of AI skyrocketed with the launch of OpenAI's ChatGPT in 2022, reaching one million users within the first five days of its release \cite{chatgpt}, and it currently has more than 100 million users \cite{chatgpt100mil}.
+
+Much research has been conducted to evaluate the capability of LLMs in question-answering. For example, as stated in the original paper of GPT-3 \cite{gpt3}, the model achieved an impressive accuracy of 64.3\% on TriviaQA \cite{triviaqa}, a large-scale reading comprehension and question-answering dataset. Katz et al. evaluated the performance of GPT-4 on the Uniform Bar Examination. The model achieved significantly higher than the minimum passing threshold, furthermore, it achieved higher than the average human candidate in five of seven subjects \cite{testbar}. Liévin et al. evaluated the performance of a model based on GPT-3.5 on three medical question-answering datasets, in which the model achieved human-level performances on all three datasets \cite{testmed}.
+
+In the field of Computer Science, multiple similar studies have been conducted. Finnie-Ansley et al. evaluated the performance of Codex, a code generation LLM based on GPT-3, on assessment questions used in a CS1 introductory Python programming course, and the model scored 78.5\% and 78.0\% on two separate tests, placing itself on the top quartile within the class performance \cite{testcodex}. Denny et al. evaluated the performance of GitHub Copilot (based on Codex) on another set of CS1 introductory Python programming problems, and Copilot was capable of solving more than half of the problems on the first try, while solving an even higher proportion of problems with further prompt engineering \cite{testcopilot}. Savelka et al. investigated the performance of text-davinci-003 (one of the most advanced GPT models from OpenAI) on assessments in introductory and intermediate Python programming courses, and the model achieved scores of around 60\% for all three courses \cite{testgpt}.
+
+\section{Methodology}
+In essence, to evaluate the performance of GPT models on Computer Graphics assessment questions, questions were collected from computerized assessments used in an undergraduate course specializing in Computer Graphics, and they were preprocessed and fed as input to GPT-4 through OpenAI's ChatCompletion API (temperature: 0.75). 10 responses were generated for each question, and the generated solutions were manually reviewed and classified into meaningful categories. The data was then processed and conclusions were drawn from the results.
+
+Most questions could not be inputted directly into GPT-4 for processing, as they contained formulas and images, which were not supported as input types, hence they needed to be replaced with textual alternatives that carry similar information.
+
+Two formula preprocessing methods were considered: textual replacement and TeX command replacement. Replacing each formula with its corresponding textual counterpart was the most straightforward approach. However, in practice, people may not write formulas using text the same way as others. For example, the formula $x^2$ may be written as both ``x\^{}2" and ``x²" (with the superscript 2 character), this can potentially lead to disparities in results, as GPT-4 may generate different tokens from the two strings. To maximize consistency, each formula was replaced with its TeX command counterpart, as it is a more rigorous method of representing formulas, and there is usually only one TeX command to represent each formula. Additionally, if students are to use GPT models to "aid" their problem-solving process, then they would most likely copy and paste the TeX command directly from the assessment page, instead of typing the formula manually.
+
+Several image preprocessing methods were explored: description generation, image-input GPT models, and manual description. Online tools that generate descriptions based on an image upload were explored, but much crucial information relevant to the questions was usually not captured in the generated descriptions. For example, numbers presented in images were usually overlooked in the descriptions, and they were necessary for solving the question, hence this method was considered unsuitable. Alternatively, there exist similar ChatCompletion GPT models that accept images as input, such as MiniGPT-4 \cite{mini}. However, these models also tended to fail at distinguishing vital information for solving the questions, and their answers did not indicate a thorough understanding of the questions. This behavior was unsurprising as the models were not designed and trained for this purpose, hence this method was also rejected. Although time-consuming and cumbersome, manual image description seemed to be the only viable method to represent images in this scenario. From the perspective of students, image descriptions may also be the best method to replace images in questions, as it is the most accessible and straightforward.
+
+Although a major problem with replacing images with image descriptions was that they are highly subjective, i.e. every person may have a different understanding and interpretation of an image, and thus give a different description. This was considered a limitation of the evaluation procedure since no other alternative solutions were found. To provide more insight and variability, two image descriptions were written for each image, one that resembles a description given by a novice student that lacks knowledge of the relevant concepts (only includes basic observations in the image with limited information), and one that resembles a description given by an informed student that is somewhat educated in the field (includes more in-depth information and insight). This can simulate the performances of a novice student and an informed student if they are to undertake the assessments only with the help of GPT-4.
+
+After generating the solutions, we manually evaluated the performance by classifying the generated solutions based on their correctness and types of errors (if any). More specifically, the categories for each generated solution are Correct Explanation; Correct Answer; Conceptual Error; Calculation Error; Logic Error; No Explanation, and each generated solution belongs to one or more of these categories. We further classified each question into a variety of categories, by topic, question type, reasoning, input/output type, difficulty level, Bloom's Taxonomy, and solution process.
+
+\section{Results}
+[Correct percentage overall, Weighted percentage (score), novice vs informed, deductive vs inductive, by topic, miscellaneous]
+
+\section{Discussion}
+
+
+\section{Conclusion}
+
+
+\section{Future Work}
+
+
+\end{multicols}
+\bibliographystyle{alpha}
+\bibliography{ref}
+
+\end{document}

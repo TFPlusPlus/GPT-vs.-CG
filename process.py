@@ -11,25 +11,21 @@ def P(var, cond_and = [], cond_not = [], cond_or1 = [], cond_or2 = [], cond_or3 
         if var in headers[i]:
             var_array.append(i)
         for cond in cond_and:
+            # if cond == headers[i]:
             if cond in headers[i]:
                 and_array.append(i)
-                break
         for cond in cond_not:
             if cond in headers[i]:
                 not_array.append(i)
-                break
         for cond in cond_or1:
             if cond in headers[i]:
                 or1_array.append(i)
-                break
         for cond in cond_or2:
             if cond in headers[i]:
                 or2_array.append(i)
-                break
         for cond in cond_or3:
             if cond in headers[i]:
                 or3_array.append(i)
-                break
     results = {}
     numerator = {}
     denominator = {}
@@ -165,6 +161,16 @@ marks = json.load(open("marks.json", "r"))
 # print(P("Correct answer", cond_and=["Input Type: Text", "Input Type: Image description (informed)"], cond_not=["Input Type: Mathematical formula", "Input Type: Image description (novice)", "Input Type: Code"], collective=True))
 # print(P("Correct answer", cond_not=["Input Type: Text"], collective=True))
 
+""" Output Type """
+# print(P("Correct answer", cond_and=["Output Type: Text"], collective=True))
+# print(P("Correct answer", cond_and=["Output Type: Mathematical formula"], collective=True))
+# print(P("Correct answer", cond_and=["Output Type: Code"], collective=True))
+
+""" Input/Output Type """
+# print(P("Correct answer", cond_not=["Math", "Image", "Code"], collective=True))
+# print(P("Correct answer", cond_or1=["Math"], cond_not=["Image", "Code"], collective=True))
+# print(P("Correct answer", cond_or1=["Image"], collective=True))
+
 """ Topic """
 # print(P("Correct answer", cond_and=["Topic: Geometry"], collective=True))
 # print(P("Correct answer", cond_and=["Topic: Graphics Introduction"], collective=True))
@@ -186,7 +192,8 @@ marks = json.load(open("marks.json", "r"))
 #     for version in versions:
 #         print(code, version)
 #         for i in range(10):
-#             d = P("Generation {}: Correct answer".format(i + 1), cond_not=["Topic: Image Processing"], filter=code, collective=False)
+#             # d = P("Generation {}: Correct answer".format(i + 1), cond_not=["Topic: Image Processing"], filter=code, collective=False)
+#             d = P("Generation {}: Correct answer".format(i + 1), filter=code, collective=False)
 #             score = 0
 #             total = 0
 #             for key in d:
@@ -195,3 +202,18 @@ marks = json.load(open("marks.json", "r"))
 #                     total += marks[key[:7]]
 #             # print("{} {:.2f} ({} / {})".format(i, score / total * 100, score, total))
 #             print("{:.4f}".format(score / total))
+
+""" Bloom's Taxonomy (not categorized well?) """
+# print(P("Correct answer", cond_and=["Bloom's Taxonomy: Remember"], collective=False))
+# print(P("Correct answer", cond_and=["Bloom's Taxonomy: Understand"], collective=True))
+# print(P("Correct answer", cond_and=["Bloom's Taxonomy: Apply"], collective=True))
+# print(P("Correct answer", cond_and=["Bloom's Taxonomy: Analyze"], collective=True))
+# print(P("Correct answer", cond_and=["Bloom's Taxonomy: Evaluate"], collective=True))
+# print(P("Correct answer", cond_and=["Bloom's Taxonomy: Create"], collective=True))
+
+""" Difficulty Level """
+# print(P("Correct answer", cond_and=["Difficulty Level: Easy"], collective=True)) # CHANGE COND_AND TO MATCH EXACTLY
+# print(P("Correct answer", cond_and=["Difficulty Level: Easy - Medium"], collective=True))
+# print(P("Correct answer", cond_and=["Difficulty Level: Medium"], collective=True)) # CHANGE COND_AND TO MATCH EXACTLY
+# print(P("Correct answer", cond_and=["Difficulty Level: Medium - Hard"], collective=True))
+# print(P("Correct answer", cond_and=["Difficulty Level: Hard"], collective=True))
