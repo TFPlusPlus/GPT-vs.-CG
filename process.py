@@ -157,6 +157,14 @@ marks = json.load(open("marks.json", "r"))
 # print(P("Correct answer", cond_and=["Reasoning: Deductive"], collective=True))
 # print(P("Correct answer", cond_and=["Reasoning: Inductive"], collective=True))
 
+""" Input Type """
+# print(P("Correct answer", cond_and=["Input Type: Text"], cond_not=["Input Type: Mathematical formula", "Input Type: Image description (novice)", "Input Type: Image description (informed)", "Input Type: Code"], collective=True))
+# print(P("Correct answer", cond_and=["Input Type: Text", "Input Type: Mathematical formula"], cond_not=["Input Type: Image description (novice)", "Input Type: Image description (informed)", "Input Type: Code"], collective=True))
+# print(P("Correct answer", cond_and=["Input Type: Text", "Input Type: Code"], cond_not=["Input Type: Mathematical formula", "Input Type: Image description (novice)", "Input Type: Image description (informed)"], collective=True))
+# print(P("Correct answer", cond_and=["Input Type: Text", "Input Type: Image description (novice)"], cond_not=["Input Type: Mathematical formula", "Input Type: Image description (informed)", "Input Type: Code"], collective=True))
+# print(P("Correct answer", cond_and=["Input Type: Text", "Input Type: Image description (informed)"], cond_not=["Input Type: Mathematical formula", "Input Type: Image description (novice)", "Input Type: Code"], collective=True))
+# print(P("Correct answer", cond_not=["Input Type: Text"], collective=True))
+
 """ Topic """
 # print(P("Correct answer", cond_and=["Topic: Geometry"], collective=True))
 # print(P("Correct answer", cond_and=["Topic: Graphics Introduction"], collective=True))
@@ -172,18 +180,18 @@ marks = json.load(open("marks.json", "r"))
 # print(search(["Color", "Correct answer"]))
 
 """ Marks """
-codes = ["2022a", "2022b", "2023a", "2023b"]
-versions = ["a", "b"]
-for code in codes:
-    for version in versions:
-        print(code, version)
-        for i in range(10):
-            d = P("Generation {}: Correct answer".format(i + 1), cond_not=["Topic: Image Processing"], filter=code, collective=False)
-            score = 0
-            total = 0
-            for key in d:
-                if len(key) == 7 or key[-1] == version:
-                    score += d[key] * marks[key[:7]]
-                    total += marks[key[:7]]
-            # print("{} {:.2f} ({} / {})".format(i, score / total * 100, score, total))
-            print("{:.4f}".format(score / total))
+# codes = ["2022a", "2022b", "2023a", "2023b"]
+# versions = ["a", "b"]
+# for code in codes:
+#     for version in versions:
+#         print(code, version)
+#         for i in range(10):
+#             d = P("Generation {}: Correct answer".format(i + 1), cond_not=["Topic: Image Processing"], filter=code, collective=False)
+#             score = 0
+#             total = 0
+#             for key in d:
+#                 if len(key) == 7 or key[-1] == version:
+#                     score += d[key] * marks[key[:7]]
+#                     total += marks[key[:7]]
+#             # print("{} {:.2f} ({} / {})".format(i, score / total * 100, score, total))
+#             print("{:.4f}".format(score / total))
