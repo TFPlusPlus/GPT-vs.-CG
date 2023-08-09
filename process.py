@@ -185,23 +185,23 @@ marks = json.load(open("marks.json", "r"))
 """ Search """
 # print(search(["Color", "Correct answer"]))
 
-""" Marks """
-# codes = ["2022a", "2022b", "2023a", "2023b"]
-# versions = ["a", "b"]
-# for code in codes:
-#     for version in versions:
-#         print(code, version)
-#         for i in range(10):
-#             # d = P("Generation {}: Correct answer".format(i + 1), cond_not=["Topic: Image Processing"], filter=code, collective=False)
-#             d = P("Generation {}: Correct answer".format(i + 1), filter=code, collective=False)
-#             score = 0
-#             total = 0
-#             for key in d:
-#                 if len(key) == 7 or key[-1] == version:
-#                     score += d[key] * marks[key[:7]]
-#                     total += marks[key[:7]]
-#             # print("{} {:.2f} ({} / {})".format(i, score / total * 100, score, total))
-#             print("{:.4f}".format(score / total))
+""" Marks (old) """
+codes = ["2022a", "2022b", "2023a", "2023b"]
+versions = ["a", "b"]
+for code in codes:
+    for version in versions:
+        print(code, version)
+        for i in range(10):
+            # d = P("Generation {}: Correct answer".format(i + 1), cond_not=["Topic: Image Processing"], filter=code, collective=False)
+            d = P("Generation {}: Correct answer".format(i + 1), filter=code, collective=False)
+            score = 0
+            total = 0
+            for key in d:
+                if len(key) == 7 or key[-1] == version:
+                    score += d[key] * marks[key[:7]]
+                    total += marks[key[:7]]
+            print("{} {:.2f} ({} / {})".format(i, score / total * 100, score, total))
+            # print("{:.4f}".format(score / total))
 
 """ Bloom's Taxonomy (not categorized well?) """
 # print(P("Correct answer", cond_and=["Bloom's Taxonomy: Remember"], collective=False))
@@ -217,3 +217,25 @@ marks = json.load(open("marks.json", "r"))
 # print(P("Correct answer", cond_and=["Difficulty Level: Medium"], collective=True)) # CHANGE COND_AND TO MATCH EXACTLY
 # print(P("Correct answer", cond_and=["Difficulty Level: Medium - Hard"], collective=True))
 # print(P("Correct answer", cond_and=["Difficulty Level: Hard"], collective=True))
+
+""" Marks (new) """
+codes = ["2022a", "2022b", "2023a", "2023b"]
+versions = ["a", "b"]
+mcq = P("Correct answer", cond_not=["Programming"], collective=False)
+pro = P("Correct answer", cond_or1=["Programming"], collective=False)
+for code in codes:
+    for version in versions:
+        print(code, version)
+        score = 0
+        total = 0
+        for q in mcq:
+            if code in q and (len(q) == 7 or q[-1] == version):
+                score += mcq[q] * marks[q[:7]]
+                total += marks[q[:7]]
+        for q in pro:
+            if code in q and (len(q) == 7 or q[-1] == version):
+                score += (pro[q] > 0) * marks[q[:7]]
+                total += marks[q[:7]]
+        print("{:.2f}% ({} / {})".format(score / total * 100, score, total))
+
+print(mcq, pro)
