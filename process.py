@@ -137,21 +137,24 @@ marks = json.load(open("marks.json", "r"))
 # print(P("Correct answer", cond_and=["Question Type: Programming"]))
 # l = P("Correct answer", cond_and=["Question Type: Programming"], collective=False)
 # print("{:.2f}%".format(sum([1 for i in l.values() if i > 0]) / len(l) * 100))
+# print(P("Correct answer", cond_or1=["Input Type: Image description"]))
 # print(P("Correct answer", cond_and=["Input Type: Image description (novice)"]))
 # print(P("Correct answer", cond_and=["Input Type: Image description (informed)"]))
 
 """ Novice vs Informed"""
-# novice = P("Correct answer", cond_and=["Input Type: Image description (novice)"], collective=False).values()
-# informed = P("Correct answer", cond_and=["Input Type: Image description (informed)"], collective=False).values()
+# novice = P("Correct answer", cond_and=["Input Type: Image description (novice)"], collective=False)
+# informed = P("Correct answer", cond_and=["Input Type: Image description (informed)"], collective=False)
 # for i in novice:
-#     print(i)
+#     print(novice[i])
+#     # print(novice[i] * marks[i[:7]])
 # print()
 # for i in informed:
-#     print(i)
+#     print(informed[i])
+#     # print(informed[i] * marks[i[:7]])
 
 """ Inductive vs Deductive """
-# print(P("Correct answer", cond_and=["Reasoning: Deductive"]))
-# print(P("Correct answer", cond_and=["Reasoning: Inductive"]))
+print(P("Correct answer", cond_and=["Reasoning: Deductive"]))
+print(P("Correct answer", cond_and=["Reasoning: Inductive"]))
 
 """ Input Type """
 # print(P("Correct answer", cond_and=["Input Type: Text"], cond_not=["Input Type: Mathematical formula", "Input Type: Image description (novice)", "Input Type: Image description (informed)", "Input Type: Code"]))
