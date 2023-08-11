@@ -1,6 +1,6 @@
 import json
 
-def P(var, cond_and = [], cond_not = [], cond_or1 = [], cond_or2 = [], cond_or3 = [], filter = "", collective = False):
+def P(var, cond_and = [], cond_not = [], cond_or1 = [], cond_or2 = [], cond_or3 = [], filter = "", collective = True):
     var_array = []
     and_array = []
     not_array = []
@@ -131,14 +131,14 @@ for i in range(len(data)-1, -1, -1):
 marks = json.load(open("marks.json", "r"))
 
 """ General Statistics """
-# print(P("Correct answer", collective=True))
-# print(P("Minor error", collective=True))
-# print(P("Correct answer", cond_and=["Question Type: Multiple-Choice Question"], collective=True))
-# print(P("Correct answer", cond_and=["Question Type: Programming"], collective=True))
+# print(P("Correct answer"))
+# print(P("Minor error"))
+# print(P("Correct answer", cond_and=["Question Type: Multiple-Choice Question"]))
+# print(P("Correct answer", cond_and=["Question Type: Programming"]))
 # l = P("Correct answer", cond_and=["Question Type: Programming"], collective=False)
 # print("{:.2f}%".format(sum([1 for i in l.values() if i > 0]) / len(l) * 100))
-# print(P("Correct answer", cond_and=["Input Type: Image description (novice)"], collective=True))
-# print(P("Correct answer", cond_and=["Input Type: Image description (informed)"], collective=True))
+# print(P("Correct answer", cond_and=["Input Type: Image description (novice)"]))
+# print(P("Correct answer", cond_and=["Input Type: Image description (informed)"]))
 
 """ Novice vs Informed"""
 # novice = P("Correct answer", cond_and=["Input Type: Image description (novice)"], collective=False).values()
@@ -150,92 +150,97 @@ marks = json.load(open("marks.json", "r"))
 #     print(i)
 
 """ Inductive vs Deductive """
-# print(P("Correct answer", cond_and=["Reasoning: Deductive"], collective=True))
-# print(P("Correct answer", cond_and=["Reasoning: Inductive"], collective=True))
+# print(P("Correct answer", cond_and=["Reasoning: Deductive"]))
+# print(P("Correct answer", cond_and=["Reasoning: Inductive"]))
 
 """ Input Type """
-# print(P("Correct answer", cond_and=["Input Type: Text"], cond_not=["Input Type: Mathematical formula", "Input Type: Image description (novice)", "Input Type: Image description (informed)", "Input Type: Code"], collective=True))
-# print(P("Correct answer", cond_and=["Input Type: Text", "Input Type: Mathematical formula"], cond_not=["Input Type: Image description (novice)", "Input Type: Image description (informed)", "Input Type: Code"], collective=True))
-# print(P("Correct answer", cond_and=["Input Type: Text", "Input Type: Code"], cond_not=["Input Type: Mathematical formula", "Input Type: Image description (novice)", "Input Type: Image description (informed)"], collective=True))
-# print(P("Correct answer", cond_and=["Input Type: Text", "Input Type: Image description (novice)"], cond_not=["Input Type: Mathematical formula", "Input Type: Image description (informed)", "Input Type: Code"], collective=True))
-# print(P("Correct answer", cond_and=["Input Type: Text", "Input Type: Image description (informed)"], cond_not=["Input Type: Mathematical formula", "Input Type: Image description (novice)", "Input Type: Code"], collective=True))
-# print(P("Correct answer", cond_not=["Input Type: Text"], collective=True))
+# print(P("Correct answer", cond_and=["Input Type: Text"], cond_not=["Input Type: Mathematical formula", "Input Type: Image description (novice)", "Input Type: Image description (informed)", "Input Type: Code"]))
+# print(P("Correct answer", cond_and=["Input Type: Text", "Input Type: Mathematical formula"], cond_not=["Input Type: Image description (novice)", "Input Type: Image description (informed)", "Input Type: Code"]))
+# print(P("Correct answer", cond_and=["Input Type: Text", "Input Type: Code"], cond_not=["Input Type: Mathematical formula", "Input Type: Image description (novice)", "Input Type: Image description (informed)"]))
+# print(P("Correct answer", cond_and=["Input Type: Text", "Input Type: Image description (novice)"], cond_not=["Input Type: Mathematical formula", "Input Type: Image description (informed)", "Input Type: Code"]))
+# print(P("Correct answer", cond_and=["Input Type: Text", "Input Type: Image description (informed)"], cond_not=["Input Type: Mathematical formula", "Input Type: Image description (novice)", "Input Type: Code"]))
+# print(P("Correct answer", cond_not=["Input Type: Text"]))
+# print(P("Correct answer", cond_or1=["Image"]))
+# print(P("Correct answer", cond_not=["Image"]))
+# print(P("Correct answer", cond_or1=["Programming"]))
+# print(P("Minor error", cond_or1=["Programming"]))
 
 """ Output Type """
-# print(P("Correct answer", cond_and=["Output Type: Text"], collective=True))
-# print(P("Correct answer", cond_and=["Output Type: Mathematical formula"], collective=True))
-# print(P("Correct answer", cond_and=["Output Type: Code"], collective=True))
+# print(P("Correct answer", cond_and=["Output Type: Text"]))
+# print(P("Correct answer", cond_and=["Output Type: Mathematical formula"]))
+# print(P("Correct answer", cond_and=["Output Type: Code"]))
 
 """ Input/Output Type """
-# print(P("Correct answer", cond_not=["Math", "Image", "Code"], collective=True))
-# print(P("Correct answer", cond_or1=["Math"], cond_not=["Image", "Code"], collective=True))
-# print(P("Correct answer", cond_or1=["Image"], collective=True))
+# print(P("Correct answer", cond_not=["Math", "Image", "Code"]))
+# print(P("Correct answer", cond_or1=["Math"], cond_not=["Image", "Code"]))
+# print(P("Correct answer", cond_or1=["Image"]))
 
 """ Topic """
-# print(P("Correct answer", cond_and=["Topic: Geometry"], collective=True))
-# print(P("Correct answer", cond_and=["Topic: Graphics Introduction"], collective=True))
-# print(P("Correct answer", cond_and=["Topic: Color"], collective=True))
-# print(P("Correct answer", cond_and=["Topic: Illumination and Shading"], collective=True))
-# print(P("Correct answer", cond_and=["Topic: 3D Modelling"], collective=True))
-# print(P("Correct answer", cond_and=["Topic: Texture Mapping"], collective=True))
-# print(P("Correct answer", cond_and=["Topic: Ray Tracing"], collective=True))
-# print(P("Correct answer", cond_and=["Topic: Parametric Curves and Surfaces"], collective=True))
-# print(P("Correct answer", cond_and=["Topic: Image Processing"], collective=True))
+# print(P("Correct answer", cond_and=["Topic: Geometry"]))
+# print(P("Correct answer", cond_and=["Topic: Graphics Introduction"]))
+# print(P("Correct answer", cond_and=["Topic: Color"]))
+# print(P("Correct answer", cond_and=["Topic: Illumination and Shading"]))
+# print(P("Correct answer", cond_and=["Topic: 3D Modelling"]))
+# print(P("Correct answer", cond_and=["Topic: Texture Mapping"]))
+# print(P("Correct answer", cond_and=["Topic: Ray Tracing"]))
+# print(P("Correct answer", cond_and=["Topic: Parametric Curves and Surfaces"]))
+# print(P("Correct answer", cond_and=["Topic: Image Processing"]))
 
 """ Search """
 # print(search(["Color", "Correct answer"]))
 
 """ Marks (old) """
-codes = ["2022a", "2022b", "2023a", "2023b"]
-versions = ["a", "b"]
-for code in codes:
-    for version in versions:
-        print(code, version)
-        for i in range(10):
-            # d = P("Generation {}: Correct answer".format(i + 1), cond_not=["Topic: Image Processing"], filter=code, collective=False)
-            d = P("Generation {}: Correct answer".format(i + 1), filter=code, collective=False)
-            score = 0
-            total = 0
-            for key in d:
-                if len(key) == 7 or key[-1] == version:
-                    score += d[key] * marks[key[:7]]
-                    total += marks[key[:7]]
-            print("{} {:.2f} ({} / {})".format(i, score / total * 100, score, total))
-            # print("{:.4f}".format(score / total))
+# codes = ["2022a", "2022b", "2023a", "2023b"]
+# versions = ["a", "b"]
+# for code in codes:
+#     for version in versions:
+#         print(code, version)
+#         for i in range(10):
+#             # d = P("Generation {}: Correct answer".format(i + 1), cond_not=["Topic: Image Processing"], filter=code, collective=False)
+#             d = P("Generation {}: Correct answer".format(i + 1), filter=code, collective=False)
+#             score = 0
+#             total = 0
+#             for key in d:
+#                 if len(key) == 7 or key[-1] == version:
+#                     score += d[key] * marks[key[:7]]
+#                     total += marks[key[:7]]
+#             print("{} {:.2f} ({} / {})".format(i, score / total * 100, score, total))
+#             # print("{:.4f}".format(score / total))
 
 """ Bloom's Taxonomy (not categorized well?) """
 # print(P("Correct answer", cond_and=["Bloom's Taxonomy: Remember"], collective=False))
-# print(P("Correct answer", cond_and=["Bloom's Taxonomy: Understand"], collective=True))
-# print(P("Correct answer", cond_and=["Bloom's Taxonomy: Apply"], collective=True))
-# print(P("Correct answer", cond_and=["Bloom's Taxonomy: Analyze"], collective=True))
-# print(P("Correct answer", cond_and=["Bloom's Taxonomy: Evaluate"], collective=True))
-# print(P("Correct answer", cond_and=["Bloom's Taxonomy: Create"], collective=True))
+# print(P("Correct answer", cond_and=["Bloom's Taxonomy: Understand"]))
+# print(P("Correct answer", cond_and=["Bloom's Taxonomy: Apply"]))
+# print(P("Correct answer", cond_and=["Bloom's Taxonomy: Analyze"]))
+# print(P("Correct answer", cond_and=["Bloom's Taxonomy: Evaluate"]))
+# print(P("Correct answer", cond_and=["Bloom's Taxonomy: Create"]))
 
 """ Difficulty Level """
-# print(P("Correct answer", cond_and=["Difficulty Level: Easy"], collective=True)) # CHANGE COND_AND TO MATCH EXACTLY
-# print(P("Correct answer", cond_and=["Difficulty Level: Easy - Medium"], collective=True))
-# print(P("Correct answer", cond_and=["Difficulty Level: Medium"], collective=True)) # CHANGE COND_AND TO MATCH EXACTLY
-# print(P("Correct answer", cond_and=["Difficulty Level: Medium - Hard"], collective=True))
-# print(P("Correct answer", cond_and=["Difficulty Level: Hard"], collective=True))
+# print(P("Correct answer", cond_and=["Difficulty Level: Easy"])) # CHANGE COND_AND TO MATCH EXACTLY
+# print(P("Correct answer", cond_and=["Difficulty Level: Easy - Medium"]))
+# print(P("Correct answer", cond_and=["Difficulty Level: Medium"])) # CHANGE COND_AND TO MATCH EXACTLY
+# print(P("Correct answer", cond_and=["Difficulty Level: Medium - Hard"]))
+# print(P("Correct answer", cond_and=["Difficulty Level: Hard"]))
 
 """ Marks (new) """
-codes = ["2022a", "2022b", "2023a", "2023b"]
-versions = ["a", "b"]
-mcq = P("Correct answer", cond_not=["Programming"], collective=False)
-pro = P("Correct answer", cond_or1=["Programming"], collective=False)
-for code in codes:
-    for version in versions:
-        print(code, version)
-        score = 0
-        total = 0
-        for q in mcq:
-            if code in q and (len(q) == 7 or q[-1] == version):
-                score += mcq[q] * marks[q[:7]]
-                total += marks[q[:7]]
-        for q in pro:
-            if code in q and (len(q) == 7 or q[-1] == version):
-                score += (pro[q] > 0) * marks[q[:7]]
-                total += marks[q[:7]]
-        print("{:.2f}% ({} / {})".format(score / total * 100, score, total))
+# codes = ["2022a", "2022b", "2023a", "2023b"]
+# versions = ["a", "b"]
+# mcq = P("Correct answer", cond_not=["Programming"], collective=False)
+# pro = P("Correct answer", cond_or1=["Programming"], collective=False)
+# for code in codes:
+#     for version in versions:
+#         print(code, version)
+#         score = 0
+#         total = 0
+#         for q in mcq:
+#             if code in q and (len(q) == 7 or q[-1] == version):
+#                 score += mcq[q] * marks[q[:7]]
+#                 total += marks[q[:7]]
+#         for q in pro:
+#             if code in q and (len(q) == 7 or q[-1] == version):
+#                 score += (pro[q] > 0) * marks[q[:7]]
+#                 total += marks[q[:7]]
+#         print("{:.2f}% ({} / {})".format(score / total * 100, score, total))
 
-print(mcq, pro)
+""" Miscellaneous """
+# d = P("Input Type: Mathematical formula")
