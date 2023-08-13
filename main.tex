@@ -1,0 +1,349 @@
+\documentclass[sigconf,authordraft]{acmart}
+
+\title{GPT vs CG: Evaluating the performance of GPT-4 on Computer Graphics assessment questions}
+\date{\vspace{-5ex}}
+
+\author{Haoran Feng}
+\affiliation{
+  \institution{University of Auckland}
+  \city{Auckland}
+  \country{New Zealand}
+}
+\email{author@auckland.ac.nz}
+
+\author{AUTHOR}
+\affiliation{
+  \institution{University of Auckland}
+  \city{Auckland}
+  \country{New Zealand}
+}
+\email{author@auckland.ac.nz}
+
+\author{AUTHOR}
+\affiliation{
+  \institution{University of Auckland}
+  \city{Auckland}
+  \country{New Zealand}
+}
+\email{author@auckland.ac.nz}
+
+\author{AUTHOR}
+\affiliation{
+  \institution{University of Auckland}
+  \city{Auckland}
+  \country{New Zealand}
+}
+\email{author@auckland.ac.nz}
+
+\author{AUTHOR}
+\affiliation{
+  \institution{University of Auckland}
+  \city{Auckland}
+  \country{New Zealand}
+}
+\email{author@auckland.ac.nz}
+
+\begin{document}
+\maketitle
+
+% \begin{multicols}{2}
+\section*{Abstract}
+Recent studies have showcased the exceptional performance of LLMs on assessment questions across several fields of study, such as Law, Medicine, and Computer Science. This makes it possible for students to generate solutions quickly and easily for their assessed work without engaging in the learning necessary to complete the work themselves. One countermeasure for instructors is to create questions for which LLMs perform poorly, but little is known about the characteristics of such questions, especially in upper-level courses such as Computer Graphics.  Assessment questions in Computer Graphics tend to cover a wide variety of concepts and question types.  To address this gap, we evaluated the performance of GPT-4 on past assessment questions used in a final-year undergraduate course specialized in Computer Graphics. We found that its performance tended to be worse than that of an average student and it struggled to achieve a passing rate. 
+
+We classified assessment questions and evaluated the performance of GPT-4 for different types of questions and found that performance tended to be best for simple mathematical questions, and worst for questions with complex descriptions and requiring creative thinking to derive a solution. Our research provides new insights into the capabilities of GPT-4 and opportunities for teaching staff to alleviate academic dishonest behavior from using LLMs. 
+
+\section*{Keywords}
+AI, LLM, GPT, Computer Graphics, Evaluation, Assessment
+
+\section{Introduction}
+Recent studies have showcased the exceptional performance of LLMs (Large Language Models) on assessment questions across several fields of study, achieving, or even exceeding, the performance of the average student \cite{testcodex, testcopilot, testgpt, testbar, testmed}. This highlights the success of LLMs. However, there are also caveats to the popularization of LLMs, such as the more frequent occurrences of academic dishonesty. Since ChatGPT \cite{chatgpt}, an online text generation tool, is free for public use, students can easily conduct academic dishonesty by generating solutions to assignments, or even exams, to easily pass courses. This disadvantages honest students that complete their work independently, while also causing the learning of dishonest students to be ineffective, hence countermeasures must be taken to ensure the fairness and effectiveness of education following the popularization of ChatGPT and other LLM-based tools.
+
+One obvious method is invigilation, but this may only apply to assessments and cannot always be enforced, such as for assignments. Another approach is using questions that ChatGPT, or other LLM-based tools, performs poorly on. Despite there being some past research on performance evaluations of LLMs on questions in several fields \cite{testcodex, testcopilot, testgpt, testbar, testmed}, there still only exists limited knowledge on the topic, hence more research in a wider range of fields is needed for this method to become viable. Alternatively, a recent study has concluded that the performance of ChatGPT on some assessment questions has decreased over the past few months \cite{gptworse}, hence it is necessary to evaluate and monitor the performance of LLMs continuously.
+
+Several research projects have been conducted to evaluate the performance of LLMs on introductory programming questions \cite{testcodex, testcopilot, testgpt}, but there exist many disciplines in Computer Science that are yet to be explored with LLMs. For this project, we aim to explore a discipline with diverse question types and concepts, hence the performance can be evaluated and contrasted between questions in different categories. A suitable discipline is Computer Graphics, since a wide variety of concepts are taught and assessed in Computer Graphics courses, and many types of questions are used in assessments, varying in question formats, solution processes, and reasoning. From the results of the evaluation, we aim to connect different question categories with the different performance outcomes, devise possible explanations and theories for the observed data, and suggest characteristics of questions on which LLMs perform poorly in the general scope. For this project, we chose GPT-4 as the LLM to be investigated.
+
+In summary, we aim to answer the following research questions with this project.
+\begin{enumerate}
+    \item[\textbf{RQ1:}] Can GPT-4 achieve human performance on assessment questions used in an introductory Computer Graphics course?
+    \item[\textbf{RQ2:}] Does GPT-4 perform differently on different question categories? If so, what question categories does GPT-4 perform well/poorly on?
+\end{enumerate}
+
+\section{Related Work}
+Much research has been conducted to evaluate the capability of LLMs in question-answering. For example, as stated in the original paper of GPT-3 \cite{gpt3}, the model achieved an impressive accuracy of 64.3\% on TriviaQA \cite{triviaqa}, a large-scale reading comprehension and question-answering dataset. Katz et al. evaluated the performance of GPT-4 on the Uniform Bar Examination. The model achieved significantly higher than the minimum passing threshold, furthermore, it achieved higher than the average human candidate in five of seven subjects \cite{testbar}. Liévin et al. evaluated the performance of a model based on GPT-3.5 on three medical question-answering datasets, in which the model achieved human-level performances on all three datasets \cite{testmed}.
+
+In the field of Computer Science, multiple similar studies have been conducted. Finnie-Ansley et al. evaluated the performance of Codex, a code generation LLM based on GPT-3, on assessment questions used in a CS1 introductory Python programming course, and the model scored 78.5\% and 78.0\% on two separate tests, placing itself on the top quartile within the class performance \cite{testcodex}. Denny et al. evaluated the performance of GitHub Copilot (based on Codex) on another set of CS1 introductory Python programming problems, and Copilot was capable of solving more than half of the problems on the first try, while solving an even higher proportion of problems with further prompt engineering \cite{testcopilot}. Savelka et al. investigated the performance of text-davinci-003 (one of the most advanced GPT models from OpenAI) on assessments in introductory and intermediate Python programming courses, and the model achieved scores of around 60\% for all three courses \cite{testgpt}.
+
+The studies listed above all concluded that GPT models can achieve high performances on assessment questions. Conversely, Singla evaluated the performance of ChatGPT and GPT-4 on visual programming, and the results were poor \cite{testvisual}. Singla also highlighted that the models lack spatial skills, which are essential to visual programming, hence the poor performance.
+
+% \begin{figure*}
+%     \centering
+%     \includegraphics[]{cube1.png}
+%     \;
+%     \includegraphics[]{cube2.png}
+%     \;
+%     \includegraphics[]{light.png}
+%     \caption{Example images used in assessments. The ``novice'' image description for the left image is ``The image shows a RGB colour cube with side length 2. The colours shown are green, cyan, blue, pink, red, and yellow in counterclockwise order, where red is on the x-axis.''; the ``informed'' image description for the left image is ``The image shows a RGB colour cube with side length 2. The point representing white is on (2, 2, 2), the point representing blue is on (0, 0, 2), and the point representing red is on (2, 0, 0).''. The ``novice'' image description for the middle image is ``The image shows a RGB colour cube with side length 2 shifted one unit to the right. The colours shown are red, pink, white, cyan, green, and black in counterclockwise order, where green is on the x-axis.''; the ``informed'' image description for the middle image is ``The image shows a RGB colour cube with side length 2 shifted one unit to the positive direction of the x-axis. The point representing white is on (1, 0, 2), the point representing blue is on (3, 2, 2), and the point representing red is on (1, 2, 0).''. The ``novice'' image description for the right image is ``A sphere is shown surrounded by darkness.''; the ``informed'' image description for the right image is ``A sphere is shown in space. The space surrounding it is black, the sphere itself is shown with a medium level of brightness, and there are no highlights shown on the sphere.''.}
+%     \label{Images}
+% \end{figure*}
+
+\begin{table*}
+    \centering
+    \caption{Example images used in assessments along with their image descriptions}
+    \label{Images}
+    \begin{tabular}{|c|p{5cm}|p{5cm}|}
+        \hline
+        \multicolumn{1}{|c|}{Image} & \multicolumn{1}{|c|}{Novice Description} & \multicolumn{1}{|c|}{Informed Description} \\ \hline\hline
+        \raisebox{-0.94\totalheight}{\includegraphics[]{cube1.png}} & The image shows a RGB colour cube with side length 2. The colours shown are green, cyan, blue, pink, red, and yellow in counterclockwise order, where red is on the x-axis. & The image shows a RGB colour cube with side length 2. The point representing white is on (2, 2, 2), the point representing blue is on (0, 0, 2), and the point representing red is on (2, 0, 0). \\ \hline
+        \raisebox{-0.94\totalheight}{\includegraphics[]{cube2.png}} & The image shows a RGB colour cube with side length 2 shifted one unit to the right. The colours shown are red, pink, white, cyan, green, and black in counterclockwise order, where green is on the x-axis. & The image shows a RGB colour cube with side length 2 shifted one unit to the positive direction of the x-axis. The point representing white is on (1, 0, 2), the point representing blue is on (3, 2, 2), and the point representing red is on (1, 2, 0). \\ \hline
+        \raisebox{-0.94\totalheight}{\includegraphics[]{light.png}} & A sphere is shown surrounded by darkness. & A sphere is shown in space. The space surrounding it is black, the sphere itself is shown with a medium level of brightness, and there are no highlights shown on the sphere. \\ \hline
+    \end{tabular}
+\end{table*}
+
+\begin{table*}
+    \centering
+    \caption{The percentages of correct generated solutions by criteria}
+    \label{Percentage}
+    \begin{tabular}{|l|r|}
+    \hline
+        \multicolumn{1}{|p{6cm}|}{Criterion} & Percentage \\ \hline
+        \hline
+        None (all questions) & 42.06\% \\ \hline
+        \hline
+        Multiple-choice questions & 53.51\% \\ \hline
+        Programming (1 attempt)& 27.14\% \\ \hline
+        Programming (10 attempts) & 53.57\% \\ \hline
+        \hline
+        Contains no images & 60.00\% \\ \hline
+        Contains images & 32.21\% \\ \hline
+        Contains images (with novice descriptions) & 27.94\% \\ \hline
+        Contains images (with informed descriptions) & 36.47\% \\ \hline
+        \hline
+        Text only & 52.86\% \\ \hline
+        Text and mathematical formulas only & 64.81\% \\ \hline
+        \hline
+        Deductive reasoning & 45.91\% \\ \hline
+        Inductive reasoning & 35.00\% \\ \hline
+    \end{tabular}
+    \;
+    \begin{tabular}{|l|r|}
+        \hline
+        \multicolumn{1}{|p{6cm}|}{Criterion} & Percentage \\ \hline
+        \hline
+        Easy difficulty & 56.00\% \\ \hline
+        Medium difficulty & 51.33\% \\ \hline
+        Hard difficulty & 18.16\% \\ \hline
+        \hline
+        Topic: 3D Modelling & 75.00\% \\ \hline
+        Topic: Texture Mapping & 60.00\% \\ \hline
+        Topic: Geometry & 50.00\% \\ \hline
+        Topic: Color & 46.67\% \\ \hline
+        Topic: Parametric Curves and Surfaces & 44.55\% \\ \hline
+        Topic: Illumination and Shading & 43.57\% \\ \hline
+        Topic: Ray Tracing & 36.43\% \\ \hline
+        Topic: Graphics Introduction & 30.00\% \\ \hline
+        Topic: Image Processing & 25.62\% \\ \hline
+        % Topic: Geometry & 50.00\% \\ \hline
+        % Topic: Graphics Introduction & 30.00\% \\ \hline
+        % Topic: Color & 46.67\% \\ \hline
+        % Topic: Illumination and Shading & 43.57\% \\ \hline
+        % Topic: 3D Modelling & 75.00\% \\ \hline
+        % Topic: Texture Mapping & 60.00\% \\ \hline
+        % Topic: Ray Tracing & 36.43\% \\ \hline
+        % Topic: Parametric Curves and Surfaces & 44.55\% \\ \hline
+        % Topic: Image Processing & 25.62\% \\ \hline
+    \end{tabular}
+\end{table*}
+
+% \begin{figure*}
+%     \centering
+%     \begin{tabular}{|l|r|r|r|r|}
+%         \hline
+%         \multicolumn{1}{|p{1.2cm}|}{Novice} & \multicolumn{1}{c|}{2022 Test} & \multicolumn{1}{c|}{2022 Exam} & \multicolumn{1}{c|}{2023 Test} & \multicolumn{1}{c|}{2023 Exam} \\ \hline\hline
+%         Run 0 & 36.36\% & 35.00\% & 68.75\% & 23.31\% \\ \hline
+%         Run 1 & 50.00\% & 29.17\% & 31.25\% & 32.63\% \\ \hline
+%         Run 2 & 59.09\% & 35.83\% & 47.92\% & 29.24\% \\ \hline
+%         Run 3 & 40.91\% & 20.83\% & 56.25\% & 31.78\% \\ \hline
+%         Run 4 & 45.45\% & 34.17\% & 45.83\% & 39.41\% \\ \hline
+%         Run 5 & 36.36\% & 20.83\% & 62.50\% & 34.32\% \\ \hline
+%         Run 6 & 50.00\% & 26.67\% & 45.83\% & 37.29\% \\ \hline
+%         Run 7 & 40.91\% & 35.83\% & 66.67\% & 32.63\% \\ \hline
+%         Run 8 & 36.36\% & 29.17\% & 52.08\% & 32.63\% \\ \hline
+%         Run 9 & 50.00\% & 35.83\% & 68.75\% & 38.14\% \\ \hline\hline
+%         Mean & 44.54\% & 30.33\% & 54.58\% & 33.14\% \\ \hline
+%         Std & 7.67\% & 6.00\% & 12.30\% & 4.68\% \\ \hline
+%     \end{tabular}
+%     \;
+%     \begin{tabular}{|l|r|r|r|r|}
+%         \hline
+%         \multicolumn{1}{|p{1.2cm}|}{Informed} & \multicolumn{1}{c|}{2022 Test} & \multicolumn{1}{c|}{2022 Exam} & \multicolumn{1}{c|}{2023 Test} & \multicolumn{1}{c|}{2023 Exam} \\ \hline\hline
+%         Run 0 & 50.00\% & 46.67\% & 62.50\% & 25.00\% \\ \hline
+%         Run 1 & 54.55\% & 25.83\% & 60.42\% & 30.93\% \\ \hline
+%         Run 2 & 54.55\% & 37.50\% & 43.75\% & 38.56\% \\ \hline
+%         Run 3 & 45.45\% & 34.17\% & 50.00\% & 41.10\% \\ \hline
+%         Run 4 & 50.00\% & 40.83\% & 62.50\% & 39.41\% \\ \hline
+%         Run 5 & 45.45\% & 34.17\% & 68.75\% & 34.32\% \\ \hline
+%         Run 6 & 45.45\% & 35.00\% & 52.08\% & 40.68\% \\ \hline
+%         Run 7 & 36.36\% & 34.17\% & 60.42\% & 30.93\% \\ \hline
+%         Run 8 & 40.91\% & 34.17\% & 58.33\% & 37.71\% \\ \hline
+%         Run 9 & 54.55\% & 32.50\% & 62.50\% & 38.14\% \\ \hline\hline
+%         Mean & 47.73\% & 35.50\% & 58.13\% & 35.68\% \\ \hline
+%         Std & 6.16\% & 5.45\% & 7.38\% & 5.25\% \\ \hline
+%     \end{tabular}
+%     \caption{The scores achieved on assessments using novice image descriptions (left) and informed image descriptions (right)}
+%     \label{Score}
+% \end{figure*}
+
+\begin{table*}
+    \centering
+    \caption{The expected scores of assessments compared with the mean scores of past students}
+    \label{Score}
+    \begin{tabular}{|l|r|r|r|r|}
+        \hline
+        \multicolumn{1}{|p{1.2cm}|}{Novice} & \multicolumn{1}{c|}{2022 Test} & \multicolumn{1}{c|}{2022 Exam} & \multicolumn{1}{c|}{2023 Test} & \multicolumn{1}{c|}{2023 Exam} \\ \hline\hline
+        Expected & 63.64\% & 48.83\% & \textbf{71.88\%} & 41.69\% \\ \hline
+        Past Mean & \textbf{77.55\%} & \textbf{69.33\%} & 64.00\% & \textbf{46.43\%} \\ \hline
+    \end{tabular}
+    \;
+    \begin{tabular}{|l|r|r|r|r|}
+        \hline
+        \multicolumn{1}{|p{1.2cm}|}{Informed} & \multicolumn{1}{c|}{2022 Test} & \multicolumn{1}{c|}{2022 Exam} & \multicolumn{1}{c|}{2023 Test} & \multicolumn{1}{c|}{2023 Exam} \\ \hline\hline
+        Expected & 67.73\% & 53.83\% & \textbf{78.12\%} & \textbf{47.03\%} \\ \hline
+        Past Mean & \textbf{77.55\%} & \textbf{69.33\%} & 64.00\% & 46.43\% \\ \hline
+    \end{tabular}
+\end{table*}
+
+\section{Methodology}
+In essence, to evaluate the performance of GPT models on Computer Graphics assessment questions, 136 questions were collected from computerized assessments used in an undergraduate course specializing in Computer Graphics, and they were preprocessed and fed as input to GPT-4 through OpenAI's ChatCompletion API (temperature: 0.75). The assessments are approximately 50\% multiple-choice questions and 50\% programming questions. 10 responses were generated for each question, and the generated solutions were manually reviewed and classified into meaningful categories. The data was then processed and conclusions were drawn from the results.
+
+Most questions could not be inputted directly into GPT-4 for processing, as they contained formulas and images, which were not supported as input types, hence they needed to be replaced with textual alternatives that carry similar information.
+
+Two formula preprocessing methods were considered: textual replacement and TeX command replacement. Replacing each formula with its corresponding textual counterpart was the most straightforward approach. However, in practice, people may not write formulas using text the same way as others. For example, the formula $x^2$ may be written as both ``x\^{}2'' and ``x²'' (with the superscript 2 character), this can potentially lead to disparities in results, as GPT-4 may generate different tokens from the two strings. To maximize consistency, each formula was replaced with its TeX command counterpart, as it is a more rigorous method of representing formulas, and there is usually only one TeX command to represent each formula. Additionally, if students are to use GPT models to ``aid'' their problem-solving process, then they would most likely copy and paste the TeX command directly from the assessment page, instead of typing the formula manually.
+
+Several image preprocessing methods were explored: description generation, image-input GPT models, and manual description. Online tools that generate descriptions based on an image upload were explored, but much crucial information relevant to the questions was usually not captured in the generated descriptions. For example, numbers presented in images were usually overlooked in the descriptions, and they were necessary for solving the question, hence this method was considered unsuitable. Alternatively, there exist similar ChatCompletion GPT models that accept images as input, such as MiniGPT-4 \cite{mini}. However, these models also tended to fail at distinguishing vital information for solving the questions, and their answers did not indicate a thorough understanding of the questions. This behavior was unsurprising as the models were not designed and trained for this purpose, hence this method was also rejected. Although time-consuming and cumbersome, manual image description seemed to be the only viable method to represent images in this scenario. From the perspective of students, image descriptions may also be the best method to replace images in questions, as it is the most accessible and straightforward.
+
+\label{imageslimitation}
+Although a major problem with replacing images with image descriptions was that they are highly subjective, i.e. every person may have a different understanding and interpretation of an image, and thus give a different description. This was considered a limitation of the evaluation procedure since no other alternative solutions were found. To provide more insight and variability, two image descriptions were written for each image, one that resembles a description given by a novice student that lacks knowledge of the relevant concepts (only includes basic observations in the image with limited information), and one that resembles a description given by an informed student that is somewhat educated in the field (includes more in-depth information and insight). This can simulate the performances of a novice student and an informed student if they are to undertake the assessments only with the assistance of GPT-4. It was also ensured that the image descriptions hold the same, or as similar as possible, amount of information as the corresponding images, such that they contain all the information necessary to solve the questions. Some examples of image descriptions are shown in Table \ref{Images}.
+
+After generating the solutions, we manually evaluated the performance by classifying the generated solutions based on their correctness and types of errors (if any). More specifically, the categories for each generated solution are Correct Explanation; Correct Answer; Conceptual Error; Calculation Error; Logic Error; No Explanation, and each generated solution belongs to one or more of these categories. We further classified each question into a variety of categories, by topic, question type, reasoning, input/output type, difficulty level, Bloom's Taxonomy, and solution process.
+
+\section{Results}
+A selection of results of the study are shown in Table \ref{Percentage} and Table \ref{Score}.
+
+Table \ref{Percentage} shows the percentages of correctly generated answers by a selection of criteria with noteworthy observations, where the left column shows the criterion and the right column shows the percentage of correctly generated answers associated with the corresponding questions satisfying the criterion.
+
+Table \ref{Score} shows the expected scores of different past assessments compared to the mean scores of past students, where the higher score for each assessment is highlighted in bold. The left table shows the results using novice image descriptions for image-based questions, and the right shows the results using informed image descriptions. The differences in scores in the two tables are only caused by the different image descriptions in image-based questions, as the generated solutions used for other questions are exactly the same. The expected scores are calculated using the proportion of correct answers (out of the 10 generations) for multiple-choice questions, and whether any correct solutions are generated from the 10 independent attempts for programming questions, weighted by the scores allocated to each question in the assessment. In the conditions of the past assessments, only one answer could be selected for multiple-choice questions, and those scores were given after the assessment, whereas unlimited attempts could be made for programming questions, and full scores were granted as long as one of the attempts was correct. The chosen scheme was used since it estimates the probability of GPT-4 generating the correct answer for multiple-choice questions, and it allows GPT-4 to attempt programming questions 10 times. Thus the scores in the table are the scores expected to be achieved by novice/informed students on the assessment using only answers provided by GPT-4.
+
+% Table \ref{Score} shows the scores achieved on different past assessments, where the left table shows the results using novice image descriptions for image-based questions, and the right shows the results using informed image descriptions. The differences in scores in the two tables are only caused by the different image descriptions in image-based questions, as the generated solutions used for other questions are exactly the same. Each ``Run X'' row shows the results using a different set of generated solutions, and the ``Mean'' and ``Std'' rows show the average and standard deviation of the achieved scores across all 10 sets of generations. The ``Mean'' row approximates the scores a novice/informed student would achieve on the past assessments by using generated solutions only.
+
+\section{Discussion}
+In this section, we identify and discuss some notable results, while suggesting possible reasons to justify the observations. From the observations and reasons, we suggest several countermeasures for academic dishonest behavior from using LLMs.
+
+\subsection{Programming Questions}
+Out of all solutions generated for programming questions, 27.14\% contained the exact code needed to gain a full score for the respective question (successful compilation and all test cases passed). Since 10 solutions were generated for each question, and the assessment conditions used allowed unlimited attempts with no penalties, hence we also computed the proportion of questions with at least one correct generated solution out of the 10, and we found that 53.57\% of questions has at least one correct generated solution (46.43\% of questions were unsolved even after 10 independent attempts).
+
+Out of the set of incorrectly generated solutions for programming questions, 20.10\% only contain minor errors that can be fixed with small modifications. They generally occur when generated code does not follow specified rules. Some examples are listed below.
+\begin{itemize}
+    \item Function call notation: Functions were called with incorrect syntax, e.g. ``foo.func(bar)'' was used instead of the correct ``func(foo, bar)''.
+    \item Operand order: Some questions specified the order of operands for some operations, and the order was not followed, e.g. ``Integer * Vector'' was used instead of the specified ``Vector * Integer''.
+    \item Spelling: Rare minor spelling errors were found in function calls, e.g. ``normalized()'' was used instead of the specified ``normalised()''.
+\end{itemize}
+
+Most of the other incorrectly generated solutions involve algorithmic and/or logic errors and require more manual effort to amend. However, all generated solutions were seemingly convincing, and it was difficult to detect the error that caused the generation of the incorrect code.
+
+\subsection{Image-based Questions}
+GPT-4 performed much lower on questions containing images (32.21\%) than those containing none (60.00\%). An essential skill taught in Computer Graphics is the ability to interpret visual and spatial information \cite{visual}, hence such skills are required to perform well in Computer Graphics assessment questions. Despite the image descriptions holding all the information necessary for solving the questions, GPT-4 still performed poorly on the image-based question, this shows the lack of capability for GPT-4 to retain and process visual information.
+
+The results for novice image descriptions and informed image descriptions also show that the level of understanding demonstrated in image descriptions leads to a difference in resultant scores, and the insight and the extra information provided by the user could potentially positively influence the performance of GPT-4. This could be due to the fact that while the images were being described, the visual processing required to solve the question was partially completed by the human interpreter, hence less visual processing (or perhaps none) was necessary for GPT-4 to perform, and it was capable to obtain more correct answers relying only on its textual processing abilities.
+
+% The results in Table \ref{Score} also show that the level of understanding demonstrated in image descriptions leads to a difference in resultant scores. A two-tailed paired t-test was carried out between the scores in the two tables, where each score in the left table is paired with the corresponding score in the right table, and the resultant p-value shows that there is a significant difference (p-value: 0.004138), i.e. GPT-4 performed higher for questions with informed image descriptions than those with novice image descriptions. This shows that the insight and the extra information provided by the user positively influence the performance of GPT-4. This could be due to the fact that while the images were being described, the visual processing required to solve the question was partially completed by the human interpreter, hence less visual processing (or perhaps none) was necessary for GPT-4 to perform, and it was capable to obtain more correct answers relying only on its textual processing abilities.
+
+\subsection{Mathematical Questions}
+Mathematics is crucial in Computer Graphics, as most concepts in Computer Graphics involve calculations and geometry. Out of the total 136 questions, 84 questions (61.76\%) include mathematical formulas or notations. Basic concepts in linear algebra, such as vectors and dot products, are prominent in these questions. GPT-4 performed the highest in questions involving mathematical formulas (64.81\%) among all observed criteria, most notably surpassing purely text-based questions.
+
+A possible reason for this is that steps in solving mathematical questions follow a strict, rigorous procedure, whereas semantics needs to be taken into account when solving text-based questions, hence the mathematical, rigorous reasoning process may be captured more easily in LLMs than the semantic reasoning process used in text-based questions.
+
+Another possible reason is that the mathematical concepts tested in the assessments are essential and used in various other disciplines too, such as linear algebra being used in engineering and economics, hence there exists much material related to the topics on the Internet, and such relevant information is readily available. Whereas the concepts tested in text-based questions are niche and mostly specific to Computer Graphics, and there exists less information about the topics on the Internet. Taking into account the fact that GPT models are trained on data extracted from the Internet \cite{gpt3}, and there would exist more data related to the mathematical concepts than the textural concepts, hence the output should, theoretically, be more accurate for mathematical questions than textural questions.
+
+Although GPT-4 generated correct answers for the majority of questions, some generated answers failed to follow straightforward procedures. Below are some examples of blunders that GPT-4 made in generations.
+\begin{itemize}
+    \item Simple calculation errors: Instances of missing negatives or incorrect one-digit addition/subtraction operations were found.
+    \item Incorrect formula application: Numbers were substituted in incorrect places when applying formulas.
+    \item Logic errors: Illogical statements were found in solutions, e.g. unequal terms were equated.
+\end{itemize}
+
+\subsection{Reasoning and Difficulty}
+The assessment questions that use deductive reasoning mostly involve applying formulas, recalling knowledge and concepts, and logical thinking, whereas those that use inductive reasoning often require creative thinking that does not follow a rigorous procedure. Hence a possible reason that GPT-4 performed higher for questions that use deductive reasoning than those that use inductive reasoning is that GPT-4 has higher logical thinking capabilities than creative thinking capabilities, and is better at following a rigorous procedure than devising a procedure independently.
+
+Although another possible reason is that questions using inductive reasoning are simply more difficult than those using deductive reasoning. Out of the questions that were classified as ``Hard'', 71.05\% use inductive reasoning, whereas the remaining 28.95\% use deductive reasoning. As shown in the results, GPT-4 performed worse for difficult questions than other questions, and since most difficult questions use inductive reasoning, hence the performance on questions using inductive reasoning decreased as a whole.
+
+There also seemingly exists a decreasing trend for performance as questions become more difficult. This is expected as more difficult questions require more logical processing and computations, there is a higher chance for GPT-4 to divert onto an incorrect solution path, hence the lower performance.
+
+\subsection{Topics}
+The topics that GPT-4 performed the worst are ``Image Processing'', ``Graphics Introduction'', and ``Ray Tracing''. These topics are heavily associated with images and other forms of visualization, and most of the questions include images or pixel matrices representing images. As discussed above, it is theorized that GPT-4 lacks visual and spatial processing capabilities from textual input, hence it is unsurprising that it performed the poorest in the topics related to visual processing.
+
+The topics that GPT-4 achieved the highest are ``3D Modelling'', ``Texture Mapping'', and ``Geometry''. There are only 4 question entries associated with the topic ``3D Modelling'', where the 3 questions answered correctly are multiple-choice questions mostly based on text, hence the high performance could be due to chance. Questions on the topic ``Geometry'' include many mathematical questions, which GPT-4 achieved relatively high performance, thus the relatively high overall performance on the topic. The high performance on the topic ``Texture Mapping'' was surprising, as the relevant questions rely heavily on visual computations.
+
+The topic ``Color'' achieved unexpectedly low performance, as none of the questions contain images. The questions on the topic often associate with color theory and light reflection, which the necessary theories can be captured with textual descriptions, but GPT-4 still performed poorly on such questions. For example, the multiple-choice question ``Consider a surface that reflects the colour magenta when three lights are shining on it: one red, one green, one blue. What will be the reflected colour if the blue light is removed?'' was answered incorrectly on every attempt, despite the relatively simple concept of color reflection assessed with the question.
+
+\subsection{Scores}
+From the results shown in Table 2, we observe that there is a weak correlation between the expected scores and the mean scores of past students, i.e. GPT-4 achieved a higher score for the assessments where past students achieved a higher score.
+
+GPT-4 performed significantly lower than the average student for assessments used in 2022, significantly higher for the 2023 mid-semester test, and approximately equal for the 2023 final exam. Although GPT-4 exceeded the average human performance for one of the assessments, it seems to be quite inconsistent in the general scope. (Although the student performance in 2022 could be abnormally high due to the non-invigilated assessments and potential academic dishonest behavior.)
+
+GPT-4 did not consistently reach average student performance, and it only passed 2 out of the 4 assessments (the score required to pass each assessment was 50\%). However, it still showed capabilities to obtain significant portions of the scores in all assessments, and it is still a viable tool for students to use to cheat in similar assessments in Computer Graphics, hence the existence of GPT-4, and other LLMs, still pose a significant threat to academic honesty, and relevant countermeasures need to be devised.
+
+% Although GPT-4 did not consistently reach average student performance, it showed capabilities to pass both the 2022 and 2023 iterations of the course. In other words, a student is likely to pass the assessment component of the course (achieving 50\% from test and exam combined) regardless of their level of knowledge, and this highlights the danger of not addressing academic dishonest behavior and devising relevant countermeasures.
+
+\subsection{Miscellaneous Observations}
+This subsection lists numerous observations from the generated solutions, that are not fitting for the previous subsections.
+
+\subsubsection*{Convincing solutions}
+All generated solutions were convincing at first glance, regardless of the correctness of the solution. If there existed errors in the solution, then they were usually subtle, and meticulous inspections were often required to identify the errors.
+
+\subsubsection*{No explanations}
+Sometimes, GPT-4 did not generate explanations or justifications along with the answer. In many instances, the generated solutions for multiple-choice questions were solely the text provided as one of the options.
+
+\subsubsection*{Contradictory statements}
+Some generated solutions contained contradictory statements. For example, one solution claimed that (a) is the correct answer at the start, then claimed that (b) is the correct answer at the end.
+
+\subsubsection*{Hallucinations}
+For a few multiple-choice questions, some answers were generated with the wrong corresponding letter. For example, one solution included the text from option (a), but the chosen option was (b).
+
+\subsubsection*{Falsely confident}
+Although many generated solutions contained a variety of different texts, plenty of questions yielded identical generations that were all incorrect.
+
+\subsection{Suggestions}
+From the findings of this study, we suggest countermeasures, possibly suitable for disciplines other than Computer Graphics, that may alleviate academic dishonest behavior from the usage of LLMs.
+
+\subsubsection*{Include peculiar requirements for programming questions}
+We have found that generated solutions for programming questions often do not adhere to specific requirements, hence LLMs may perform worse for programming questions that have peculiar requirements, such as specifically required syntax, custom functions, and unique naming conventions, this would more likely confuse generation tools, and lead to incorrect generated solutions.
+
+\subsubsection*{Use more image-based questions}
+From the results related to image-based questions, we proposed that, with only the assistance of LLMs, students with more knowledge of the topic are more likely to score higher on image-based questions than those less knowledgeable, while still scoring significantly lower than the average student, thus image-based questions can assess student ability to an extent even with the availability of LLMs, and the incorporation of more image-based questions may be a viable method of fairly assessing students.
+
+\subsubsection*{Less deductive reasoning and more inductive reasoning}
+As discussed above, GPT-4 was observed to obtain higher performance for questions using deductive reasoning, such as mathematical questions, than those using inductive reasoning, such as those requiring creative thinking. Thus to control the performance of GPT-4, and other LLMs, on future assessment questions, then questions that require students to recall knowledge, apply formulas, and form simple deductions should be avoided, and questions that require longer thought processes and more intensive creative thinking should be used instead.
+
+\subsection{Limitations}
+There are several limitations of this study that should be taken into consideration, they are addressed in this subsection.
+
+\subsubsection*{Subjective image descriptions}
+As addressed briefly in Section \ref{imageslimitation}, a major limitation of this study is the fact that everyone has their own understanding of an image, and hence can give varying descriptions, and the performance of GPT-4 can vary from the different descriptions as input. Hence the descriptions written for images in this study were purposely written to be as generic as possible, and two descriptions were written for each image to improve variability, each demonstrating a different level of understanding of the image.
+
+\subsubsection*{Subjective classifications}
+Some classifications for questions may have room for disagreement due to subjectivity, such as for reasoning processes, i.e. one may classify a question as one using deductive reasoning, whereas one may argue that it uses inductive reasoning, as there does not exist a precise boundary between the two reasoning processes. Although a different classifier may lead to different results, the room for disagreement for most classifications is relatively small, which means that the results obtained from different classifiers may be different, but still comparable.
+
+\subsubsection*{Sequential inputs for programming questions}
+In this study, each solution was generated independently, i.e. one generation does not affect another. However, the possibility of sequential inputs is not explored, and the use of sequential prompts may boost the performance, as any errors or discrepancies between the output and the expected output may be reported back to the LLM, and the solution may be adjusted accordingly, where each iteration brings the generated solution closer to a correct solution. Unfortunately, this was not explored in this study, and future studies will have to be carried out to measure the difference in performance using this strategy.
+
+\subsubsection*{Potentially inadequate suggestions}
+Although the suggestions devised are supported by data, there is no experimental evidence that they can reduce academic dishonesty, and further experiments, possibly across other disciplines, need to be conducted before conclusions can be confidently drawn. Additionally, the field of LLMs is advancing and improving rapidly, and new tools are frequently being developed, so the devised suggestions may become outdated in the near future.
+
+\section{Conclusion}
+Future Work: When GPT-4 accepting image inputs is released.
+
+% \end{multicols}
+\bibliographystyle{apalike}
+\bibliography{ref}
+
+\end{document}
