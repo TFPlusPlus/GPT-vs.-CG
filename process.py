@@ -1,6 +1,6 @@
 import json
 
-def P(var, cond_and = [], cond_not = [], cond_or1 = [], cond_or2 = [], cond_or3 = [], filter = "", collective = True):
+def P(var, cond_and = [], cond_not = [], cond_or1 = [], cond_or2 = [], cond_or3 = [], filter = "", collective = True, exact = False):
     var_array = []
     and_array = []
     not_array = []
@@ -8,24 +8,43 @@ def P(var, cond_and = [], cond_not = [], cond_or1 = [], cond_or2 = [], cond_or3 
     or2_array = []
     or3_array = []
     for i in range(len(headers)):
-        if var in headers[i]:
-            var_array.append(i)
-        for cond in cond_and:
-            # if cond == headers[i]:
-            if cond in headers[i]:
-                and_array.append(i)
-        for cond in cond_not:
-            if cond in headers[i]:
-                not_array.append(i)
-        for cond in cond_or1:
-            if cond in headers[i]:
-                or1_array.append(i)
-        for cond in cond_or2:
-            if cond in headers[i]:
-                or2_array.append(i)
-        for cond in cond_or3:
-            if cond in headers[i]:
-                or3_array.append(i)
+        if exact:
+            if var in headers[i]:
+            # if var == headers[i]:
+                var_array.append(i)
+            for cond in cond_and:
+                if cond == headers[i]:
+                    and_array.append(i)
+            for cond in cond_not:
+                if cond == headers[i]:
+                    not_array.append(i)
+            for cond in cond_or1:
+                if cond == headers[i]:
+                    or1_array.append(i)
+            for cond in cond_or2:
+                if cond == headers[i]:
+                    or2_array.append(i)
+            for cond in cond_or3:
+                if cond == headers[i]:
+                    or3_array.append(i)
+        else:
+            if var in headers[i]:
+                var_array.append(i)
+            for cond in cond_and:
+                if cond in headers[i]:
+                    and_array.append(i)
+            for cond in cond_not:
+                if cond in headers[i]:
+                    not_array.append(i)
+            for cond in cond_or1:
+                if cond in headers[i]:
+                    or1_array.append(i)
+            for cond in cond_or2:
+                if cond in headers[i]:
+                    or2_array.append(i)
+            for cond in cond_or3:
+                if cond in headers[i]:
+                    or3_array.append(i)
     results = {}
     numerator = {}
     denominator = {}
@@ -81,6 +100,8 @@ def P(var, cond_and = [], cond_not = [], cond_or1 = [], cond_or2 = [], cond_or3 
     return results
 
 def search(terms = []):
+    if type(terms) != list:
+        return "ERROR"
     terms_indices = {}
     results = {}
     for term in terms:
@@ -153,8 +174,8 @@ marks = json.load(open("marks.json", "r"))
 #     # print(informed[i] * marks[i[:7]])
 
 """ Inductive vs Deductive """
-print(P("Correct answer", cond_and=["Reasoning: Deductive"]))
-print(P("Correct answer", cond_and=["Reasoning: Inductive"]))
+# print(P("Correct answer", cond_and=["Reasoning: Deductive"]))
+# print(P("Correct answer", cond_and=["Reasoning: Inductive"]))
 
 """ Input Type """
 # print(P("Correct answer", cond_and=["Input Type: Text"], cond_not=["Input Type: Mathematical formula", "Input Type: Image description (novice)", "Input Type: Image description (informed)", "Input Type: Code"]))
@@ -219,11 +240,14 @@ print(P("Correct answer", cond_and=["Reasoning: Inductive"]))
 # print(P("Correct answer", cond_and=["Bloom's Taxonomy: Create"]))
 
 """ Difficulty Level """
-# print(P("Correct answer", cond_and=["Difficulty Level: Easy"])) # CHANGE COND_AND TO MATCH EXACTLY
+# print(P("Correct answer", cond_and=["Difficulty Level: Easy"], exact=True))
 # print(P("Correct answer", cond_and=["Difficulty Level: Easy - Medium"]))
-# print(P("Correct answer", cond_and=["Difficulty Level: Medium"])) # CHANGE COND_AND TO MATCH EXACTLY
+# print(P("Correct answer", cond_and=["Difficulty Level: Medium"], exact=True))
 # print(P("Correct answer", cond_and=["Difficulty Level: Medium - Hard"]))
 # print(P("Correct answer", cond_and=["Difficulty Level: Hard"]))
+# print(P("Correct answer", cond_and=["Difficulty Level: Easy"], exact=True))
+# print(P("Correct answer", cond_or1=["Difficulty Level: Easy - Medium", "Difficulty Level: Medium"], exact=True))
+# print(P("Correct answer", cond_or1=["Difficulty Level: Medium - Hard", "Difficulty Level: Hard"], exact=True))
 
 """ Marks (new) """
 # codes = ["2022a", "2022b", "2023a", "2023b"]
@@ -247,3 +271,13 @@ print(P("Correct answer", cond_and=["Reasoning: Inductive"]))
 
 """ Miscellaneous """
 # d = P("Input Type: Mathematical formula")
+# print(P("Deductive", cond_or1=["Hard"]))
+# print(P("Inductive", cond_or1=["Hard"]))
+# print(search(["Texture Mapping"]))
+# print(P("Input Type: Image description (novice)", cond_or1=["Topic: Ray Tracing", "Topic: Graphics Introduction", "Topic: Image Processing"]))
+# print(P("Input Type: Image description (informed)", cond_or1=["Topic: Ray Tracing", "Topic: Graphics Introduction", "Topic: Image Processing"]))
+print(search(["Topic: Ray Tracing"]))
+print(search(["Topic: Graphics Introduction"]))
+print(search(["Topic: Image Processing"]))
+print(search(["Topic: 3D Modelling"]))
+print(search(["Topic: Geometry"]))
